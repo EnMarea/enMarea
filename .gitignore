@@ -1,0 +1,16 @@
+# LOCAL DATA (logs, cache, environment variables, etc)
+
+data/*
+.env
+public/*
+!public/index.php
+
+
+# DEPENDENCIES (composer, bower, npm, etc)
+
+vendor/
+bower_components/
+node_modules/
+
+# You can comment this line: http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
+composer.lock
