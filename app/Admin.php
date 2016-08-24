@@ -4,8 +4,8 @@ namespace App;
 
 class Admin extends \Folk\Admin
 {
-    public $title = 'CMS';
-    public $description = 'Content of the website';
+    public $title = 'en marea';
+    public $description = 'Xestion da web da campaña';
 
     public function __construct($url, App $app)
     {
@@ -21,7 +21,7 @@ class Admin extends \Folk\Admin
         }
 
         $this->setEntities([
-            //place your entities here
+            Admin\Highlights::class
         ]);
     }
 }

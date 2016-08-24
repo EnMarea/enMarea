@@ -35,6 +35,7 @@ class App extends Fol
         $this->register(new Providers\Router());
         $this->register(new Providers\Templates());
         $this->register(new Providers\Middleware());
+        $this->register(new Providers\Database());
     }
 
     /**
@@ -47,10 +48,10 @@ class App extends Fol
      */
     public function dispatch(ServerRequestInterface $request, ResponseInterface $response)
     {
-        $adminUrl = env('APP_ADMIN_URL');
+        $adminPath = env('APP_ADMIN_PATH');
 
-        if (strpos((string) $request->getUri(), $adminUrl) === 0) {
-            $admin = new Admin($adminUrl, $this);
+        if (strpos($request->getUri()->getPath(), $adminPath) === 0) {
+            $admin = new Admin((string) $request->getUri()->withPath($adminPath), $this);
 
             return $admin($request);
         }
