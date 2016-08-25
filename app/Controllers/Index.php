@@ -35,8 +35,16 @@ class Index
             ->where('isActive = 1')
             ->run();
 
+        $header = $db->headers
+            ->select()
+            ->one()
+            ->where('isActive = 1')
+            ->orderBy('RAND()')
+            ->run();
+
         return $app['templates']->render('pages/home', [
             'highlights' => $highlights,
+            'header' => $header,
         ]);
     }
 

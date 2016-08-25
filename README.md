@@ -12,9 +12,16 @@
 ```bash
 git clone https://github.com/oscarotero/enMarea.git
 cd enMarea
+composer install
 npm install
-cp .env.example .env
+
+# crea os directorios con permiso de escritura
 mkdir -m 0777 data
 mkdir -m 0777 data/logs
+
+# edita os datos de entorno:
+cp .env.example .env
+
+php vendor/bin/phinx migrate
 php vendor/bin/robo run
 ```

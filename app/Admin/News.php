@@ -20,6 +20,9 @@ class News extends SimpleCrud
     {
         return $b->group([
             'imageFile' => $b->imageUpload()
+                ->data('config', [
+                    'directory' => '../data/uploads/news/imageFile/'
+                ])
                 ->required()
                 ->label('Imaxe'),
 
