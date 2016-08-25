@@ -7,9 +7,44 @@
     width: 92vw;
     list-style: none;
     max-width: 1800px;
+    box-sizing: border-box;
 }
 
 /* Tipografía */
+
+%font-16-18 {
+	font-size: var(--font-16);
+	line-height: 1.3;
+
+	@media (--from-narrow) {
+		font-size: var(--font-18);
+	}
+}
+%font-18-24 {
+	font-size: var(--font-18);
+	line-height: 1.1;
+
+	@media (--from-narrow) {
+		font-size: var(--font-24);
+	}
+}
+
+/*
+ * minValue: 1rem
+ * maxValue: 1.5rem
+ * minWidth: 30
+ * maxWidth: 56rem
+ */
+%font-16__24 {
+	font-size: calc(1rem + (1.5 - 1) * ((100vw - 30rem) / (56 - 30)));
+
+	@media (--to-narrow) {
+		font-size: var(--font-16);
+	}
+	@media (--from-medium) {
+		font-size: var(--font-24);
+	}
+}
 
 /*
  * minValue: 1.5rem
@@ -17,7 +52,7 @@
  * minWidth: 30
  * maxWidth: 56rem
  */
-%font-black-24-36 {
+%font-black-24__36 {
 	font-weight: 900;
 	font-size: calc(1.5rem + (2.25 - 1.5) * ((100vw - 30rem) / (56 - 30)));
 
@@ -28,6 +63,46 @@
 
 	@media (--from-medium) {
 		font-size: var(--font-36);
+	}
+}
+
+/*
+ * minValue: 1.5rem
+ * maxValue: 4rem
+ * minWidth: 30
+ * maxWidth: 56rem
+ */
+%font-bold-24__64 {
+	font-weight: 700;
+	font-size: calc(1.5rem + (4 - 1.5) * ((100vw - 30rem) / (56 - 30)));
+	line-height: 1;
+
+	@media (--to-narrow) {
+		font-size: var(--font-24);
+	}
+
+	@media (--from-medium) {
+		font-size: var(--font-64);
+	}
+}
+
+/*
+ * minValue: 2.25rem
+ * maxValue: 4.5rem
+ * minWidth: 30
+ * maxWidth: 56rem
+ */
+%font-black-36__72 {
+	font-weight: 900;
+	font-size: calc(2.25rem + (4.5 - 2.25) * ((100vw - 30rem) / (56 - 30)));
+	line-height: 1;
+
+	@media (--to-narrow) {
+		font-size: var(--font-36);
+	}
+
+	@media (--from-medium) {
+		font-size: var(--font-72);
 	}
 }
 
@@ -76,6 +151,40 @@
 			width: calc((100% / 3) - ((20px * 2) / 3));
 
 			&:nth-child(3n) {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+%grid-1-2-3-3-4 {
+	@extend %grid-1-2;
+
+	@media (--from-narrow) AND (--to-intermedium) {
+		> li {
+			width: calc((100% / 2) - (20px / 2));
+
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	@media (--from-intermedium) AND (--to-wide) {
+		> li {
+			width: calc((100% / 3) - ((20px * 2) / 3));
+
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	@media (--from-wide) {
+		> li {
+			width: calc((100% / 4) - ((20px * 3) / 4));
+
+			&:nth-child(4n) {
 				margin-right: 0;
 			}
 		}

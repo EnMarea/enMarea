@@ -17,6 +17,10 @@ class Middleware implements ServiceProviderInterface
                 M::ClientIp(),
                 M::trailingSlash(),
                 M::FormatNegotiator(),
+                M::imageTransformer([
+                    'small.' => 'resizeCrop,380,230',
+                    'landscape.' => 'resizeCrop,1200,600'
+                ]),
                 M::create('/uploads', function () use ($app) {
                     return M::readResponse($app->getPath('data'))->continueOnError();
                 }),

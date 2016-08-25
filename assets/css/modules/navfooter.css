@@ -27,7 +27,7 @@
 	strong {
 		display: block;
 		text-transform: uppercase;
-		@extend %font-black-24-36;
+		@extend %font-black-24__36;
 		max-width: 10em;
 		line-height: .9;
 		margin-top: 1.5rem;

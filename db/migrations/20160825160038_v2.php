@@ -1,8 +1,9 @@
 <?php
 
 use Phinx\Migration\AbstractMigration;
+use Phinx\Db\Adapter\MysqlAdapter;
 
-class V1 extends AbstractMigration
+class V2 extends AbstractMigration
 {
     /**
      * Change Method.
@@ -27,14 +28,15 @@ class V1 extends AbstractMigration
      */
     public function change()
     {
-        $this->table('highlights')
-            ->addColumn('type', 'string')
+        $this->table('news')
             ->addColumn('title', 'string')
+            ->addColumn('slug', 'string')
             ->addColumn('imageFile', 'string')
-            ->addColumn('createAt', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
-            ->addColumn('url', 'string')
+            ->addColumn('intro', 'string')
+            ->addColumn('createdAt', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
+            ->addColumn('body', 'text', ['limit' => MysqlAdapter::TEXT_REGULAR])
             ->addColumn('isActive', 'boolean')
-            ->addColumn('province', 'enum', ['values' => 'acoruna,lugo,ourense,pontevedra'])
+            ->addIndex(['slug'], ['unique' => true])
             ->create();
     }
 }

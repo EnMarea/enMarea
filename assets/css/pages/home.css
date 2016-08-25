@@ -6,8 +6,40 @@
 
 .page-highlights {
 	@extend %wrapper;
-	
-	> ul {
-		@extend %grid-1-2-3;
+	max-width: var(--max-width);
+}
+.page-highlights-content {
+	margin-top: 1rem;
+	@extend %grid-1-2-3-3-4;
+
+	@media (--from-narrow) {
+		margin-top: 2rem;
+	}
+}
+
+.page-highlights-filters {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+	@extend %font-16__24;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+
+	a {
+		display: block;
+		padding: .3rem .5rem;
+		background: var(--color-blue);
+		color: white;
+		white-space: nowrap;
+
+		&.is-actived {
+			color: var(--color-blue);
+			background: white;
+		}
+	}
+	li {
+		margin-right: 1px;
 	}
 }

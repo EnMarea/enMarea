@@ -2,7 +2,7 @@
 
 use Phinx\Migration\AbstractMigration;
 
-class V1 extends AbstractMigration
+class V3 extends AbstractMigration
 {
     /**
      * Change Method.
@@ -27,14 +27,14 @@ class V1 extends AbstractMigration
      */
     public function change()
     {
-        $this->table('highlights')
-            ->addColumn('type', 'string')
-            ->addColumn('title', 'string')
-            ->addColumn('imageFile', 'string')
-            ->addColumn('createAt', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
-            ->addColumn('url', 'string')
+        $this->table('events')
+            ->addColumn('city', 'string')
+            ->addColumn('place', 'string')
+            ->addColumn('day', 'date')
+            ->addColumn('hour', 'text')
+            ->addColumn('person', 'text')
+            ->addColumn('intro', 'string')
             ->addColumn('isActive', 'boolean')
-            ->addColumn('province', 'enum', ['values' => 'acoruna,lugo,ourense,pontevedra'])
             ->create();
     }
 }

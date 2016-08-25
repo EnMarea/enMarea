@@ -1,0 +1,29 @@
+.highlight {
+	> a {
+		display: block;
+	}
+}
+.highlight-type {
+	background: var(--color-blue);
+	color: white;
+	padding: .2em .3em;
+}
+.highlight-province {
+	background: white;
+	font-style: normal;
+	padding: .2em .3em;
+}
+.highlight-title {
+	@extend %font-16-18;
+}
+
+.highlight-image {
+	position: relative;
+}
+.highlight-details {
+	position: absolute;
+	display: flex;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+}

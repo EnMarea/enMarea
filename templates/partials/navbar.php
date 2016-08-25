@@ -6,22 +6,39 @@
 
 		<nav role="navigation" class="navbar-links js-navigation">
 			<ul class="is-desktop">
-				<li>
-					<a href="#">Novas</a>
+				<li class="is-twitter">
+					<a href="#">
+						<?= $this->svg('ico-twitter') ?>
+					</a>
 				</li>
-				<li>
+				<li class="is-facebook">
+					<a href="#">
+						<?= $this->svg('ico-facebook') ?>
+					</a>
+				</li>
+				<li class="is-youtube">
+					<a href="#">
+						<?= $this->svg('ico-youtube') ?>
+					</a>
+				</li>
+				<li class="is-section">
+					<a href="<?= $this->url('news') ?>"<?= $menu === 'news' ? ' class="is-actived"' : '' ?>>
+						Novas
+					</a>
+				</li>
+				<li class="is-section">
 					<a href="#">Axenda</a>
 				</li>
-				<li>
+				<li class="is-section">
 					<a href="#">Candidaturas</a>
 				</li>
-				<li>
+				<li class="is-section">
 					<a href="#">Programa</a>
 				</li>
-				<li>
+				<li class="is-section">
 					<a href="#">En marea</a>
 				</li>
-				<li>
+				<li class="is-section">
 					<a href="#">Repositorio</a>
 				</li>
 			</ul>
@@ -30,7 +47,9 @@
 			</button>
 			<ul class="is-mobile">
 				<li>
-					<a href="#">Novas</a>
+					<a href="<?= $this->url('news') ?>">
+						Novas
+					</a>
 				</li>
 				<li>
 					<a href="#">Axenda</a>

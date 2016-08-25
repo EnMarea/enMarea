@@ -3,13 +3,17 @@
 	--color-blue: #004FFF;
 	--color-black: #313131;
 	--color-gray-light: color(var(--color-black) tint(85%));
+	--color-gray: color(var(--color-black) tint(60%));
 	--max-width: 82rem;
+	--max-width-text: 56rem;
 
 	--font-14: .8rem;
 	--font-16: 1rem;
 	--font-18: 1.125rem;
 	--font-24: 1.5rem;
 	--font-36: 2.25rem;
+	--font-64: 4rem;
+	--font-72: 4.5rem;
 }
 
 @custom-media --to-narrow (max-width: 30rem);

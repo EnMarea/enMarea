@@ -21,7 +21,9 @@ class Admin extends \Folk\Admin
         }
 
         $this->setEntities([
-            Admin\Highlights::class
+            Admin\Highlights::class,
+            Admin\News::class,
+            Admin\Events::class,
         ]);
     }
 }

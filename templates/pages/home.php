@@ -1,4 +1,11 @@
-<?= $this->layout('layouts/default') ?>
+<?php 
+$social = new SocialLinks\Page([
+	'url' => $this->url('home'),
+	'title' => 'En Marea',
+]);
+?>
+
+<?= $this->layout('layouts/default', ['social' => $social]) ?>
 
 <?php $this->start('extra-head') ?>
 <link rel="stylesheet" type="text/css" href="<?= $this->asset('css/pages/home.css') ?>">
@@ -12,7 +19,9 @@
 <div class="hero">
 	<section class="hero-content">
 		<header>
-			<h1>Luís</h1>
+			<h1 class="hero-title">
+				<?= $this->svg('logo-luisvillares')->withA11y('Luís Villares') ?>
+			</h1>
 		</header>
 
 		<blockquote class="hero-quote">
@@ -42,11 +51,18 @@
 			<a href="#">luis.luisino.7</a>
 		</footer>
 	</section>
+
+	<ul class="page-highlights-filters">
+		<li><a class="is-actived" href="#">Movémonos</a></li>
+		<li><a href="#">A Coruña</a></li>
+		<li><a href="#">Lugo</a></li>
+		<li><a href="#">Ourense</a></li>
+		<li><a href="#">Pontevedra</a></li>
+	</ul>
 </div>
 
 <section class="page-highlights">
-	
-	<ul>
+	<ul class="page-highlights-content">
 		<?php
 		foreach ($highlights as $highlight) {
 			$this->insert('partials/highlights/list', ['highlight' => $highlight]);

@@ -15,11 +15,11 @@ var $html = $('html');
 $window.on('scroll', function() {
     let pos = $window.scrollTop();
 
-    if (pos > 0 && !sticked) {
+    if (pos > 5 && !sticked) {
         $html.addClass('is-scrolled');
         sticked = true;
-    } else if (pos === 0 && sticked) {
+    } else if (pos < 5 && sticked) {
         $html.removeClass('is-scrolled');
         sticked = false;
     }
-});
+}).trigger('scroll');

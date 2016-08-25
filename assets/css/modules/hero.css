@@ -1,13 +1,24 @@
 .hero {
 	background-color: black;
-	background-position: center 25%;
+	background-position: 25% 25%;
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding-bottom: 3rem;
+	color: white;
 }
 .hero-content {
 	@extend %wrapper;
 	max-width: var(--max-width);
+	padding-bottom: 5vh;
+	padding-top: 5vh;
+}
+.hero-title {
+	svg {
+		width: 100%;
+		max-width: 30rem;
+	}
+	g {
+		fill: currentColor;
+	}
 }
 .hero-menu {
 	list-style: none;
@@ -55,17 +66,14 @@
 }
 .hero-quote {
 	margin: 0;
-	@extend %font-black-24-36;
+	@extend %font-black-24__36;
 	max-width: 30rem;
 
 	span {
-		color: white;
 		background: var(--color-blue);
 	}
 }
 .hero-social {
-	color: white;
-
 	a {
 		color: inherit;
 	}

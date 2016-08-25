@@ -1,0 +1,51 @@
+@import "../variables.css";
+@import "../placeholders.css";
+
+html {
+	background: white;
+}
+
+.navbar {
+	background-color: var(--color-blue);
+}
+
+.page-navigation {
+	@extend %wrapper;
+	border-bottom: solid 3px var(--color-blue);
+	@extend %font-16-18;
+	font-weight: bold;
+	max-width: var(--max-width);
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	a {
+		background: url('../../svg/ico-arrow-left.svg') no-repeat left center;
+		padding-left: 20px;
+		display: inline-block;
+		white-space: nowrap;
+	}
+}
+
+.new.is-permalink {
+	margin-top: 20px;
+
+	.new-header {
+		@extend %wrapper;
+		max-width: var(--max-width-text);
+	}
+	.new-title {
+		@extend %font-bold-24__64;
+		margin: 0;
+	}
+	.new-intro {
+		@extend %font-16__24;
+		margin-top: 20px;
+	}
+	.new-image {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+}
+.page-morenews {
+	margin-bottom: 40px;
+}
