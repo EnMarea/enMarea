@@ -16,7 +16,7 @@ class Router implements ServiceProviderInterface
 
             $map = $routerContainer->getMap();
 
-            $map->get('index', '/', "{$ns}\\Index::index");
+            $map->get('home', '/', "{$ns}\\Index::home");
 
             return $routerContainer;
         };

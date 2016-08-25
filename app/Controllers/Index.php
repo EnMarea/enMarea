@@ -8,10 +8,17 @@ use Zend\Diactoros\ServerRequest as Request;
 
 class Index
 {
-    public function index(Request $request, Response $response, App $app)
+    public function home(Request $request, Response $response, App $app)
     {
-        return $app['templates']->render('pages/index', [
-            'content' => 'Ola mundor',
+    	$db = $app->get('db');
+
+    	$highlights = $db->highlights
+    		->select()
+        	->where('isActive = 1')
+        	->run();
+
+        return $app['templates']->render('pages/home', [
+            'highlights' => $highlights,
         ]);
     }
 }

@@ -1,0 +1,164 @@
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: white;
+
+	+ div {
+		padding-top: 5rem;
+	}
+}
+
+.navbar-content {
+	@extend %wrapper;
+	max-width: var(--max-width);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar-logo {
+	color: inherit;
+	svg {
+		display: block;
+	}
+	path {
+		fill: currentColor;
+	}
+}
+.navbar-links {
+	margin-left: 2rem;
+	display: flex;
+	align-items: center;
+
+	a {
+		color: inherit;
+		font-weight: 700;
+		text-transform: lowercase;
+		display: block;
+		padding: 0 .5em;
+		white-space: nowrap;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		&.is-desktop {
+			display: flex;
+
+			> li {
+				display: none;
+			}
+
+			@media (--from-wide) {
+				font-size: var(--font-18);
+			}
+		}
+		&.is-mobile {
+			position: fixed;
+			right: 0;
+			transform: translateX(100px);
+			opacity: 0;
+			transition: transform .3s, opacity .3s;
+			background: white;
+			color: var(--color-blue);
+			margin-top: 1.5em;
+		}
+	}
+	&.is-opened {
+		.is-mobile {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+
+	@media (min-width: 400px) {
+		ul.is-desktop > li:nth-child(1) {
+			display: block;
+		}
+		ul.is-mobile > li:nth-child(1) {
+			display: none;
+		}
+	}
+
+	@media (min-width: 500px) {
+		ul.is-desktop > li:nth-child(2) {
+			display: block;
+		}
+		ul.is-mobile > li:nth-child(2) {
+			display: none;
+		}
+	}
+
+	@media (min-width: 600px) {
+		ul.is-desktop > li:nth-child(3) {
+			display: block;
+		}
+		ul.is-mobile > li:nth-child(3) {
+			display: none;
+		}
+	}
+
+	@media (min-width: 700px) {
+		ul.is-desktop > li:nth-child(4) {
+			display: block;
+		}
+		ul.is-mobile > li:nth-child(4) {
+			display: none;
+		}
+	}
+
+	@media (min-width: 800px) {
+		ul.is-desktop > li:nth-child(5) {
+			display: block;
+		}
+		ul.is-mobile > li:nth-child(5) {
+			display: none;
+		}
+	}
+
+	@media (min-width: 900px) {
+		ul.is-desktop > li:nth-child(6) {
+			display: block;
+		}
+		ul.is-mobile > li:nth-child(6) {
+			display: none;
+		}
+		.navbar-toggle {
+			display: none;
+		}
+	}
+}
+.navbar-toggle {
+	border: none;
+	background: none;
+	padding: 0;
+	margin-left: 1em;
+	color: inherit;
+
+	g {
+		stroke: currentColor;
+		stroke-width: 3px;
+	}
+}
+html.is-scrolled {
+	.navbar {
+		background: white;
+		box-shadow: 0 0 2px color(black a(.4));
+	}
+
+	.navbar-logo {
+		path {
+			fill: var(--color-blue);
+		}
+	}
+	.navbar-links {
+		color: var(--color-blue);
+	}
+}

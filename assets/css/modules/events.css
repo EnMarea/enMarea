@@ -1,0 +1,31 @@
+.event {
+	
+}
+.event-time {
+	font-weight: 700;
+}
+.event-address {
+	strong {
+		font-style: normal;
+	}
+	p {
+		margin: 0;
+	}
+}
+.event.is-minilist {
+	font-size: var(--font-16);
+	display: flex;
+
+	.event-time {
+		width: 3em;
+	}
+}
+.eventList {
+	list-style: none;
+	padding: 0;
+	margin: .5em 0;
+
+	> li + li {
+		margin-top: .5rem;
+	}
+}

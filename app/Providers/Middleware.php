@@ -17,6 +17,9 @@ class Middleware implements ServiceProviderInterface
                 M::ClientIp(),
                 M::trailingSlash(),
                 M::FormatNegotiator(),
+                M::create('/uploads', function () use ($app) {
+                    return M::readResponse($app->getPath('data'))->continueOnError();
+                }),
                 M::AuraRouter($app->get('router'))->arguments($app),
             ]);
         };

@@ -23,7 +23,7 @@ class Database implements ServiceProviderInterface
             ]);
 
             $db->getTableFactory()->addNamespace($app->getNamespace('Models\\'));
-            $db->setAttribute(SimpleCrud::ATTR_UPLOADS, $app->getPath('../data/uploads'));
+            $db->setAttribute(SimpleCrud::ATTR_UPLOADS, $app->getPath('data/uploads'));
 
             return $db;
         };

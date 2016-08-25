@@ -1,0 +1,13 @@
+@import "../variables.css";
+@import "../placeholders.css";
+
+@import "../modules/hero.css";
+
+
+.page-highlights {
+	@extend %wrapper;
+	
+	> ul {
+		@extend %grid-1-2-3;
+	}
+}

@@ -1,0 +1,10 @@
+@import "normalize-css";
+@import "fonts.css";
+@import "variables.css";
+@import "reset.css";
+@import "placeholders.css";
+
+/* Módulos */
+@import "modules/navbar.css";
+@import "modules/navfooter.css";
+@import "modules/events.css";
