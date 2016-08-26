@@ -1,0 +1,10 @@
+.text-title {
+	@extend %font-bold-24__64;
+	color: var(--color-blue);
+	margin: 0;
+}
+.text-body {
+	h2 {
+		border-bottom: solid 2px var(--color-blue);
+	}
+}

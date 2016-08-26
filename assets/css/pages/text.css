@@ -1,0 +1,12 @@
+@import "../variables.css";
+@import "../placeholders.css";
+
+.navbar {
+	background-color: var(--color-blue);
+}
+
+.page-content {
+	@extend %wrapper;
+	max-width: var(--max-width-text);
+	margin-top: 40px;
+}

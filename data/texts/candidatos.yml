@@ -1,0 +1,58 @@
+header:
+  title: Candidaturas
+  subtitle: Aqui iría un subtítulo
+
+provinces:
+  - title: A Coruña
+    candidates:
+      - name: Antón Sánchez García
+      - name: Luca Chao Pérez
+      - name: José Manuel Lago Peñas
+      - name: Magdalena Barahona Martín
+      - name: Francisco Pancho Casal Vidal
+      - name: Flora María Miranda Pena
+      - name: Xan Xove González
+      - name: Mariló Candedo Gunturiz
+      - name: Carlos Palacios Suárez
+      - name: Lorena Dapena
+      - name: Daniel Alejandro Calvete Suárez
+      - name: Iria Otero Romero
+      - name: Gonzalo Rodríguez Rodríguez
+      - name: María Antonia Trillo Blanco
+
+  - title: Lugo
+    candidates:
+      - name: Luis Villares Naveira
+      - name: Paula Vázquez Verao
+      - name: Víctor Andrés Álvarez Arias
+      - name: María Isabel García Díaz
+      - name: José Manuel “Josito” Pérez Afonso
+      - name: María Victoria Esteban Riesco
+      - name: Bernardo Fraga Galdo
+      - name: Natalia Prieto Fernández
+
+  - title: Pontevedra
+    candidates:
+      - name: Carmen Santos Queiruga
+      - name: Marcos Cal Ogando
+      - name: Eva Solla Fernández
+      - name: Juan J. Merlo Lorenzo
+      - name: Paula Quinteiro Araújo
+      - name: Xoan Hermida González
+      - name: Julia Torregrosa
+      - name: Mariano Abalo Costa
+      - name: Noemí Martínez González
+      - name: Juan Manuel Fajardo Recouso
+      - name: Mar Blanco Casais
+      - name: Marcelo Armendáriz Gil
+
+  - title: Ourense
+    candidates:
+      - name: María de los Ángeles Cuña Bóveda
+      - name: David Rodríguez Estévez
+      - name: María Eva Gutiérrez Fernández
+      - name: Xosé Manuel Pérez Bouza
+      - name: Manuela Pérez Pérez
+      - name: Ares Jiménez Soria
+      - name: Rita González Pérez
+      - name: Carlos Miguélez Soto

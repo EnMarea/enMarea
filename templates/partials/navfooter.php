@@ -1,3 +1,5 @@
+<?php $comun = $app->get('texts')['comun']; ?>
+
 <footer class="navfooter">
 	<div class="navfooter-content">
 		<span class="navfooter-logo">
@@ -9,11 +11,30 @@
 
 		<nav role="navigation" class="navfooter-links">
 			<ul>
-				<li>
-					<a href="#">Contacto</a>
+				<li class="is-twitter">
+					<a href="<?= $comun->rrss->twitter ?>">
+						<?= $this->svg('ico-twitter') ?>
+					</a>
 				</li>
-				<li>
-					<a href="#">Privacidade</a>
+				<li class="is-facebook">
+					<a href="<?= $comun->rrss->facebook ?>">
+						<?= $this->svg('ico-facebook') ?>
+					</a>
+				</li>
+				<li class="is-youtube">
+					<a href="<?= $comun->rrss->youtube ?>">
+						<?= $this->svg('ico-youtube') ?>
+					</a>
+				</li>
+				<li class="is-section">
+					<a href="<?= $this->url('contact') ?>">
+						Contacto
+					</a>
+				</li>
+				<li class="is-section">
+					<a href="<?= $this->url('privacy') ?>">
+						Privacidade
+					</a>
 				</li>
 			</ul>
 		</nav>

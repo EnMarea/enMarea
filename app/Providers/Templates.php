@@ -14,6 +14,8 @@ class Templates implements ServiceProviderInterface
         $app['templates'] = function ($app) {
             $templates = new Engine($app->getPath('templates'));
 
+            $templates->addData(['app' => $app]);
+
             $templates->registerFunction('asset', function () use ($app) {
             	return call_user_func_array([$app, 'getUrl'], func_get_args());
             });

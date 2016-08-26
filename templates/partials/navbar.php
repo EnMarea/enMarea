@@ -1,3 +1,5 @@
+<?php $comun = $app->get('texts')['comun']; ?>
+
 <div class="navbar">
 	<div class="navbar-content">
 		<a href="<?= $this->url('home') ?>" class="navbar-logo">
@@ -7,17 +9,17 @@
 		<nav role="navigation" class="navbar-links js-navigation">
 			<ul class="is-desktop">
 				<li class="is-twitter">
-					<a href="#">
+					<a href="<?= $comun->rrss->twitter ?>">
 						<?= $this->svg('ico-twitter') ?>
 					</a>
 				</li>
 				<li class="is-facebook">
-					<a href="#">
+					<a href="<?= $comun->rrss->facebook ?>">
 						<?= $this->svg('ico-facebook') ?>
 					</a>
 				</li>
 				<li class="is-youtube">
-					<a href="#">
+					<a href="<?= $comun->rrss->youtube ?>">
 						<?= $this->svg('ico-youtube') ?>
 					</a>
 				</li>

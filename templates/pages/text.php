@@ -1,0 +1,31 @@
+<?php 
+
+use Jenssegers\Date\Date;
+
+$social = new SocialLinks\Page([
+	'url' => $this->url('home'),
+	'title' => $text->title.' - En Marea',
+]);
+?>
+
+<?= $this->layout('layouts/default', ['social' => $social]) ?>
+
+<?php $this->start('extra-head') ?>
+<link rel="stylesheet" type="text/css" href="<?= $this->asset('css/pages/text.css') ?>">
+<?php $this->stop(); ?>
+
+<div class="page-content">
+	<article class="text">
+		<header class="text-header">
+			<h1 class="text-title"><?= $text->title ?></h1>
+		</header>
+
+		<div class="text-body">
+			<?php
+			foreach ($text->body as $section) {
+				$this->insert('partials/sections/'.$section['type'], ['section' => $section]);
+			}
+			?>
+		</div>
+	</article>
+</div>

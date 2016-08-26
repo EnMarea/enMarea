@@ -25,6 +25,7 @@ class Admin extends \Folk\Admin
             Admin\News::class,
             Admin\Events::class,
             Admin\Headers::class,
+            Admin\Texts::class,
         ]);
     }
 }

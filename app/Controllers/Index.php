@@ -136,4 +136,42 @@ class Index
             'texts' => $app->get('texts'),
         ]);
     }
+
+    /**
+     * Privacidade
+     */
+    public function privacy(Request $request, Response $response, App $app)
+    {
+        return $this->text('privacidade', $response, $app);
+    }
+
+    /**
+     * Contacto
+     */
+    public function contact(Request $request, Response $response, App $app)
+    {
+        return $this->text('contacto', $response, $app);
+    }
+
+    /**
+     * Devolve unha páxina de texto corrido
+     */
+    private function text($name, Response $response, App $app)
+    {
+        $db = $app->get('db');
+
+        $text = $db->texts
+            ->select()
+            ->one()
+            ->by('name', $name)
+            ->run();
+
+        if (!$text) {
+            return $response->withStatus(404);
+        }
+
+        return $app['templates']->render('pages/text', [
+            'text' => $text,
+        ]);
+    }
 }
