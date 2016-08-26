@@ -59,6 +59,9 @@ $social = new SocialLinks\Page([
 		</section>
 	</div>
 
+	<?php
+	/* Eliminaos os filtros mentres non haxa suficiente contido
+
 	<ul class="page-highlights-filters js-filter" data-target="#highlights">
 		<li data-filter="*" class="is-actived">Movémonos</li>
 		<li data-filter=".is-acoruna">A Coruña</li>
@@ -66,6 +69,7 @@ $social = new SocialLinks\Page([
 		<li data-filter=".is-ourense">Ourense</li>
 		<li data-filter=".is-pontevedra">Pontevedra</li>
 	</ul>
+	*/ ?>
 </div>
 
 <section class="page-highlights">
