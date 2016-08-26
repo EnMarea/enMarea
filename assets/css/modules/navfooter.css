@@ -9,12 +9,12 @@
 	&:before {
 		content: "";
 		display: block;
-		border-top: solid 200px white;
-		border-left: solid 90vw transparent;
-		margin: 0 0 -100px auto;
+		border-top: solid 300px white;
+		border-left: solid 100vw transparent;
+		margin: 0 0 -200px auto;
 		width: 90vw;
 		height: 0;
-		box-sizing: border-box
+		box-sizing: border-box;
 	}
 }
 .navfooter-content {
@@ -40,7 +40,7 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		display: flex;
+		display: inline-flex;
 		align-items: center;
 		font-size: var(--font-14);
 		padding-top: 1.5rem;

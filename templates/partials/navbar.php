@@ -46,9 +46,11 @@
 				<li class="is-section">
 					<a href="#">En marea</a>
 				</li>
+				<?php /*
 				<li class="is-section">
 					<a href="#">Repositorio</a>
 				</li>
+				*/ ?>
 			</ul>
 			<button class="navbar-toggle js-toggle">
 				<?= $this->svg('ico-menu') ?>
@@ -77,9 +79,11 @@
 				<li>
 					<a href="#">En marea</a>
 				</li>
+				<?php /*
 				<li>
 					<a href="#">Repositorio</a>
 				</li>
+				*/ ?>
 			</ul>
 		</nav>
 	</div>

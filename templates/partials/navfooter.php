@@ -5,7 +5,7 @@
 		<span class="navfooter-logo">
 			<?= $this->svg('logo-enmarea-simbolo') ?>
 			<strong>
-				Xente común.
+				Hai marea
 			</strong>
 		</span>
 

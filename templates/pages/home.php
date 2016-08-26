@@ -28,7 +28,7 @@ $social = new SocialLinks\Page([
 			</header>
 
 			<blockquote class="hero-quote">
-				<span><?= $header->text ?></span>
+				<q><?= $header->text ?></q>
 			</blockquote>
 
 			<nav>
@@ -55,8 +55,14 @@ $social = new SocialLinks\Page([
 
 			<footer class="hero-social">
 				<strong>Vémonos nas redes</strong>
-				<a href="#">@VillaresLuis</a>
-				<a href="#">luis.luisino.7</a>
+				<a href="https://twitter.com/VillaresLuis">
+					<?= $this->svg('ico-twitter') ?>
+					@VillaresLuis
+				</a>
+				<a href="https://www.facebook.com/luis.luisino.7">
+					<?= $this->svg('ico-facebook') ?>
+					luis.luisino.7
+				</a>
 			</footer>
 		</section>
 	</div>

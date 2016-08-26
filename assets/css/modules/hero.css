@@ -1,11 +1,12 @@
 .hero {
 	background-color: black;
-	background-position: 25% 25%;
+	background-position: 15% 25%;
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: white;
 
 	&.is-right {
+		background-position: 85% 25%;
 		.hero-content {
 			margin: 0 0 0 auto;
 		}
@@ -75,15 +76,25 @@
 	margin: 0;
 	@extend %font-black-24__36;
 
-	span {
+	q {
 		background: var(--color-blue);
 	}
 }
 .hero-social {
 	a {
 		color: inherit;
+		display: inline-block;
+		white-space: nowrap;
+		margin: .5em 1em 0 0;
 	}
 	strong {
 		display: block;
+	}
+	svg {
+		display: inline-block;
+		width: 16px;
+	}
+	g {
+		fill: currentColor;
 	}
 }
