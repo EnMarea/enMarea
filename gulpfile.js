@@ -9,9 +9,11 @@ var gulp     = require('gulp'),
     webpack  = require('webpack'),
     url      = require('url'),
     favicon  = require('gulp-real-favicon'),
-    env      = process.env;
+    env      = require('node-env-file');
 
-var publicPath = url.parse(env.APP_URL || '/enMarea/public').pathname;
+env('.env');
+
+var publicPath = url.parse(process.env.APP_URL).pathname;
 
 gulp.task('apache', function () {
     gulp.src([
@@ -25,7 +27,7 @@ gulp.task('apache', function () {
 gulp.task('css', function() {
     var config = require('./stylecow.json');
 
-    if (env.APP_DEV) {
+    if (process.env.APP_DEV) {
         config.code = 'normal';
         config.cssErrors = true;
     } else {
@@ -46,7 +48,7 @@ gulp.task('css', function() {
 gulp.task('js', function(done) {
     var config = require('./webpack.config');
 
-    if (!env.APP_DEV) {
+    if (!process.env.APP_DEV) {
         config.plugins = config.plugins.concat(
             new webpack.optimize.DedupePlugin(),
             new webpack.optimize.UglifyJsPlugin()
@@ -78,13 +80,13 @@ gulp.task('fonts', function() {
 
 gulp.task('favicon', function(done) {
     favicon.generateFavicon({
-        masterPicture: 'assets/img/logo-rrss.png',
+        masterPicture: 'assets/img/favicon.png',
         dest: 'public',
         iconsPath: publicPath,
         design: {
             ios: {
                 pictureAspect: 'backgroundAndMargin',
-                backgroundColor: '#004efe',
+                backgroundColor: '#ffffff',
                 margin: '14%',
                 assets: {
                     ios6AndPriorIcons: false,
@@ -95,7 +97,7 @@ gulp.task('favicon', function(done) {
             },
             desktopBrowser: {},
             windows: {
-                pictureAspect: 'noChange',
+                pictureAspect: 'whiteSilhouette',
                 backgroundColor: '#da532c',
                 onConflict: 'override',
                 assets: {
@@ -109,7 +111,7 @@ gulp.task('favicon', function(done) {
                 }
             },
             androidChrome: {
-                pictureAspect: 'shadow',
+                pictureAspect: 'noChange',
                 themeColor: '#ffffff',
                 manifest: {
                     name: 'En marea',
@@ -124,10 +126,13 @@ gulp.task('favicon', function(done) {
                 }
             },
             safariPinnedTab: {
-                pictureAspect: 'blackAndWhite',
-                threshold: 92.8125,
-                themeColor: '#5bbad5'
+                pictureAspect: 'silhouette',
+                themeColor: '#004fff'
             }
+        },
+        settings: {
+            scalingAlgorithm: 'Lanczos',
+            errorOnImageTooSmall: false
         },
         settings: {
             scalingAlgorithm: 'Mitchell',

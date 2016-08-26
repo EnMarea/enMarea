@@ -12,6 +12,7 @@
     "gulp-real-favicon": "^0.2.1",
     "gulp-rename": "^1.2.2",
     "gulp-stylecow": "^3.2.2",
+    "node-env-file": "^0.1.8",
     "webpack": "^1.13.2"
   },
   "scripts": {

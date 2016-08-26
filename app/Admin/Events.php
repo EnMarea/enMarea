@@ -37,7 +37,7 @@ class Events extends SimpleCrud
 
             'person' => $b->text()
                 ->required()
-                ->label('Persoas que asistirán'),
+                ->label('Persoas que asistirán (separadas por coma)'),
 
             'intro' => $b->html()
                 ->label('Descripción do evento'),
