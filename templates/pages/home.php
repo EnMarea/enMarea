@@ -32,16 +32,21 @@ $social = new SocialLinks\Page([
 			<nav>
 				<ul class="hero-menu">
 					<li><a href="#">Coñéceme</a></li>
+					<?php /*
 					<li><a href="#">O meu blog</a></li>
 					<li><a href="#">Transparencia</a></li>
+					*/ ?>
 					<li class="is-extended">
 						<strong>Hoxe estaremos en:</strong>
 						
 						<ul class="eventList">
-							<?php $this->insert('partials/events/minilist') ?>
-							<?php $this->insert('partials/events/minilist') ?>
+							<?php
+							foreach ($events as $event) {
+								$this->insert('partials/events/minilist', ['event' => $event]);
+							}
+							?>
 						</ul>
-						<a href="#">Ver toda a axenda</a>
+						<a href="<?= $this->url('events') ?>">Ver toda a axenda</a>
 					</li>
 				</ul>
 			</nav>
@@ -54,17 +59,17 @@ $social = new SocialLinks\Page([
 		</section>
 	</div>
 
-	<ul class="page-highlights-filters">
-		<li><a class="is-actived" href="#">Movémonos</a></li>
-		<li><a href="#">A Coruña</a></li>
-		<li><a href="#">Lugo</a></li>
-		<li><a href="#">Ourense</a></li>
-		<li><a href="#">Pontevedra</a></li>
+	<ul class="page-highlights-filters js-filter" data-target="#highlights">
+		<li data-filter="*" class="is-actived">Movémonos</li>
+		<li data-filter=".is-acoruna">A Coruña</li>
+		<li data-filter=".is-lugo">Lugo</li>
+		<li data-filter=".is-ourense">Ourense</li>
+		<li data-filter=".is-pontevedra">Pontevedra</li>
 	</ul>
 </div>
 
 <section class="page-highlights">
-	<ul class="page-highlights-content">
+	<ul class="page-highlights-content" id="highlights">
 		<?php
 		foreach ($highlights as $highlight) {
 			$this->insert('partials/highlights/list', ['highlight' => $highlight]);

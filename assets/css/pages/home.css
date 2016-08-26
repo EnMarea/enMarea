@@ -22,24 +22,22 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	list-style: none;
-	@extend %font-16__24;
+	@extend %font-16-18;
 	font-weight: 700;
 	margin: 0;
 	padding: 0;
 
-	a {
-		display: block;
-		padding: .3rem .5rem;
+	li {
+		padding: .5rem;
 		background: var(--color-blue);
 		color: white;
 		white-space: nowrap;
+		margin-right: 1px;
+		cursor: pointer;
 
 		&.is-actived {
 			color: var(--color-blue);
 			background: white;
 		}
-	}
-	li {
-		margin-right: 1px;
 	}
 }

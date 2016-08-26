@@ -12,14 +12,36 @@
 		margin: 0;
 	}
 }
+.event-person {
+	border-bottom: solid 3px;
+	display: inline-block;
+	white-space: nowrap;
+}
+.event-intro {
+	p {
+		margin-top: 0;
+	}
+}
 .event.is-minilist {
 	font-size: var(--font-16);
 	display: flex;
 
 	.event-time {
 		width: 3em;
+		flex: 0 0 3em;
 	}
 }
+
+.event.is-list {
+	@extend %font-16-18;
+	display: flex;
+
+	.event-time {
+		width: 3.5em;
+		flex: 0 0 3.5em;
+	}
+}
+
 .eventList {
 	list-style: none;
 	padding: 0;

@@ -1,4 +1,7 @@
 <?php 
+
+use Jenssegers\Date\Date;
+
 $social = new SocialLinks\Page([
 	'url' => $this->url('home'),
 	'title' => $new->title.' - En Marea',
@@ -18,8 +21,9 @@ $social = new SocialLinks\Page([
 
 	<article class="new is-permalink">
 		<header class="new-header">
-			<time class="new-time">
-				<?= $new->createdAt->format('d-m-Y') ?>
+			<?php $date = Date::instance($new->createdAt); ?>
+			<time class="new-time" title="<?= $date->format('l j F') ?>">
+				<?= $date->diffForHumans() ?>
 			</time>
 
 			<h1 class="new-title"><?= $new->title ?></h1>

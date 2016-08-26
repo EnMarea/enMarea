@@ -3,6 +3,7 @@
 namespace App;
 
 use Fol;
+use Jenssegers\Date\Date;
 use Zend\Diactoros\ServerRequestFactory;
 use Zend\Diactoros\Response\SapiEmitter;
 use Zend\Diactoros\Response;
@@ -31,6 +32,8 @@ class App extends Fol
     {
         $this->setPath(dirname(__DIR__));
         $this->setUrl(env('APP_URL'));
+
+        Date::setLocale('gl');
 
         $this->register(new Providers\Router());
         $this->register(new Providers\Templates());

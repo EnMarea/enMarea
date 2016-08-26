@@ -1,9 +1,9 @@
 <footer class="navfooter">
 	<div class="navfooter-content">
 		<span class="navfooter-logo">
-			<?= $this->svg('logo-enmarea') ?>
+			<?= $this->svg('logo-enmarea-simbolo') ?>
 			<strong>
-				O cambio non hai quen o pare
+				Xente común.
 			</strong>
 		</span>
 

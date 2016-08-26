@@ -153,7 +153,8 @@
 		}
 	}
 
-	@media (min-width: 1200px) {
+	/* cambiar a (min-width: 1200px) cando haxa unha opción máis */
+	@media (min-width: 1100px) {
 		ul.is-desktop > li {
 			display: block;
 		}

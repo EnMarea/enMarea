@@ -9,6 +9,8 @@ require __DIR__.'/bootstrap.php';
  */
 class RoboFile extends \Robo\Tasks
 {
+    use Gettext\Robo\GettextScanner;
+
     /**
      * Run a php server.
      *
@@ -33,6 +35,17 @@ class RoboFile extends \Robo\Tasks
         //gulp + browser sync
         $this->taskExec('node node_modules/.bin/gulp sync')
             ->env($env)
+            ->run();
+    }
+
+    /**
+     * Scan files to find new gettext values
+     */
+    public function gettext()
+    {
+        $this->taskGettextScanner()
+            ->extract('templates/')
+            ->generate('locales/gl/messages.po', 'locales/gl/messages.php')
             ->run();
     }
 }

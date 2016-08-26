@@ -1,3 +1,8 @@
+<?php
+
+use Jenssegers\Date\Date;
+?>
+
 <li>
 	<article class="new is-list">
 		<figure class="new-image">
@@ -17,8 +22,9 @@
 				<?= $new->intro ?>
 			</div>
 			<footer class="new-footer">
-				<time class="new-time">
-					<?= $new->createdAt->format('d-m-Y') ?>
+				<?php $date = Date::instance($new->createdAt); ?>
+				<time class="new-time" title="<?= $date->format('l j F') ?>">
+					<?= $date->diffForHumans() ?>
 				</time>
 			</footer>
 		</div>

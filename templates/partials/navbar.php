@@ -27,14 +27,18 @@
 					</a>
 				</li>
 				<li class="is-section">
-					<a href="#">Axenda</a>
+					<a href="<?= $this->url('events') ?>"<?= $menu === 'events' ? ' class="is-actived"' : '' ?>>
+						Axenda
+					</a>
 				</li>
 				<li class="is-section">
 					<a href="#">Candidaturas</a>
 				</li>
+				<?php /*
 				<li class="is-section">
 					<a href="#">Programa</a>
 				</li>
+				*/ ?>
 				<li class="is-section">
 					<a href="#">En marea</a>
 				</li>
@@ -52,7 +56,9 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">Axenda</a>
+					<a href="<?= $this->url('events') ?>">
+						Axenda
+					</a>
 				</li>
 				<li>
 					<a href="#">Candidaturas</a>

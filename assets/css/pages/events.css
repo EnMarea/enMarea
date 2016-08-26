@@ -1,0 +1,86 @@
+@import "../variables.css";
+@import "../placeholders.css";
+
+.navbar {
+	background-color: var(--color-blue);
+}
+
+.page-header-container {
+	background: var(--color-blue);
+	color: white;
+	padding-bottom: 40px;
+
+	@media (--from-intermedium) {
+		padding-bottom: 140px;
+		margin-bottom: -100px;
+	}
+}
+
+.page-header {
+	@extend %wrapper;
+	max-width: var(--max-width);
+	margin-top: 20px;
+
+	@media (--from-intermedium) {
+		margin-top: 40px;
+	}
+
+	h1 {
+		@extend %font-black-36__72;
+		margin: 0;
+	}
+	p {
+		@extend %font-18-24;
+		margin: 0;
+	}
+}
+
+.page-content {
+	background: white;
+	@extend %wrapper;
+	max-width: var(--max-width);
+	padding: 20px;
+	min-height: 100px;
+
+	@media (--from-medium) {
+		display: flex;
+	}
+}
+.page-timeline {
+	display: none;
+
+	@media (--from-medium) {
+		display: block;
+		flex: 1 1 200px;
+	}
+}
+.page-events {
+	@media (--from-medium) {
+		flex: 1 1 200px;
+	}
+}
+.page-events-day {
+	> h2 {
+		color: var(--color-blue);
+		background: url('../../svg/ico-arrow-right.svg') no-repeat left center;
+		padding-left: 24px;
+		cursor: pointer;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	> ul {
+		display: none;
+		margin-left: 24px;
+	}
+
+	&.is-opened {
+		> h2 {
+			background-image: url('../../svg/ico-arrow-down.svg');
+		}
+		> ul {
+			display: block;
+		}
+	}
+}

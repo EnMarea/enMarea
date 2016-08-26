@@ -1,8 +1,6 @@
 var $ = require('jquery');
 
-/* Abrir/pechar o menú */
-$nav = $('.js-navigation');
-
+/* Abrir/pechar cousas */
 $('.js-toggle').click(function (e) {
 	$(this).parent().toggleClass('is-opened');
 });
@@ -13,7 +11,7 @@ var $window = $(window);
 var $html = $('html');
 
 $window.on('scroll', function() {
-    let pos = $window.scrollTop();
+    var pos = $window.scrollTop();
 
     if (pos > 5 && !sticked) {
         $html.addClass('is-scrolled');
@@ -23,3 +21,16 @@ $window.on('scroll', function() {
         sticked = false;
     }
 }).trigger('scroll');
+
+/* Filtro */
+$('.js-filter').click(function (e) {
+	var $target = $(e.target);
+
+	$target.addClass('is-actived').siblings().removeClass('is-actived');
+
+	$($(this).data('target'))
+		.children()
+		.hide()
+		.filter($target.data('filter'))
+		.show();
+});

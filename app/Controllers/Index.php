@@ -42,9 +42,17 @@ class Index
             ->orderBy('RAND()')
             ->run();
 
+        $events = $db->events
+            ->select()
+            ->where('isActive = 1')
+            ->where('DATE(`day`) = DATE(NOW())')
+            ->orderBy('day,hour')
+            ->run();
+
         return $app['templates']->render('pages/home', [
             'highlights' => $highlights,
             'header' => $header,
+            'events' => $events,
         ]);
     }
 
@@ -89,7 +97,7 @@ class Index
         $latests = $db->news
             ->select()
             ->where('isActive = 1')
-            //->where('id != :currentId', [':currentId' => $new->id])
+            ->where('id != :currentId', [':currentId' => $new->id])
             ->orderBy('createdAt', 'DESC')
             ->limit(3)
             ->run();
@@ -97,6 +105,25 @@ class Index
         return $app['templates']->render('pages/new', [
             'new' => $new,
             'latests' => $latests
+        ]);
+    }
+
+    /**
+     * Páxina de eventos
+     */
+    public function events(Request $request, Response $response, App $app)
+    {
+        $db = $app->get('db');
+
+        $events = $db->events
+            ->select()
+            ->where('isActive = 1')
+            ->orderBy('day', 'ASC')
+            ->orderBy('hour', 'ASC')
+            ->run();
+
+        return $app['templates']->render('pages/events', [
+            'events' => $events,
         ]);
     }
 }

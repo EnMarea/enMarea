@@ -19,6 +19,7 @@ class Router implements ServiceProviderInterface
             $map->get('home', '/', "{$ns}\\Index::home");
             $map->get('news', '/novas', "{$ns}\\Index::news");
             $map->get('new', '/nova/{slug}', "{$ns}\\Index::newPermalink");
+            $map->get('events', '/axenda', "{$ns}\\Index::events");
 
             return $routerContainer;
         };

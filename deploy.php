@@ -2,14 +2,14 @@
 
 require 'recipe/composer.php';
 
-server('dev', 'example.com', 22)
-    ->user('root')
+server('dev', 'oscarotero.com', 22)
+    ->user('oscarotero')
     ->forwardAgent()
     ->stage('dev')
-    ->env('branch', 'develop')
-    ->env('deploy_path', '/var/www/examle.com');
+    ->env('branch', 'master')
+    ->env('deploy_path', '/var/www/oscarotero.com/www/enMarea');
 
-set('repository', 'git@github.com:user/repo.git');
+set('repository', 'git@github.com:oscarotero/enMarea.git');
 set('writable_dirs', ['public']);
 set('shared_files', ['.env']);
 set('shared_dirs', ['data']);
