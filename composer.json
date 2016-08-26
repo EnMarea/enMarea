@@ -37,7 +37,9 @@
         "social-links/social-links": "^1.11",
         "gettext/gettext": "^4.0",
         "gettext/robo": "^2.0",
-        "jenssegers/date": "dev-master"
+        "jenssegers/date": "dev-master",
+        "fly-crud/fly-crud": "^2.0",
+        "symfony/yaml": "^3.1"
     },
     "autoload": {
         "psr-4": {

@@ -10,32 +10,5 @@ html {
 }
 
 .page-header {
-	@extend %wrapper;
-	max-width: 30rem;
-	padding: 0 20px;
-
-	@media (--from-intermedium) {
-		max-width: var(--max-width);
-		margin: 0 auto;
-		padding: 0;
-	}
-}
-
-.page-header {
-	color: var(--color-blue);
-	margin-top: 20px;
-	margin-bottom: 20px;
-
-	@media (--from-intermedium) {
-		margin-top: 40px;
-	}
-
-	h1 {
-		@extend %font-black-36__72;
-		margin: 0;
-	}
-	p {
-		@extend %font-18-24;
-		margin: 0;
-	}
+	@extend %header-white;
 }

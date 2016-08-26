@@ -1,0 +1,43 @@
+@import "../variables.css";
+@import "../placeholders.css";
+
+.navbar {
+	background-color: var(--color-blue);
+}
+
+.page-header-container {
+	@extend %header-blue;
+}
+
+.page-province {
+	max-width: var(--max-width-text);
+	margin: 0 auto;
+
+	h2 {
+		@extend %font-black-24__36;
+		color: var(--color-blue);
+	}
+
+	> ol {
+		@extend %font-16__24;
+		color: var(--color-blue);
+		font-weight: 700;
+	}
+
+	@media (--from-intermedium) {
+		display: flex;
+		align-items: center;
+
+		h2 {
+			text-align: right;
+			flex: 0 0 12rem;
+			margin-right: 20px;
+		}
+
+		> ol {
+			background: url('../../svg/ico-bracket-right.svg') no-repeat left center;
+			background-size: 80px 100%;
+			padding-left: 6em;
+		}
+	}
+}

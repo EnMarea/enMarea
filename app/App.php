@@ -39,6 +39,7 @@ class App extends Fol
         $this->register(new Providers\Templates());
         $this->register(new Providers\Middleware());
         $this->register(new Providers\Database());
+        $this->register(new Providers\Texts());
     }
 
     /**

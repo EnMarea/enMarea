@@ -190,3 +190,66 @@
 		}
 	}
 }
+
+
+/* Utilidades */
+%header-blue {
+	background: var(--color-blue);
+	color: white;
+	padding-bottom: 40px;
+
+	@media (--from-intermedium) AND (max-width: 2000px) {
+		padding-bottom: 140px;
+		margin-bottom: -100px;
+	}
+
+	> header {
+		@extend %wrapper;
+		max-width: var(--max-width);
+		margin-top: 20px;
+		text-align: center;
+
+		@media (--from-intermedium) {
+			margin-top: 40px;
+		}
+
+		h1 {
+			@extend %font-black-36__72;
+			margin: 0;
+		}
+		p {
+			@extend %font-18-24;
+			margin: 0;
+		}
+	}
+
+	+ div {
+		@extend %wrapper;
+		background: white;
+		padding: 20px;
+		max-width: var(--max-width);
+		min-height: 100px;
+	}
+}
+
+%header-white {
+	@extend %wrapper;
+	text-align: center;
+	color: var(--color-blue);
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	@media (--from-intermedium) {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+
+	h1 {
+		@extend %font-black-36__72;
+		margin: 0;
+	}
+	p {
+		@extend %font-18-24;
+		margin: 0;
+	}
+}

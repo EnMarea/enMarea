@@ -32,7 +32,9 @@
 					</a>
 				</li>
 				<li class="is-section">
-					<a href="#">Candidaturas</a>
+					<a href="<?= $this->url('candidates') ?>"<?= $menu === 'candidates' ? ' class="is-actived"' : '' ?>>
+						Candidaturas
+					</a>
 				</li>
 				<?php /*
 				<li class="is-section">
@@ -61,11 +63,15 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">Candidaturas</a>
+					<a href="<?= $this->url('candidates') ?>">
+						Candidaturas
+					</a>
 				</li>
+				<?php /*
 				<li>
 					<a href="#">Programa</a>
 				</li>
+				*/ ?>
 				<li>
 					<a href="#">En marea</a>
 				</li>

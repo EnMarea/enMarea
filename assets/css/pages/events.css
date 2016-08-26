@@ -6,42 +6,10 @@
 }
 
 .page-header-container {
-	background: var(--color-blue);
-	color: white;
-	padding-bottom: 40px;
-
-	@media (--from-intermedium) {
-		padding-bottom: 140px;
-		margin-bottom: -100px;
-	}
-}
-
-.page-header {
-	@extend %wrapper;
-	max-width: var(--max-width);
-	margin-top: 20px;
-
-	@media (--from-intermedium) {
-		margin-top: 40px;
-	}
-
-	h1 {
-		@extend %font-black-36__72;
-		margin: 0;
-	}
-	p {
-		@extend %font-18-24;
-		margin: 0;
-	}
+	@extend %header-blue;
 }
 
 .page-content {
-	background: white;
-	@extend %wrapper;
-	max-width: var(--max-width);
-	padding: 20px;
-	min-height: 100px;
-
 	@media (--from-medium) {
 		display: flex;
 	}

@@ -126,4 +126,14 @@ class Index
             'events' => $events,
         ]);
     }
+
+    /**
+     * Páxina de candidatos
+     */
+    public function candidates(Request $request, Response $response, App $app)
+    {
+        return $app['templates']->render('pages/candidates', [
+            'texts' => $app->get('texts'),
+        ]);
+    }
 }
