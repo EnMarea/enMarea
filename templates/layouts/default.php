@@ -30,6 +30,18 @@ https://oscarotero.com
         ?>
 
         <link rel="stylesheet" type="text/css" href="<?= $this->asset('css/styles.css') ?>">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="<?= $this->asset('apple-touch-icon.png') ?>">
+        <link rel="icon" type="image/png" href="<?= $this->asset('favicon-32x32.png') ?>" sizes="32x32">
+        <link rel="icon" type="image/png" href="<?= $this->asset('favicon-16x16.png') ?>" sizes="16x16">
+        <link rel="manifest" href="<?= $this->asset('manifest.json') ?>">
+        <link rel="mask-icon" href="<?= $this->asset('safari-pinned-tab.svg') ?>" color="#5bbad5">
+        <link rel="shortcut icon" href="<?= $this->asset('favicon.ico') ?>">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="<?= $this->asset('mstile-144x144.png') ?>">
+        <meta name="msapplication-config" content="<?= $this->asset('browserconfig.xml') ?>">
+        <meta name="theme-color" content="#ffffff">
+
         <?= $this->section('extra-head') ?>
     </head>
 

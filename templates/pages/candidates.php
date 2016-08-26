@@ -3,6 +3,8 @@
 $social = new SocialLinks\Page([
 	'url' => $this->url('candidates'),
 	'title' => 'Candidatos - En marea',
+	'image' => $this->asset('img/logo-rrss.png'),
+	'twitterUser' => '@en_marea',
 ]);
 
 $this->layout('layouts/default', ['menu' => 'candidates', 'social' => $social]);

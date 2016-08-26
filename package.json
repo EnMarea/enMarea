@@ -9,6 +9,7 @@
     "gulp-cached": "^1.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-imagemin": "^3.0.3",
+    "gulp-real-favicon": "^0.2.1",
     "gulp-rename": "^1.2.2",
     "gulp-stylecow": "^3.2.2",
     "webpack": "^1.13.2"

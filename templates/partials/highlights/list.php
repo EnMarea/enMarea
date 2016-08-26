@@ -7,10 +7,6 @@
 				<?php if (!empty($highlight->type)): ?>
 				<strong class="highlight-type"><?= $highlight->type ?></strong>
 				<?php endif ?>
-
-				<?php if (!empty($highlight->province)): ?>
-				<em class="highlight-province"><?= $highlight->province ?></em>
-				<?php endif ?>
 			</p>
 		</div>
 

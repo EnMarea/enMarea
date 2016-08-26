@@ -8,7 +8,10 @@ var gulp     = require('gulp'),
     sync     = require('browser-sync').create(),
     webpack  = require('webpack'),
     url      = require('url'),
+    favicon  = require('gulp-real-favicon'),
     env      = process.env;
+
+var publicPath = url.parse(env.APP_URL || '/enMarea/public').pathname;
 
 gulp.task('apache', function () {
     gulp.src([
@@ -50,7 +53,7 @@ gulp.task('js', function(done) {
         );
     }
 
-    config.output.publicPath = path.join(url.parse(env.APP_URL || '/').pathname, '/js/');
+    config.output.publicPath = path.join(publicPath, '/js/');
 
     webpack(config, function (err, stats) {
         done();
@@ -71,6 +74,69 @@ gulp.task('fonts', function() {
             return path;
         }))
         .pipe(gulp.dest('public/fonts'));
+});
+
+gulp.task('favicon', function(done) {
+    favicon.generateFavicon({
+        masterPicture: 'assets/img/logo-rrss.png',
+        dest: 'public',
+        iconsPath: publicPath,
+        design: {
+            ios: {
+                pictureAspect: 'backgroundAndMargin',
+                backgroundColor: '#004efe',
+                margin: '14%',
+                assets: {
+                    ios6AndPriorIcons: false,
+                    ios7AndLaterIcons: false,
+                    precomposedIcons: false,
+                    declareOnlyDefaultIcon: true
+                }
+            },
+            desktopBrowser: {},
+            windows: {
+                pictureAspect: 'noChange',
+                backgroundColor: '#da532c',
+                onConflict: 'override',
+                assets: {
+                    windows80Ie10Tile: false,
+                    windows10Ie11EdgeTiles: {
+                        small: false,
+                        medium: true,
+                        big: false,
+                        rectangle: false
+                    }
+                }
+            },
+            androidChrome: {
+                pictureAspect: 'shadow',
+                themeColor: '#ffffff',
+                manifest: {
+                    name: 'En marea',
+                    display: 'standalone',
+                    orientation: 'notSet',
+                    onConflict: 'override',
+                    declared: true
+                },
+                assets: {
+                    legacyIcon: false,
+                    lowResolutionIcons: false
+                }
+            },
+            safariPinnedTab: {
+                pictureAspect: 'blackAndWhite',
+                threshold: 92.8125,
+                themeColor: '#5bbad5'
+            }
+        },
+        settings: {
+            scalingAlgorithm: 'Mitchell',
+            errorOnImageTooSmall: false
+        },
+        markupFile: 'faviconData.json'
+    }, function() {
+        done();
+    });
 });
 
 gulp.task('sync', ['css', 'js', 'img', 'fonts'], function () {

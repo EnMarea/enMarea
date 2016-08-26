@@ -5,6 +5,9 @@ use Jenssegers\Date\Date;
 $social = new SocialLinks\Page([
 	'url' => $this->url('home'),
 	'title' => $new->title.' - En Marea',
+	'text' => $new->intro,
+	'image' => $this->img('uploads/news/imageFile/'.$new->imageFile->getFilename(), 'small.'),
+	'twitterUser' => '@en_marea'
 ]);
 ?>
 

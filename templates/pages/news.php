@@ -1,7 +1,9 @@
 <?php 
 $social = new SocialLinks\Page([
 	'url' => $this->url('news'),
-	'title' => 'En Marea - Actualidade',
+	'title' => 'Actualidade - En Marea',
+	'image' => $this->asset('img/logo-rrss.png'),
+	'twitterUser' => '@en_marea',
 ]);
 ?>
 
