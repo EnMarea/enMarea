@@ -48,6 +48,13 @@ class News extends SimpleCrud
                     'video' => [
                         'code' => $b->textarea()
                             ->label('Código do vídeo')
+                    ],
+                    'image' => [
+                        'imageFile' => $b->imageUpload()
+                            ->data('config', [
+                                'directory' => '../data/uploads/news/imageFile/'
+                            ])
+                            ->label('Imaxe')
                     ]
                 ])
                 ->required()

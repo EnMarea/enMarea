@@ -15,6 +15,14 @@ class News extends Table
             $data['slug'] = $slugify->slugify($data['slug']);
         }
 
+        if (isset($data['body'])) {
+        	foreach ($data['body'] as &$section) {
+        		if ($section['type'] === 'image') {
+        			$section['imageFile'] = $this->fields['imageFile']->dataToDatabase($section['imageFile']);
+        		}
+        	}
+        }
+
         return $data;
     }
 }

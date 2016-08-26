@@ -24,3 +24,8 @@
 		}
 	}
 }
+
+.section.is-image {
+	margin: 40px auto;
+	max-width: var(--max-width-text);
+}
