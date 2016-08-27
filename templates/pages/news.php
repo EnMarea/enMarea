@@ -26,3 +26,11 @@ $social = new SocialLinks\Page([
 	}
 	?>
 </ul>
+
+<nav class="page-navigation">
+<?php if ($nextPage): ?>
+	<a href="<?= $this->url('news').'?p='.$nextPage ?>" class="button">
+		Novas anteriores
+	</a>
+</nav>
+<?php endif ?>

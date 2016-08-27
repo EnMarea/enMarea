@@ -62,13 +62,28 @@ class Index
     public function news(Request $request, Response $response, App $app)
     {
         $db = $app->get('db');
+        $query = $request->getQueryParams();
+
+        $currPage = (empty($query['p']) ? 1 : (int) $query['p']) ?: 1;
+        $itemsPage = 12;
 
         $news = $db->news
             ->select()
             ->where('isActive = 1')
             ->orderBy('createdAt', 'DESC')
-            ->limit(6)
+            ->limit($itemsPage + 1)
+            ->offset(($currPage * $itemsPage) - $itemsPage)
             ->run();
+
+        $nextPage = false;
+
+        if ($news->count() > $itemsPage) {
+            $arr = iterator_to_array($news);
+            end($arr);
+            unset($news[key($arr)]);
+
+            $nextPage = $currPage + 1;
+        }
 
         if (Middleware\FormatNegotiator::getFormat($request) === 'xml') {
             return $app['templates']->render('pages/news.rss', [
@@ -78,6 +93,7 @@ class Index
 
         return $app['templates']->render('pages/news', [
             'news' => $news,
+            'nextPage' => $nextPage
         ]);
     }
 

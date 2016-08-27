@@ -8,3 +8,22 @@
 .page-header {
 	@extend %header-white;
 }
+.page-navigation {
+	@extend %wrapper;
+	text-align: center;
+	margin-top: 2rem;
+
+	.button {
+		display: inline-block;
+		padding: 1em;
+		border: solid 3px;
+		font-weight: 700;
+		font-size: var(--font-18);
+		text-decoration: none;
+
+		&:hover {
+			color: white;
+			background: var(--color-blue)
+		}
+	}
+}
