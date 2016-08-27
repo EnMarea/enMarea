@@ -5,11 +5,12 @@
 	font-weight: 700;
 }
 .event-address {
+	line-height: 1.2;
 	strong {
 		font-style: normal;
 	}
 	p {
-		margin: 0;
+		margin: .3em 0;
 	}
 }
 .event-person {

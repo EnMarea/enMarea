@@ -15,6 +15,7 @@ $social = new SocialLinks\Page([
 
 <?php $this->start('extra-head') ?>
 <link rel="stylesheet" type="text/css" href="<?= $this->asset('css/pages/new.css') ?>">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="<?= $this->url('news-rss') ?>">
 <?php $this->stop(); ?>
 
 <div class="page-content">

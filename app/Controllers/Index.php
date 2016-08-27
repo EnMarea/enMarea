@@ -70,6 +70,12 @@ class Index
             ->limit(6)
             ->run();
 
+        if (Middleware\FormatNegotiator::getFormat($request) === 'xml') {
+            return $app['templates']->render('pages/news.rss', [
+                'news' => $news,
+            ]);
+        }
+
         return $app['templates']->render('pages/news', [
             'news' => $news,
         ]);

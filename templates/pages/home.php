@@ -93,17 +93,6 @@ $social = new SocialLinks\Page([
 		<?php
 		foreach ($highlights as $highlight) {
 			$this->insert('partials/highlights/list', ['highlight' => $highlight]);
-			$this->insert('partials/highlights/list', ['highlight' => $highlight]);
-			$this->insert('partials/highlights/list', ['highlight' => $highlight]);
-			$this->insert('partials/highlights/list', ['highlight' => $highlight]);
-			$this->insert('partials/highlights/list', ['highlight' => $highlight]);
-			$this->insert('partials/highlights/list', ['highlight' => $highlight]);
-			$this->insert('partials/highlights/list', ['highlight' => $highlight]);
-			$this->insert('partials/highlights/list', ['highlight' => $highlight]);
-			$this->insert('partials/highlights/list', ['highlight' => $highlight]);
-			$this->insert('partials/highlights/list', ['highlight' => $highlight]);
-			$this->insert('partials/highlights/list', ['highlight' => $highlight]);
-			$this->insert('partials/highlights/list', ['highlight' => $highlight]);
 		}
 		?>
 	</ul>

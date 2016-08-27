@@ -39,7 +39,8 @@
         "gettext/robo": "^2.0",
         "jenssegers/date": "dev-master",
         "fly-crud/fly-crud": "^2.0",
-        "symfony/yaml": "^3.1"
+        "symfony/yaml": "^3.1",
+        "suin/php-rss-writer": "^1.5"
     },
     "autoload": {
         "psr-4": {

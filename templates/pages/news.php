@@ -11,6 +11,7 @@ $social = new SocialLinks\Page([
 
 <?php $this->start('extra-head') ?>
 <link rel="stylesheet" type="text/css" href="<?= $this->asset('css/pages/news.css') ?>">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="<?= $this->url('news-rss') ?>">
 <?php $this->stop(); ?>
 
 <header class="page-header">
@@ -21,10 +22,6 @@ $social = new SocialLinks\Page([
 <ul class="newList">
 	<?php
 	foreach ($news as $new) {
-		$this->insert('partials/news/list', ['new' => $new]);
-		$this->insert('partials/news/list', ['new' => $new]);
-		$this->insert('partials/news/list', ['new' => $new]);
-		$this->insert('partials/news/list', ['new' => $new]);
 		$this->insert('partials/news/list', ['new' => $new]);
 	}
 	?>
