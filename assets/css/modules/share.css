@@ -1,0 +1,22 @@
+.share {
+	display: flex;
+	align-items: center;
+	margin-top: 1rem;
+
+	a {
+		padding: .3em .5em;
+	}
+	strong {
+		margin-right: .5em;
+	}
+}
+.share-twitter {
+	g {
+		fill: #1DA1F2;
+	}
+}
+.share-facebook {
+	g {
+		fill: #3B5998;
+	}
+}

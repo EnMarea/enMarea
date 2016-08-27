@@ -3,7 +3,7 @@
 use Jenssegers\Date\Date;
 
 $social = new SocialLinks\Page([
-	'url' => $this->url('home'),
+	'url' => $this->url('new', ['slug' => $new->slug]),
 	'title' => $new->title.' - En Marea',
 	'text' => $new->intro,
 	'image' => $this->img('uploads/news/imageFile/'.$new->imageFile->getFilename(), 'small.'),
@@ -32,8 +32,10 @@ $social = new SocialLinks\Page([
 			<h1 class="new-title"><?= $new->title ?></h1>
 			
 			<div class="new-intro">
-				<?= $new->title ?>
+				<?= $new->intro ?>
 			</div>
+
+			<?php $this->insert('partials/share', ['social' => $social]) ?>
 		</header>
 
 		<figure class="new-image">

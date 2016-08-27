@@ -34,3 +34,10 @@ $('.js-filter').click(function (e) {
 		.filter($target.data('filter'))
 		.show();
 });
+
+/* Compartir nas redes sociais */
+$('.js-share').click(function (e) {
+	e.preventDefault();
+
+    window.open($(this).attr('href'), 'share', 'toolbar=0, status=0, width=650, height=360');
+});
