@@ -2,10 +2,10 @@
 	"files": [
 		{
 			"input": "assets/css/styles.css",
-			"output": "public/css/styles.css"
+			"output": "www/css/styles.css"
 		},{
 			"input": "assets/css/pages/*.css",
-			"output": "public/css/pages/[name].css"
+			"output": "www/css/pages/[name].css"
 		}
 	],
 	"support": {

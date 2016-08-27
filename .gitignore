@@ -2,8 +2,8 @@
 
 data/*
 .env
-public/*
-!public/index.php
+www/*
+!www/index.php
 !data/texts
 
 

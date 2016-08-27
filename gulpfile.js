@@ -21,7 +21,7 @@ gulp.task('apache', function () {
         'bower_components/apache-server-configs/dist/.htaccess',
     ])
     .pipe(concat('.htaccess'))
-    .pipe(gulp.dest('public'))
+    .pipe(gulp.dest('www'))
 });
 
 gulp.task('css', function() {
@@ -66,18 +66,18 @@ gulp.task('img', function(done) {
     gulp.src('assets/img/**/*.{jpg,png,gif,svg}')
         .pipe(cache('img'))
         .pipe(imagemin().on('end', done))
-        .pipe(gulp.dest('public/img'));
+        .pipe(gulp.dest('www/img'));
 });
 
 gulp.task('fonts', function() {
     gulp.src('assets/fonts/**/*')
-        .pipe(gulp.dest('public/fonts'));
+        .pipe(gulp.dest('www/fonts'));
 });
 
 gulp.task('favicon', function(done) {
     favicon.generateFavicon({
         masterPicture: 'assets/img/favicon.png',
-        dest: 'public',
+        dest: 'www',
         iconsPath: publicPath,
         design: {
             ios: {
@@ -150,7 +150,7 @@ gulp.task('sync', ['css', 'js', 'img', 'fonts'], function () {
     ], function (event) {
         sync.reload();
     });
-    gulp.watch('public/**/*', function (event) {
+    gulp.watch('www/**/*', function (event) {
         sync.reload(path.basename(event.path));
     });
 
