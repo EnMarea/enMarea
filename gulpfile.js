@@ -70,11 +70,7 @@ gulp.task('img', function(done) {
 });
 
 gulp.task('fonts', function() {
-    gulp.src('assets/fonts/*')
-        .pipe(rename(function (path) {
-            path.basename = path.basename.toLowerCase();
-            return path;
-        }))
+    gulp.src('assets/fonts/**/*')
         .pipe(gulp.dest('public/fonts'));
 });
 

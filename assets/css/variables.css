@@ -1,5 +1,5 @@
 :root {
-	--font: qanelas, helvetica, arial, sans-serif;
+	--font: enMarea, helvetica, arial, sans-serif;
 	--color-blue: #004FFF;
 	--color-black: #313131;
 	--color-gray-light: color(var(--color-black) tint(85%));
