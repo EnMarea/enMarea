@@ -33,7 +33,11 @@ $social = new SocialLinks\Page([
 
 			<nav>
 				<ul class="hero-menu">
-					<li><a href="#">Coñéceme</a></li>
+					<li>
+						<a href="<?= $this->url('bio') ?>">
+							Coñéceme
+						</a>
+					</li>
 					<?php /*
 					<li><a href="#">O meu blog</a></li>
 					<li><a href="#">Transparencia</a></li>
