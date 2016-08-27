@@ -76,10 +76,23 @@
 .hero-quote {
 	margin: 0;
 	@extend %font-black-24__36;
-	line-height: 1;
+	line-height: 1.05;
+	text-indent: -1rem;
+	border-left: solid 1rem var(--color-blue);
 
 	q {
 		background: var(--color-blue);
+		box-decoration-break: clone;
+		padding: 3px 5px 0 0;
+		quotes: none;
+		&::before {
+			content: "“";
+			font-weight: 700;
+		}
+		&::after {
+			content: "”";
+			font-weight: 700;
+		}
 	}
 }
 .hero-social {
