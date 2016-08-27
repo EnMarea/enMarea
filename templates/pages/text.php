@@ -30,7 +30,7 @@ $social = new SocialLinks\Page([
 	<div class="text-body">
 		<?php
 		foreach ($text->body as $section) {
-			$this->insert('partials/sections/'.$section['type'], ['section' => $section]);
+			$this->insert('partials/sections/'.$section['type'], ['section' => $section, 'context' => 'texts']);
 		}
 		?>
 	</div>
