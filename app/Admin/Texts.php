@@ -41,7 +41,9 @@ class Texts extends SimpleCrud
                             ->data('config', [
                                 'directory' => '../data/uploads/texts/imageFile/'
                             ])
-                            ->label('Imaxe')
+                            ->label('Imaxe'),
+                        'isWide' => $b->checkbox()
+                            ->label('Mostar a todo ancho'),
                     ]
                 ])
                 ->required()

@@ -16,18 +16,16 @@ $social = new SocialLinks\Page([
 <link rel="stylesheet" type="text/css" href="<?= $this->asset('css/pages/text.css') ?>">
 <?php $this->stop(); ?>
 
-<div class="page-content">
-	<article class="text">
-		<header class="text-header">
-			<h1 class="text-title"><?= $text->title ?></h1>
-		</header>
+<article class="text page-content">
+	<header class="text-header">
+		<h1 class="text-title"><?= $text->title ?></h1>
+	</header>
 
-		<div class="text-body">
-			<?php
-			foreach ($text->body as $section) {
-				$this->insert('partials/sections/'.$section['type'], ['section' => $section]);
-			}
-			?>
-		</div>
-	</article>
-</div>
+	<div class="text-body">
+		<?php
+		foreach ($text->body as $section) {
+			$this->insert('partials/sections/'.$section['type'], ['section' => $section]);
+		}
+		?>
+	</div>
+</article>

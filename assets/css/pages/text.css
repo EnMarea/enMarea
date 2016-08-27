@@ -6,7 +6,10 @@
 }
 
 .page-content {
-	@extend %wrapper;
-	max-width: var(--max-width-text);
 	margin-top: 40px;
+	
+	> header {
+		@extend %wrapper;
+		max-width: var(--max-width-text);
+	}
 }

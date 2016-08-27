@@ -38,10 +38,6 @@ $social = new SocialLinks\Page([
 			<?php $this->insert('partials/share', ['social' => $social]) ?>
 		</header>
 
-		<figure class="new-image">
-			<img src="<?= $this->img('uploads/news/imageFile/'.$new->imageFile->getFilename(), 'landscape.') ?>">
-		</figure>
-
 		<div class="new-body">
 			<?php
 			foreach ($new->body as $section) {

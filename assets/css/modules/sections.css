@@ -28,4 +28,12 @@
 .section.is-image {
 	margin: 40px auto;
 	max-width: var(--max-width-text);
+
+	&.is-wide {
+		max-width: none;
+
+		img {
+			width: 100%;
+		}
+	}
 }

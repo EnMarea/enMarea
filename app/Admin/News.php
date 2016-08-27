@@ -54,7 +54,9 @@ class News extends SimpleCrud
                             ->data('config', [
                                 'directory' => '../data/uploads/news/imageFile/'
                             ])
-                            ->label('Imaxe')
+                            ->label('Imaxe'),
+                        'isWide' => $b->checkbox()
+                            ->label('Mostar a todo ancho'),
                     ]
                 ])
                 ->required()
