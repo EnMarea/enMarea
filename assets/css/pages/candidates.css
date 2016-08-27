@@ -12,10 +12,11 @@
 .page-province {
 	margin: 0 auto;
 	color: var(--color-blue);
+	counter-reset: candidate;
+	text-align: center;
 
 	h2 {
 		@extend %font-black-24__36;
-		text-align: center;
 	}
 	h3 {
 		display: inline;
@@ -27,29 +28,45 @@
 	}
 }
 
-.page-candidates {
+.page-candidates-main {
 	@extend %grid-1-2-3-3-4;
-	counter-reset: candidate;
 	margin-bottom: 2em;
 
 	li {
-		margin-bottom: 1px;
-		display: flex;
-		align-items: center;
 		counter-increment: candidate;
 	}
 	strong {
 		&::before {
-			content: counter(candidate);
-			display: block;
+			content: counter(candidate) ". ";
+			display: inline-block;
 			font-weight: normal;
 			color: var(--color-gray);
 		}
 	}
 
 	img {
-		margin: 0 1em 0 0;
-		flex: 0 0 92px;
+		margin: 0 auto .5em auto;
+	}
+}
+.page-candidates-secondary {
+	list-style: none;
+	padding: 0;
+	text-align: center;
+
+	li {
+		counter-increment: candidate;
+		display: inline-block;
+		margin: .5em .5em;
+		white-space: nowrap;
+	}
+	strong {
+		&::before {
+			content: counter(candidate) ". ";
+			display: inline-block;
+			width: 1.2em;
+			font-weight: normal;
+			color: var(--color-gray);
+		}
 	}
 }
 .page-substitutes {

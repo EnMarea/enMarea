@@ -4,7 +4,7 @@ header:
 
 provinces:
   - title: A Coruña
-    candidates:
+    main_candidates:
       - name: Antón Sánchez García
       - name: Luca Chao Pérez
       - name: José Manuel Lago Peñas
@@ -13,6 +13,7 @@ provinces:
       - name: Flora María Miranda Pena
       - name: Xan Xove González
       - name: Mariló Candedo Gunturiz
+    secondary_candidates:
       - name: Carlos Palacios Suárez
       - name: Lorena Dapena Merlán
       - name: Daniel Alejandro “Uru” Calvete Suárez
@@ -38,11 +39,12 @@ provinces:
       - name: Eva García Amador
 
   - title: Lugo
-    candidates:
+    main_candidates:
       - name: Luis Villares Naveira
       - name: Paula Vázquez Verao
       - name: Víctor Andrés Álvarez Arias
       - name: María Isabel García Díaz
+    secondary_candidates:
       - name: José Manuel “Josito” Pérez Afonso
       - name: María Victoria Esteban Riesco
       - name: Bernardo Fraga Galdo
@@ -61,7 +63,7 @@ provinces:
       - name: Elías Pérez Sánchez
 
   - title: Pontevedra
-    candidates:
+    main_candidates:
       - name: Carmen Santos Queiruga
       - name: Marcos Cal Ogando
       - name: Eva Solla Fernández
@@ -70,6 +72,7 @@ provinces:
       - name: Xoán Hermida González
       - name: Julia Torregrosa Sañudo
       - name: Mariano Abalo Costa
+    secondary_candidates:
       - name: Noemí Martínez González
       - name: Juan Manuel Fajardo Recouso
       - name: Mar Blanco Casais
@@ -92,11 +95,12 @@ provinces:
       - name: María del Rosario Romero Bahamonde
 
   - title: Ourense
-    candidates:
+    main_candidates:
       - name: Ánxeles Cuña Bóveda
       - name: David Rodríguez Estévez
       - name: María Eva Gutiérrez Fernández
       - name: Xosé Manuel Pérez Bouza
+    secondary_candidates:
       - name: Manuela Pérez Pérez
       - name: Ares Jiménez Soria
       - name: Rita González Pérez
