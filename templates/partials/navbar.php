@@ -8,17 +8,13 @@
 
 		<nav role="navigation" class="navbar-links js-navigation">
 			<ul class="is-desktop">
-				<li class="is-twitter">
+				<li class="is-rrss">
 					<a href="<?= $comun->rrss->twitter ?>">
 						<?= $this->svg('ico-twitter') ?>
 					</a>
-				</li>
-				<li class="is-facebook">
 					<a href="<?= $comun->rrss->facebook ?>">
 						<?= $this->svg('ico-facebook') ?>
 					</a>
-				</li>
-				<li class="is-youtube">
 					<a href="<?= $comun->rrss->youtube ?>">
 						<?= $this->svg('ico-youtube') ?>
 					</a>
@@ -56,6 +52,17 @@
 				<?= $this->svg('ico-menu') ?>
 			</button>
 			<ul class="is-mobile">
+				<li class="is-rrss">
+					<a href="<?= $comun->rrss->twitter ?>">
+						<?= $this->svg('ico-twitter') ?>
+					</a>
+					<a href="<?= $comun->rrss->facebook ?>">
+						<?= $this->svg('ico-facebook') ?>
+					</a>
+					<a href="<?= $comun->rrss->youtube ?>">
+						<?= $this->svg('ico-youtube') ?>
+					</a>
+				</li>
 				<li>
 					<a href="<?= $this->url('news') ?>">
 						Novas
