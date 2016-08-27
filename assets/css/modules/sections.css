@@ -4,6 +4,7 @@
 .section.is-text {
 	max-width: var(--max-width-text);
 	@extend %font-16-18;
+	@extend %wrapper;
 	line-height: 1.4;
 	margin: 0 auto;
 }

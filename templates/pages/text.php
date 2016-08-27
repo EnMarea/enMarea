@@ -21,6 +21,12 @@ $social = new SocialLinks\Page([
 		<h1 class="text-title"><?= $text->title ?></h1>
 	</header>
 
+	<?php if (!empty($text->intro)): ?>
+	<div class="text-intro">
+		<?= $text->intro ?>
+	</div>
+	<?php endif ?>
+
 	<div class="text-body">
 		<?php
 		foreach ($text->body as $section) {

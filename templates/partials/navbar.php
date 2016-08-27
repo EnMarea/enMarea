@@ -40,7 +40,9 @@
 				</li>
 				*/ ?>
 				<li class="is-section">
-					<a href="#">En marea</a>
+					<a href="<?= $this->url('about') ?>"<?= $menu === 'about' ? ' class="is-actived"' : '' ?>>
+						En marea
+					</a>
 				</li>
 				<?php /*
 				<li class="is-section">
@@ -84,7 +86,9 @@
 				</li>
 				*/ ?>
 				<li>
-					<a href="#">En marea</a>
+					<a href="<?= $this->url('about') ?>">
+						En marea
+					</a>
 				</li>
 				<?php /*
 				<li>

@@ -12,4 +12,9 @@
 		@extend %wrapper;
 		max-width: var(--max-width-text);
 	}
+	> .text-intro {
+		@extend %wrapper;
+		max-width: var(--max-width-text);
+		margin-bottom: 4rem;
+	}
 }

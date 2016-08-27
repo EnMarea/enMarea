@@ -27,6 +27,9 @@ class Texts extends SimpleCrud
                 ->required()
                 ->label('Identificador (non cambiar)'),
 
+            'intro' => $b->html()
+                ->label('Texto introductorio (opcional)'),
+
             'body' => $b->collectionMultiple([
                     'text' => [
                         'html' => $b->html()

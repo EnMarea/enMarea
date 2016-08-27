@@ -160,6 +160,16 @@ class Index
     }
 
     /**
+     * En marea
+     */
+    public function about(Request $request, Response $response, App $app)
+    {
+        $app['templates']->addData(['menu' => 'about'], 'layouts/default');
+        
+        return $this->text('enmarea', $response, $app);
+    }
+
+    /**
      * Devolve unha páxina de texto corrido
      */
     private function text($name, Response $response, App $app)
