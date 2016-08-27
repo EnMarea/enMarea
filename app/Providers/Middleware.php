@@ -22,6 +22,9 @@ class Middleware implements ServiceProviderInterface
                     ->catchExceptions()
                     ->arguments($app),
                 */
+                M::create('/uploads', function () use ($app) {
+                    return M::saveResponse($app->getPath('www'));
+                }),
                 M::imageTransformer([
                     'small.' => 'resizeCrop,380,230',
                     'normal.' => 'resize,900',
