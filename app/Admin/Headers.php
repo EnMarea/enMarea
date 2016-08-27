@@ -9,7 +9,7 @@ class Headers extends SimpleCrud
 {
     public $title = 'Cabeceiras';
     public $description = 'Distintas cabeceiras para a portada';
-    public $icon = 'image/collections';
+    public $icon = 'editor/insert_emoticon';
 
     public function getTable()
     {

@@ -170,6 +170,14 @@ class Index
     }
 
     /**
+     * Biografía
+     */
+    public function bio(Request $request, Response $response, App $app)
+    {
+        return $this->text('biografia', $response, $app);
+    }
+
+    /**
      * Devolve unha páxina de texto corrido
      */
     private function text($name, Response $response, App $app)

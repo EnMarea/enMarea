@@ -9,7 +9,7 @@ class News extends SimpleCrud
 {
     public $title = 'Novas';
     public $description = 'Noticias de actualidade';
-    public $icon = 'image/collections';
+    public $icon = 'av/art_track';
 
     public function getTable()
     {

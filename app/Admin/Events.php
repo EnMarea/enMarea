@@ -9,7 +9,7 @@ class Events extends SimpleCrud
 {
     public $title = 'Eventos';
     public $description = 'Calendario de eventos';
-    public $icon = 'image/collections';
+    public $icon = 'action/event';
 
     public function getTable()
     {

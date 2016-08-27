@@ -9,7 +9,7 @@ class HighLights extends SimpleCrud
 {
     public $title = 'Destacados';
     public $description = 'Destacados de portada';
-    public $icon = 'image/collections';
+    public $icon = 'action/view_module';
 
     public function getTable()
     {

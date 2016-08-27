@@ -25,6 +25,7 @@ class Router implements ServiceProviderInterface
             $map->get('privacy', '/privacidade', "{$ns}\\Index::privacy");
             $map->get('contact', '/contacto', "{$ns}\\Index::contact");
             $map->get('about', '/en-marea', "{$ns}\\Index::about");
+            $map->get('bio', '/luis-villares', "{$ns}\\Index::bio");
 
             return $routerContainer;
         };

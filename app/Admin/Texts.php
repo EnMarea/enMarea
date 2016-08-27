@@ -9,7 +9,7 @@ class Texts extends SimpleCrud
 {
     public $title = 'Textos';
     public $description = 'Páxinas de textos corridos';
-    public $icon = 'image/collections';
+    public $icon = 'action/subject';
 
     public function getTable()
     {
