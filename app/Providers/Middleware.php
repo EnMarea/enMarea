@@ -21,7 +21,9 @@ class Middleware implements ServiceProviderInterface
                 M::ErrorHandler($app->getNamespace('Controllers\\Index::error'))
                     ->catchExceptions()
                     ->arguments($app),
+                Middleware::expires(),
                 */
+
                 M::create('/uploads', function () use ($app) {
                     return M::saveResponse($app->getPath('www'));
                 }),

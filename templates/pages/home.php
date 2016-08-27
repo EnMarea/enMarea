@@ -11,11 +11,13 @@ $social = new SocialLinks\Page([
 
 <?php $this->start('extra-head') ?>
 <link rel="stylesheet" type="text/css" href="<?= $this->asset('css/pages/home.css') ?>">
+<?php if (!empty($header->imageFile)): ?>
 <style type="text/css">
 	.hero {
 		background-image: url('<?= $this->img('uploads/headers/imageFile/'.$header->imageFile->getFilename(), 'landscape.') ?>');
 	}
 </style>
+<?php endif ?>
 <?php $this->stop(); ?>
 
 <div class="hero is-<?= $header->style ?>">
