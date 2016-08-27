@@ -198,4 +198,24 @@ class Index
             'text' => $text,
         ]);
     }
+
+    /**
+     * Páxina de candidatos
+     */
+    public function error(Request $request, Response $response, App $app)
+    {
+        switch ($response->getStatusCode()) {
+            case 404:
+                return $app['templates']->render('pages/error', [
+                    'texts' => $app->get('texts')['404'],
+                ]);
+                break;
+            
+            default:
+                return $app['templates']->render('pages/error', [
+                    'texts' => $app->get('texts')['500'],
+                ]);
+        }
+        
+    }
 }

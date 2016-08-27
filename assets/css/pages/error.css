@@ -1,0 +1,36 @@
+@import "../variables.css";
+@import "../placeholders.css";
+
+.navbar {
+	background-color: var(--color-blue);
+}
+.container {
+	background: transparent;
+}
+.page-content {
+	color: white;
+	text-align: center;
+	margin-top: 25vh;
+	@extend %wrapper;
+	max-width: var(--max-width-text);
+
+	h1 {
+		@extend %font-black-36__72;
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 0;
+		@extend %font-16__24;
+	}
+}
+.navfooter {
+	display: none;
+}
+.button {
+	background: white;
+	display: inline-block;
+	padding: 1em;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 3px;
+}

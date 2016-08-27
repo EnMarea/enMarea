@@ -72,21 +72,3 @@
 		}
 	}
 }
-	/*
-	@media (--from-intermedium) {
-		display: flex;
-		align-items: center;
-
-		h2 {
-			text-align: right;
-			flex: 0 0 12rem;
-			margin-right: 20px;
-		}
-
-		> ol {
-			background: url('../../svg/ico-bracket-right.svg') no-repeat left center;
-			background-size: 80px 100%;
-			padding-left: 6em;
-		}
-	}
-	*/
