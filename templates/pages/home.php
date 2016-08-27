@@ -38,6 +38,7 @@ $social = new SocialLinks\Page([
 					<li><a href="#">O meu blog</a></li>
 					<li><a href="#">Transparencia</a></li>
 					*/ ?>
+					<?php if ($events->count()): ?>
 					<li class="is-extended">
 						<strong>Hoxe estaremos en:</strong>
 						
@@ -48,8 +49,15 @@ $social = new SocialLinks\Page([
 							}
 							?>
 						</ul>
-						<a href="<?= $this->url('events') ?>">Ver toda a axenda</a>
+						<a href="<?= $this->url('events') ?>">Ver axenda completa</a>
 					</li>
+					<?php else: ?>
+					<li>
+						<a href="<?= $this->url('events') ?>">
+							Axenda de campaña
+						</a>
+					</li>
+					<?php endif ?>
 				</ul>
 			</nav>
 

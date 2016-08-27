@@ -39,7 +39,7 @@
 
 		&.is-extended {
 			background: white;
-			color: var(--color-blue);
+			color: var(--color-black);
 
 			> ul {
 				padding-left: 1rem;
