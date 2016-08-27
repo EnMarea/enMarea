@@ -73,9 +73,9 @@ $social = new SocialLinks\Page([
 					<?= $this->svg('ico-twitter') ?>
 					@VillaresLuis
 				</a>
-				<a href="https://www.facebook.com/luis.luisino.7">
+				<a href="https://www.facebook.com/LuisVillaresNaveira/">
 					<?= $this->svg('ico-facebook') ?>
-					luis.luisino.7
+					LuisVillaresNaveira
 				</a>
 			</footer>
 		</section>

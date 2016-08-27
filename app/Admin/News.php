@@ -43,6 +43,16 @@ class News extends SimpleCrud
             'isActive' => $b->checkbox()
                 ->label('Amosar'),
 
+            'province' => $b->select()
+                ->options([
+                    '' => 'Ningunha',
+                    'acoruna' => 'A Coruña',
+                    'lugo' => 'Lugo',
+                    'ourense' => 'Ourense',
+                    'pontevedra' => 'Pontevedra',
+                ])
+                ->label('Provincia'),
+
             'body' => $b->collectionMultiple([
                     'text' => [
                         'html' => $b->html()
