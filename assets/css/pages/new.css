@@ -1,10 +1,6 @@
 @import "../variables.css";
 @import "../placeholders.css";
 
-html {
-	background: white;
-}
-
 .navbar {
 	background-color: var(--color-blue);
 }

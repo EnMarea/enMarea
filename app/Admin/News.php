@@ -30,6 +30,9 @@ class News extends SimpleCrud
                 ->required()
                 ->label('Título'),
 
+            'createdAt' => $b->datetime()
+                ->label('Data de creación'),
+
             'slug' => $b->text()
                 ->required()
                 ->label('Id único (o que aparece na url)'),

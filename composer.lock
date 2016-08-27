@@ -1616,16 +1616,16 @@
         },
         {
             "name": "simple-crud/simple-crud",
-            "version": "v6.4.0",
+            "version": "v6.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/simple-crud.git",
-                "reference": "92b405570906ec0c45b8935b20adb31d0320afd8"
+                "reference": "b2e08c0040232e8ce3ba8571f4ae80cdafb57a41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/simple-crud/zipball/92b405570906ec0c45b8935b20adb31d0320afd8",
-                "reference": "92b405570906ec0c45b8935b20adb31d0320afd8",
+                "url": "https://api.github.com/repos/oscarotero/simple-crud/zipball/b2e08c0040232e8ce3ba8571f4ae80cdafb57a41",
+                "reference": "b2e08c0040232e8ce3ba8571f4ae80cdafb57a41",
                 "shasum": ""
             },
             "require": {
@@ -1659,7 +1659,7 @@
                 "mysql",
                 "sqlite"
             ],
-            "time": "2016-08-18 15:12:05"
+            "time": "2016-08-27 11:59:14"
         },
         {
             "name": "social-links/social-links",
