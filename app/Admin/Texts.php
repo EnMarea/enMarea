@@ -35,6 +35,13 @@ class Texts extends SimpleCrud
                     'video' => [
                         'code' => $b->textarea()
                             ->label('Código do vídeo')
+                    ],
+                    'image' => [
+                        'imageFile' => $b->imageUpload()
+                            ->data('config', [
+                                'directory' => '../data/uploads/texts/imageFile/'
+                            ])
+                            ->label('Imaxe')
                     ]
                 ])
                 ->required()

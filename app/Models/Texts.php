@@ -4,18 +4,11 @@ namespace App\Models;
 
 use SimpleCrud\Table;
 use SimpleCrud\Fields\File;
-use Cocur\Slugify\Slugify;
 
-class News extends Table
+class Texts extends Table
 {
     public function dataToDatabase(array $data, $new)
     {
-        if (isset($data['slug'])) {
-        	$slugify = new Slugify();
-
-            $data['slug'] = $slugify->slugify($data['slug']);
-        }
-
         $imageField = new File($this, 'imageFile');
 
         if (isset($data['body'])) {
