@@ -1,4 +1,4 @@
-<li class="highlight is-list<?= empty($highlight->province) ? '' : ' is-'.$highlight->province ?>">
+<li class="highlight is-list<?= empty($highlight->province) ? '' : ' is-'.$highlight->province ?>" data-folk="highlights,<?= $highlight->id ?>">
 	<a href="<?= $highlight->url ?>">
 		<div class="highlight-image">
 			<img src="<?= $this->img('uploads/highlights/imageFile/'.$highlight->imageFile->getFilename(), 'small.') ?>">

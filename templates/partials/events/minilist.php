@@ -1,4 +1,4 @@
-<li class="event is-minilist">
+<li class="event is-minilist" data-folk="events,<?= $event->id ?>">
 	<time class="event-time"><?= $event->hour ?></time>
 
 	<address class="event-address">

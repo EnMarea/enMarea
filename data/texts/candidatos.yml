@@ -9,16 +9,33 @@ provinces:
       - name: Luca Chao Pérez
       - name: José Manuel Lago Peñas
       - name: Magdalena Barahona Martín
-      - name: Francisco Pancho Casal Vidal
+      - name: Francisco “Pancho” Casal Vidal
       - name: Flora María Miranda Pena
       - name: Xan Xove González
       - name: Mariló Candedo Gunturiz
       - name: Carlos Palacios Suárez
-      - name: Lorena Dapena
-      - name: Daniel Alejandro Calvete Suárez
+      - name: Lorena Dapena Merlán
+      - name: Daniel Alejandro “Uru” Calvete Suárez
       - name: Iria Otero Romero
       - name: Gonzalo Rodríguez Rodríguez
       - name: María Antonia Trillo Blanco
+      - name: Enrique Costas Bastero
+      - name: Vanessa Vidal Freire
+      - name: Borja San Ramón Tizón
+      - name: Sara Torreiro Rodríguez
+      - name: Miguel Ángel Costoya Rivera
+      - name: Dores Torrado Ares
+      - name: Mariano Enrique Fernández Cabarcos
+      - name: Pilar María Tembrás Ameneiro
+      - name: Jesús Pérez Balirac
+      - name: Begoña Hermida Pérez
+      - name: Rogelio Santos Queiruga
+    substitutes:
+      - name: Anxos Paz García
+      - name: Antonio Padua Pérez Casas
+      - name: María Dolores Patiño Iglesias
+      - name: Luis Hernández Álvarez
+      - name: Eva García Amador
 
   - title: Lugo
     candidates:
@@ -30,6 +47,18 @@ provinces:
       - name: María Victoria Esteban Riesco
       - name: Bernardo Fraga Galdo
       - name: Natalia Prieto Fernández
+      - name: Marcos Besada Álvarez
+      - name: Carmen Maria Fernández Alarcón
+      - name: Luis Manuel Daporta Rodríguez
+      - name: Nery Díaz Prieto
+      - name: Ignacio Javier García Gómez
+      - name: María Patricia de la Fuente Vila
+    substitutes:
+      - name: Luis Díaz Allegue
+      - name: Maria Lourdes Sylla García
+      - name: Xesús Feás Sánchez
+      - name: Paula Santiago Fernández
+      - name: Elías Pérez Sánchez
 
   - title: Pontevedra
     candidates:
@@ -38,17 +67,33 @@ provinces:
       - name: Eva Solla Fernández
       - name: Juan J. Merlo Lorenzo
       - name: Paula Quinteiro Araújo
-      - name: Xoan Hermida González
-      - name: Julia Torregrosa
+      - name: Xoán Hermida González
+      - name: Julia Torregrosa Sañudo
       - name: Mariano Abalo Costa
       - name: Noemí Martínez González
       - name: Juan Manuel Fajardo Recouso
       - name: Mar Blanco Casais
       - name: Marcelo Armendáriz Gil
+      - name: María Consuelo Martínez García
+      - name: Constantino Cordal Rodríguez
+      - name: Sandra Pesqueira Pérez
+      - name: Manuel González Moreira
+      - name: Alhambra Martínez Cubillo
+      - name: Alberte García Álvarez
+      - name: María Luisa Lores Aguín
+      - name: David Crespo Pardo
+      - name: María Josefa Rodriguez Rosales
+      - name: Carlos Meixome Quinteiro
+    substitutes:
+      - name: Ana Rozados Gómez
+      - name: Ramón Bueno Piñeiro
+      - name: Silvia Díaz Iglesias
+      - name: Josué Villar Ballesteros
+      - name: María del Rosario Romero Bahamonde
 
   - title: Ourense
     candidates:
-      - name: María de los Ángeles Cuña Bóveda
+      - name: Ánxeles Cuña Bóveda
       - name: David Rodríguez Estévez
       - name: María Eva Gutiérrez Fernández
       - name: Xosé Manuel Pérez Bouza
@@ -56,3 +101,15 @@ provinces:
       - name: Ares Jiménez Soria
       - name: Rita González Pérez
       - name: Carlos Miguélez Soto
+      - name: Alba Menor Doval
+      - name: Jorge Lorenzo Vilas
+      - name: María Sofía Díaz Gómez
+      - name: Alejandro Hermida Prada
+      - name: María José Conde Seguín
+      - name: Brais Fidalgo Martínez
+    substitutes:
+      - name: Silvia Cuesta González
+      - name: Alfonso Grande Pérez
+      - name: Carmen Docampo Paradelo
+      - name: Óscar Fernández Abad
+      - name: María de los Ángeles Faraldo Vallés

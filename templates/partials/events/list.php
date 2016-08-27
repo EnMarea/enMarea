@@ -1,4 +1,4 @@
-<li class="event is-list">
+<li class="event is-list" data-folk="events,<?= $event->id ?>">
 	<time class="event-time"><?= $event->hour ?></time>
 
 	<div class="event-content">

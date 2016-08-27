@@ -23,7 +23,7 @@ $social = new SocialLinks\Page([
 		<a href="<?= $this->url('news') ?>">Volver á actualidade</a>
 	</nav>
 
-	<article class="new is-permalink">
+	<article class="new is-permalink" data-folk="news,<?= $new->id ?>">
 		<header class="new-header">
 			<?php $date = Date::instance($new->createdAt); ?>
 			<time class="new-time" title="<?= $date->format('l j F') ?>">

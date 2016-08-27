@@ -26,10 +26,21 @@ $this->layout('layouts/default', ['menu' => 'candidates', 'social' => $social]);
 	<section class="page-province">
 		<h2><?= $province->title ?></h2>
 
-		<ol>
+		<ol class="page-candidates">
 			<?php foreach ($province->candidates as $candidate): ?>
 			<li>
-				<?= $candidate->name ?>
+				<img src="//placehold.it/92x92">
+				<strong>
+					<?= $candidate->name ?>
+				</strong>
+			</li>
+			<?php endforeach ?>
+		</ol>
+		<h3>Suplentes:</h3>
+		<ol class="page-substitutes">
+			<?php foreach ($province->substitutes as $substitute): ?>
+			<li>
+				<?= $substitute->name ?>
 			</li>
 			<?php endforeach ?>
 		</ol>

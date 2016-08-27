@@ -16,7 +16,7 @@ $social = new SocialLinks\Page([
 <link rel="stylesheet" type="text/css" href="<?= $this->asset('css/pages/text.css') ?>">
 <?php $this->stop(); ?>
 
-<article class="text page-content">
+<article class="text page-content" data-folk="texts,<?= $text->id ?>">
 	<header class="text-header">
 		<h1 class="text-title"><?= $text->title ?></h1>
 	</header>

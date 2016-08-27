@@ -4,7 +4,7 @@ use Jenssegers\Date\Date;
 ?>
 
 <li>
-	<article class="new is-list">
+	<article class="new is-list" data-folk="news,<?= $new->id ?>">
 		<figure class="new-image">
 			<a href="<?= $this->url('new', ['slug' => $new->slug]) ?>">
 			<img src="<?= $this->img('uploads/news/imageFile/'.$new->imageFile->getFilename(), 'small.') ?>">
