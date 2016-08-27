@@ -2,7 +2,7 @@
 $social = new SocialLinks\Page([
 	'url' => $this->url('home'),
 	'title' => 'En Marea',
-	'image' => $this->img('uploads/headers/imageFile/'.$header->imageFile->getFilename(), 'small.'),
+	'image' => $this->asset('img/logo-rrss.png'),
 	'twitterUser' => '@en_marea',
 ]);
 ?>
