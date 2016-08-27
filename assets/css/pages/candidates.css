@@ -17,6 +17,7 @@
 
 	h2 {
 		@extend %font-black-24__36;
+		color: var(--color-black);
 	}
 	h3 {
 		display: inline;
@@ -31,6 +32,7 @@
 .page-candidates-main {
 	@extend %grid-1-2-3-3-4;
 	margin-bottom: 2em;
+	justify-content: center;
 
 	li {
 		counter-increment: candidate;

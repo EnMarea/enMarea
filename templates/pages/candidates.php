@@ -2,7 +2,7 @@
 
 $social = new SocialLinks\Page([
 	'url' => $this->url('candidates'),
-	'title' => 'Candidatos - En marea',
+	'title' => 'Listas para o cambio - En marea',
 	'image' => $this->asset('img/logo-rrss.png'),
 	'twitterUser' => '@en_marea',
 ]);
@@ -26,6 +26,7 @@ $this->layout('layouts/default', ['menu' => 'candidates', 'social' => $social]);
 	<section class="page-province">
 		<h2><?= $province->title ?></h2>
 
+		<?php /*
 		<ol class="page-candidates-main">
 			<?php foreach ($province->main_candidates as $candidate): ?>
 			<li>
@@ -36,9 +37,18 @@ $this->layout('layouts/default', ['menu' => 'candidates', 'social' => $social]);
 			</li>
 			<?php endforeach ?>
 		</ol>
+		*/ ?>
 		<ol class="page-candidates-secondary">
+			<?php foreach ($province->main_candidates as $candidate): ?>
+			<li>
+				<strong>
+					<?= $candidate->name ?>
+				</strong>
+			</li>
+			<?php endforeach ?>
+
 			<?php foreach ($province->secondary_candidates as $candidate): ?>
-			<li class="is-secondary">
+			<li>
 				<strong>
 					<?= $candidate->name ?>
 				</strong>
