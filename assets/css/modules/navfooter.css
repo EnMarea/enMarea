@@ -54,9 +54,13 @@
 				padding-right: 1em;
 			}
 		}
-		g {
-			fill: currentColor;
-		}
+	}
+	svg {
+		width: 24px;
+		height: 24px;
+	}
+	g {
+		fill: currentColor;
 	}
 	a {
 		color: inherit;
