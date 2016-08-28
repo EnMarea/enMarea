@@ -17,24 +17,31 @@ class Middleware implements ServiceProviderInterface
                 M::ClientIp(),
                 M::trailingSlash(),
                 M::FormatNegotiator(),
-                /*
-                M::ErrorHandler($app->getNamespace('Controllers\\Index::error'))
-                    ->catchExceptions()
-                    ->arguments($app),
-                Middleware::expires(),
-                */
+
+                M::create(function () {
+                    return env('APP_DEV') ? false : M::ErrorHandler($app->getNamespace('Controllers\\Index::error'))
+                        ->catchExceptions()
+                        ->arguments($app),
+                }),
+
+                M::create(function () {
+                    return env('APP_DEV') ? false : M::expires();
+                }),
 
                 M::create('/uploads', function () use ($app) {
                     return M::saveResponse($app->getPath('www'));
                 }),
+
                 M::imageTransformer([
                     'small.' => 'resizeCrop,380,230',
                     'normal.' => 'resize,900',
                     'landscape.' => 'resizeCrop,1200,600'
                 ]),
+
                 M::create('/uploads', function () use ($app) {
                     return M::readResponse($app->getPath('data'))->continueOnError();
                 }),
+
                 M::AuraRouter($app->get('router'))->arguments($app),
             ]);
         };
