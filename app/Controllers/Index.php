@@ -33,6 +33,7 @@ class Index
         $highlights = $db->highlights
             ->select()
             ->where('isActive = 1')
+            ->orderBy('position')
             ->run();
 
         $header = $db->headers

@@ -49,6 +49,9 @@ class HighLights extends SimpleCrud
 
             'isActive' => $b->checkbox()
                 ->label('Amosar'),
+
+            'position' => $b->number()
+                ->label('Posición'),
         ]);
     }
 }
