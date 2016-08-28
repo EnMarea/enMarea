@@ -24,6 +24,7 @@
 .hero-title {
 	svg {
 		width: 100%;
+		height: auto;
 	}
 	g {
 		fill: currentColor;
