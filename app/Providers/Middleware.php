@@ -18,7 +18,7 @@ class Middleware implements ServiceProviderInterface
                 M::trailingSlash(),
                 M::FormatNegotiator(),
 
-                M::create(function () {
+                M::create(function () use ($app) {
                     return env('APP_DEV') ? false : M::ErrorHandler($app->getNamespace('Controllers\\Index::error'))
                         ->catchExceptions()
                         ->arguments($app);
