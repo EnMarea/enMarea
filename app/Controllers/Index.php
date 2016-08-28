@@ -6,6 +6,7 @@ use App\App;
 use Zend\Diactoros\Response;
 use Zend\Diactoros\ServerRequest as Request;
 use Psr7Middlewares\Middleware;
+use Zend\Diactoros\Response\RedirectResponse;
 
 class Index
 {
@@ -214,6 +215,30 @@ class Index
         return $app['templates']->render('pages/text', [
             'text' => $text,
         ]);
+    }
+
+    /**
+     * Rutas que coinciden coa web antiga
+     */
+    public function redirect(Request $request, Response $response, App $app)
+    {
+        $slug = $request->getAttribute('slug');
+
+        $db = $app->get('db');
+
+        $new = $db->news
+            ->count()
+            ->by('slug', $slug)
+            ->limit(1)
+            ->run();
+
+        if (!$new) {
+            return $response->withStatus(404);
+        }
+
+        $url = $app['router']->getGenerator()->generate('new', ['slug' => $slug]);
+
+        return new RedirectResponse($app->getUrl($url));
     }
 
     /**
