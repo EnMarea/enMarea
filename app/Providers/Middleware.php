@@ -21,7 +21,7 @@ class Middleware implements ServiceProviderInterface
                 M::create(function () {
                     return env('APP_DEV') ? false : M::ErrorHandler($app->getNamespace('Controllers\\Index::error'))
                         ->catchExceptions()
-                        ->arguments($app),
+                        ->arguments($app);
                 }),
 
                 M::create(function () {
