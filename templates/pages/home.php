@@ -16,6 +16,12 @@ $social = new SocialLinks\Page([
 	.hero {
 		background-image: url('<?= $this->img('uploads/headers/imageFile/'.$header->imageFile->getFilename(), 'landscape.') ?>');
 	}
+	@media (max-width: 700px) {
+		.hero {
+			background-image: linear-gradient(rgba(0, 30, 100, .6), rgba(0, 30, 100, .6)), url('<?= $this->img('uploads/headers/imageFile/'.$header->imageFile->getFilename(), 'normal.') ?>');
+			background-position: center center;
+		}
+	}
 </style>
 <?php endif ?>
 <?php $this->stop(); ?>
