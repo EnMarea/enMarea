@@ -77,7 +77,7 @@
 .hero-quote {
 	margin: 0;
 	@extend %font-black-24__36;
-	line-height: 1;
+	line-height: 1.2;
 	text-indent: -1rem;
 	border-left: solid 1rem var(--color-blue);
 
@@ -86,6 +86,7 @@
 		box-decoration-break: clone;
 		padding: 0 5px 0 0;
 		quotes: none;
+		
 		&::before {
 			content: "“";
 			font-weight: 700;

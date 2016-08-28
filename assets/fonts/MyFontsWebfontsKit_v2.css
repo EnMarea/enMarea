@@ -55,7 +55,7 @@
  
   
 @font-face {
-	font-family: 'Qanelas-Heavy';
+	font-family: 'enMarea';
 	src: url('webfonts_v2/31FB10_2_0.eot');
 	src: url('webfonts_v2/31FB10_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts_v2/31FB10_2_0.woff2') format('woff2'),url('webfonts_v2/31FB10_2_0.woff') format('woff'),url('webfonts_v2/31FB10_2_0.ttf') format('truetype');
 	font-style: normal;
@@ -64,7 +64,7 @@
  
   
 @font-face {
-	font-family: 'Qanelas-RegularItalic';
+	font-family: 'enMarea';
 	src: url('webfonts_v2/31FB10_3_0.eot');
 	src: url('webfonts_v2/31FB10_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts_v2/31FB10_3_0.woff2') format('woff2'),url('webfonts_v2/31FB10_3_0.woff') format('woff'),url('webfonts_v2/31FB10_3_0.ttf') format('truetype');
 	font-style: italic;
@@ -73,7 +73,7 @@
  
   
 @font-face {
-	font-family: 'Qanelas-Regular';
+	font-family: 'enMarea';
 	src: url('webfonts_v2/31FB10_4_0.eot');
 	src: url('webfonts_v2/31FB10_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts_v2/31FB10_4_0.woff2') format('woff2'),url('webfonts_v2/31FB10_4_0.woff') format('woff'),url('webfonts_v2/31FB10_4_0.ttf') format('truetype');
 	font-style: normal;
