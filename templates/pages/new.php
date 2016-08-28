@@ -6,7 +6,7 @@ $social = new SocialLinks\Page([
 	'url' => $this->url('new', ['slug' => $new->slug]),
 	'title' => $new->title.' - En Marea',
 	'text' => $new->intro,
-	'image' => $this->img('uploads/news/imageFile/'.$new->imageFile->getFilename(), 'small.'),
+	'image' => $new->imageFile ? $this->img('uploads/news/imageFile/'.$new->imageFile->getFilename(), 'small.') : null,
 	'twitterUser' => '@en_marea'
 ]);
 ?>
