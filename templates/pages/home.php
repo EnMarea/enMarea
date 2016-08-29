@@ -37,7 +37,13 @@ $social = new SocialLinks\Page([
 			</header>
 
 			<blockquote class="hero-quote">
-				<q><?= $header->text ?></q>
+				<?php if (empty($header->url)): ?>
+					<q><?= $header->text ?></q>
+				<?php else: ?>
+					<a href="<?= $header->url ?>">
+						<q><?= $header->text ?></q>
+					</a>
+				<?php endif ?>
 			</blockquote>
 
 			<nav>

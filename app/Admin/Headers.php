@@ -30,6 +30,9 @@ class Headers extends SimpleCrud
                 ->required()
                 ->label('Texto'),
 
+            'url' => $b->url()
+                ->label('Url á que queres que vaia (opcional)'),
+
             'style' => $b->select()
                 ->options([
                     'left' => 'Texto á esquerda',
