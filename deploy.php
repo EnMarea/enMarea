@@ -2,31 +2,40 @@
 
 require 'recipe/composer.php';
 
-server('dev', 'oscarotero.com', 22)
-    ->user('oscarotero')
+server('prod', '82.98.177.41', 22)
+    ->user('enmarea')
     ->forwardAgent()
-    ->stage('dev')
+    ->stage('prod')
     ->env('branch', 'master')
-    ->env('deploy_path', '/var/www/oscarotero.com/www/enMarea');
+    ->env('deploy_path', '/var/www/enmarea.gal/www');
 
 set('repository', 'git@github.com:oscarotero/enMarea.git');
-set('writable_dirs', ['public']);
 set('shared_files', ['.env']);
 set('shared_dirs', ['data']);
 
 task('deploy:assets', function () {
-    $path = env('release_path');
-    $uploads = [
-        '/public/.htaccess',
-        '/public/img',
-        '/public/css',
-        '/public/js',
-    ];
+    $releasePath = env('release_path');
 
+    run("php {$releasePath}/vendor/bin/phinx migrate -c {$releasePath}/phinx.php");
     runLocally('node node_modules/.bin/gulp');
 
-    foreach ($uploads as $dir) {
-        upload(__DIR__.$dir, $path.$dir);
+    $uploads = array_merge(
+        [
+            'www/.htaccess',
+            'www/css',
+            'www/img',
+            'www/fonts',
+            'www/js',
+        ],
+        glob('www/*.png'),
+        glob('www/*.ico'),
+        glob('www/*.svg'),
+        glob('www/*.json'),
+        glob('www/*.xml')
+    );
+
+    foreach ($uploads as $path) {
+        upload(__DIR__.'/'.$path, $releasePath.'/'.$path);
     }
 });
 

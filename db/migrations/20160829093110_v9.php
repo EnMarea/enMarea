@@ -28,7 +28,7 @@ class V9 extends AbstractMigration
     public function change()
     {
         $this->table('texts')
-            ->addColumn('texts_id', 'integer')
+            ->addColumn('texts_id', 'integer', ['null' => true])
             ->addColumn('position', 'integer', ['null' => true])
             ->addForeignKey('texts_id', 'texts', 'id', ['delete' => 'SET NULL'])
             ->update();
