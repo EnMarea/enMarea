@@ -11,7 +11,10 @@ server('prod', '82.98.177.41', 22)
 
 set('repository', 'git@github.com:oscarotero/enMarea.git');
 set('shared_files', ['.env']);
-set('shared_dirs', ['data']);
+set('shared_dirs', [
+    'data/logs',
+    'data/uploads',
+]);
 
 task('deploy:assets', function () {
     $releasePath = env('release_path');
