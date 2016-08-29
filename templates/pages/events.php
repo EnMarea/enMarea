@@ -5,7 +5,8 @@ use Jenssegers\Date\Date;
 $social = new SocialLinks\Page([
 	'url' => $this->url('events'),
 	'title' => 'Axenda - En marea',
-	'image' => $this->asset('img/logo-rrss.png'),
+	'text' => 'En Marea, a alternativa de cambio en Galicia. Coñece a Luís Villares, o futuro presidente da Xunta',
+	'image' => $this->asset('img/img-rrss.png'),
 	'twitterUser' => '@en_marea',
 ]);
 

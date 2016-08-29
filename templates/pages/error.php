@@ -1,9 +1,10 @@
 <?php
 
 $social = new SocialLinks\Page([
-	'url' => $this->url('candidates'),
-	'title' => 'Candidatos - En marea',
-	'image' => $this->asset('img/logo-rrss.png'),
+	'url' => $this->url('home'),
+	'title' => 'En marea',
+	'text' => 'En Marea, a alternativa de cambio en Galicia. Coñece a Luís Villares, o futuro presidente da Xunta',
+	'image' => $this->asset('img/img-rrss.png'),
 	'twitterUser' => '@en_marea',
 ]);
 
