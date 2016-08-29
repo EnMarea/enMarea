@@ -1,5 +1,5 @@
 .navbar {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -10,6 +10,10 @@
 
 	+ div, + header, + article {
 		padding-top: 5rem;
+	}
+
+	@media (min-height: 500px) {
+		position: fixed;
 	}
 }
 
@@ -30,6 +34,11 @@
 	svg {
 		display: block;
 		max-width: 100%;
+
+		@media (--to-intermedium) {
+			width: 200px;
+			height: 41px;
+		}
 	}
 	path {
 		fill: currentColor;
@@ -90,7 +99,7 @@
 		}
 		&.is-mobile {
 			position: fixed;
-			right: 0;
+			right: 4%;
 			top: 50px;
 			transform: translateX(100px);
 			opacity: 0;
@@ -172,7 +181,7 @@
 
 	/* cambiar a (min-width: 1100px) cando haxa unha opción máis */
 	/* cambiar a (min-width: 1200px) cando haxa dúas opción máis */
-	@media (min-width: 1000px) {
+	@media (min-width: 1100px) {
 		ul.is-desktop > li {
 			display: block;
 		}
