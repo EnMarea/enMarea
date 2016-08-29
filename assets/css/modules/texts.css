@@ -43,16 +43,19 @@
 		}
 
 		a {
-			background: url('../../svg/ico-arrow-right.svg') no-repeat left center;
-			padding-left: 20px;
+			background: url('../../svg/ico-arrow-right.svg') no-repeat 20px center;
+			padding-left: 40px;
 			display: inline-block;
 
 			&.is-back {
 				background-image: url('../../svg/ico-arrow-left.svg');
+				background-position: left center;
+				padding-left: 20px;
+				margin-bottom: 1em;
 			}
 			&.is-selected {
-				color: var(--color-gray);
-				background: none;
+				color: var(--color-black);
+				text-decoration: line-through;
 			}
 		}
 	}
