@@ -1,6 +1,6 @@
 /**
  * @license
- * MyFonts Webfont Build ID 3275419, 2016-08-27T05:31:36-0400
+ * MyFonts Webfont Build ID 3275962, 2016-08-29T14:05:43-0400
  * 
  * The fonts listed in this notice are subject to the End User License
  * Agreement(s) entered into by the website owner. All other parties are 
@@ -14,6 +14,12 @@
  * Webfont: Qanelas-Bold by Radomir Tinkov
  * URL: http://www.myfonts.com/fonts/radomir-tinkov/qanelas/bold/
  * 
+ * Webfont: Qanelas-BoldItalic by Radomir Tinkov
+ * URL: http://www.myfonts.com/fonts/radomir-tinkov/qanelas/bold-italic/
+ * 
+ * Webfont: Qanelas-SemiBold by Radomir Tinkov
+ * URL: http://www.myfonts.com/fonts/radomir-tinkov/qanelas/semi-bold/
+ * 
  * Webfont: Qanelas-RegularItalic by Radomir Tinkov
  * URL: http://www.myfonts.com/fonts/radomir-tinkov/qanelas/regular-italic/
  * 
@@ -21,7 +27,7 @@
  * URL: http://www.myfonts.com/fonts/radomir-tinkov/qanelas/regular/
  * 
  * 
- * License: http://www.myfonts.com/viewlicense?type=web&buildid=3275419
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3275962
  * Licensed pageviews: 100,000
  * Webfonts copyright: Copyright &#x00A9; 2015 by Radomir Tinkov. All rights reserved.
  * 
@@ -30,40 +36,20 @@
 
 
 /* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/31fa9b");
+@import url("//hello.myfonts.net/count/31fcba");
 
   
-@font-face {
-	font-family: 'enMarea';
-	src: url('webfonts/31FA9B_0_0.eot');
-	src: url('webfonts/31FA9B_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/31FA9B_0_0.woff2') format('woff2'),url('webfonts/31FA9B_0_0.woff') format('woff'),url('webfonts/31FA9B_0_0.ttf') format('truetype');
-	font-style: normal;
-	font-weight: 900;
-}
+@font-face {font-family: 'enMarea';font-weight: 900; font-style: normal;src: url('webfonts/31FCBA_0_0.eot');src: url('webfonts/31FCBA_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/31FCBA_0_0.woff2') format('woff2'),url('webfonts/31FCBA_0_0.woff') format('woff'),url('webfonts/31FCBA_0_0.ttf') format('truetype');}
  
   
-@font-face {
-	font-family: 'enMarea';
-	src: url('webfonts/31FA9B_1_0.eot');
-	src: url('webfonts/31FA9B_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/31FA9B_1_0.woff2') format('woff2'),url('webfonts/31FA9B_1_0.woff') format('woff'),url('webfonts/31FA9B_1_0.ttf') format('truetype');
-	font-style: normal;
-	font-weight: 700;
-}
+@font-face {font-family: 'enMarea';font-weight: bold;font-style: normal;src: url('webfonts/31FCBA_1_0.eot');src: url('webfonts/31FCBA_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/31FCBA_1_0.woff2') format('woff2'),url('webfonts/31FCBA_1_0.woff') format('woff'),url('webfonts/31FCBA_1_0.ttf') format('truetype');}
  
   
-@font-face {
-	font-family: 'enMarea';
-	src: url('webfonts/31FA9B_2_0.eot');
-	src: url('webfonts/31FA9B_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/31FA9B_2_0.woff2') format('woff2'),url('webfonts/31FA9B_2_0.woff') format('woff'),url('webfonts/31FA9B_2_0.ttf') format('truetype');
-	font-style: italic;
-	font-weight: 400;
-}
+@font-face {font-family: 'enMarea';font-weight: bold;font-style: italic;src: url('webfonts/31FCBA_2_0.eot');src: url('webfonts/31FCBA_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/31FCBA_2_0.woff2') format('woff2'),url('webfonts/31FCBA_2_0.woff') format('woff'),url('webfonts/31FCBA_2_0.ttf') format('truetype');}
  
   
-@font-face {
-	font-family: 'enMarea';
-	src: url('webfonts/31FA9B_3_0.eot');
-	src: url('webfonts/31FA9B_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/31FA9B_3_0.woff2') format('woff2'),url('webfonts/31FA9B_3_0.woff') format('woff'),url('webfonts/31FA9B_3_0.ttf') format('truetype');
-	font-style: normal;
-	font-weight: 400;
-}
+@font-face {font-family: 'enMarea';font-weight: normal;font-style: italic;src: url('webfonts/31FCBA_4_0.eot');src: url('webfonts/31FCBA_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/31FCBA_4_0.woff2') format('woff2'),url('webfonts/31FCBA_4_0.woff') format('woff'),url('webfonts/31FCBA_4_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'enMarea';font-weight: normal;font-style: normal;src: url('webfonts/31FCBA_5_0.eot');src: url('webfonts/31FCBA_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/31FCBA_5_0.woff2') format('woff2'),url('webfonts/31FCBA_5_0.woff') format('woff'),url('webfonts/31FCBA_5_0.ttf') format('truetype');}
+ 
