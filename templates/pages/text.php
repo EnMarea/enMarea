@@ -17,7 +17,19 @@ $social = new SocialLinks\Page([
 <link rel="stylesheet" type="text/css" href="<?= $this->asset('css/pages/text.css') ?>">
 <?php $this->stop(); ?>
 
-<article class="text page-content" data-folk="texts,<?= $text->id ?>">
+<?php if ($menu->count() && $subText): ?>
+<nav class="page-navigation">
+	<ul>
+		<li>
+			<a href="<?= $this->url('about') ?>">
+				Volver
+			</a>
+		</li>
+	</ul>
+</nav>
+<?php endif ?>
+
+<article class="text is-permalink page-content" data-folk="texts,<?= $text->id ?>">
 	<header class="text-header">
 		<h1 class="text-title"><?= $text->title ?></h1>
 	</header>
@@ -35,4 +47,25 @@ $social = new SocialLinks\Page([
 		}
 		?>
 	</div>
+
+	<?php if ($menu->count()): ?>
+	<nav class="text-navigation">
+		<ul>
+			<?php if ($subText): ?>
+			<li>
+				<a href="<?= $this->url('about') ?>" class="is-back">
+					Volver
+				</a>
+			</li>
+			<?php endif ?>
+			<?php foreach ($menu as $option): ?>
+			<li>
+				<a href="<?= $this->url('about', ['slug' => $option->name]) ?>"<?= $option->name === $text->name ? ' class="is-selected"' : '' ?>>
+					<?= $option->title ?>
+				</a>
+			</li>
+			<?php endforeach ?>
+		</ul>
+	</nav>
+	<?php endif ?>
 </article>

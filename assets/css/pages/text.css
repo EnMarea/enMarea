@@ -5,16 +5,40 @@
 	background-color: var(--color-blue);
 }
 
+.page-navigation {
+	@extend %wrapper;
+	border-bottom: solid 3px var(--color-blue);
+	@extend %font-16-18;
+	font-weight: bold;
+	max-width: var(--max-width);
+	padding-bottom: 10px;
+	margin-bottom: 2em;
+	padding-top: 6rem;
+
+	a {
+		display: inline-block;
+		white-space: nowrap;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	li + li {
+		border-left: solid 1px var(--color-gray-light);
+		padding-left: 1em;
+		margin-left: 1em;
+	}
+
+	li:first-child a {
+		background: url('../../svg/ico-arrow-left.svg') no-repeat left center;
+		padding-left: 20px;
+	}
+}
+
 .page-content {
-	margin-top: 40px;
-	
-	> header {
-		@extend %wrapper;
-		max-width: var(--max-width-text);
-	}
-	> .text-intro {
-		@extend %wrapper;
-		max-width: var(--max-width-text);
-		margin-bottom: 4rem;
-	}
+	margin-top: 4rem;
 }

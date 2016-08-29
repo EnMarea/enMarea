@@ -17,3 +17,43 @@
 		border-bottom: solid 2px var(--color-blue);
 	}
 }
+.text.is-permalink {
+	.text-header {
+		@extend %wrapper;
+		max-width: var(--max-width-text);
+	}
+	.text-intro {
+		@extend %wrapper;
+		max-width: var(--max-width-text);
+		margin-bottom: 4rem;
+	}
+	.text-navigation {
+		@extend %wrapper;
+		max-width: var(--max-width-text);
+		margin-top: 4rem;
+		padding-top: 2rem;
+		border-top: solid 3px var(--color-blue);
+		@extend %font-16-18;
+		font-weight: 700;
+		
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		a {
+			background: url('../../svg/ico-arrow-right.svg') no-repeat left center;
+			padding-left: 20px;
+			display: inline-block;
+
+			&.is-back {
+				background-image: url('../../svg/ico-arrow-left.svg');
+			}
+			&.is-selected {
+				color: var(--color-gray);
+				background: none;
+			}
+		}
+	}
+}

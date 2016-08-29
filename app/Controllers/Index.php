@@ -166,7 +166,7 @@ class Index
      */
     public function privacy(Request $request, Response $response, App $app)
     {
-        return $this->text('privacidade', $response, $app);
+        return $this->text('privacidade', $request, $response, $app);
     }
 
     /**
@@ -174,7 +174,7 @@ class Index
      */
     public function contact(Request $request, Response $response, App $app)
     {
-        return $this->text('contacto', $response, $app);
+        return $this->text('contacto', $request, $response, $app);
     }
 
     /**
@@ -184,7 +184,7 @@ class Index
     {
         $app['templates']->addData(['menu' => 'about'], 'layouts/default');
         
-        return $this->text('enmarea', $response, $app);
+        return $this->text('enmarea', $request, $response, $app);
     }
 
     /**
@@ -192,13 +192,13 @@ class Index
      */
     public function bio(Request $request, Response $response, App $app)
     {
-        return $this->text('biografia', $response, $app);
+        return $this->text('biografia', $request, $response, $app);
     }
 
     /**
      * Devolve unha páxina de texto corrido
      */
-    private function text($name, Response $response, App $app)
+    private function text($name, Request $request, Response $response, App $app)
     {
         $db = $app->get('db');
 
@@ -212,8 +212,26 @@ class Index
             return $response->withStatus(404);
         }
 
+        $menu = $text->texts;
+        $subText = $request->getAttribute('slug');
+
+        if ($subText) {
+            $text = $db->texts
+                ->select()
+                ->one()
+                ->by('name', $subText)
+                ->relatedWith($text)
+                ->run();
+
+            if (!$text) {
+                return $response->withStatus(404);
+            }
+        }
+
         return $app['templates']->render('pages/text', [
             'text' => $text,
+            'menu' => $menu,
+            'subText' => $subText
         ]);
     }
 
