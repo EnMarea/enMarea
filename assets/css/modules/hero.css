@@ -6,7 +6,6 @@
 	color: white;
 
 	&.is-right {
-		background-position: 66% 25%;
 		.hero-content {
 			margin: 0 0 0 auto;
 		}
