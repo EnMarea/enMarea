@@ -64,6 +64,16 @@ foreach ($events as $event) {
 			</ul>
 		</div>
 		<?php endforeach ?>
+
+		<?php $comun = $app->get('texts')['comun']; ?>
+		<a href="<?= $comun->rrss->telegram->url ?>" class="button is-telegram">
+			<span class="button-icon">
+				<?= $this->svg('ico-telegram')->withA11y($comun->rrss->telegram->title) ?>
+			</span>
+			<strong>
+				Segue o día a día da campaña na nosa canle de Telegram
+			</strong>
+		</a>
 	</div>
 	<div class="page-timeline">
 		<a class="twitter-timeline"  href="https://twitter.com/hashtag/rutaEnMarea" data-chrome="noheader nofooter noborders" data-widget-id="769118986873233408">#rutaEnMarea Tweets</a>

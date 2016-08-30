@@ -12,6 +12,7 @@
 .page-content {
 	@media (--from-medium) {
 		display: flex;
+		justify-content: space-around;
 	}
 }
 .page-timeline {
@@ -20,11 +21,14 @@
 	@media (--from-medium) {
 		display: block;
 		flex: 1 1 200px;
+		max-width: 520px;
 	}
 }
 .page-events {
 	@media (--from-medium) {
 		flex: 1 1 200px;
+		max-width: 50%;
+
 	}
 }
 .page-events-day {
@@ -51,4 +55,31 @@
 			display: block;
 		}
 	}
+}
+
+.button.is-telegram {
+	display: flex;
+	align-items: center;
+	max-width: 20em;
+	margin: 4rem auto 2rem auto;
+	background: #2CA5E0;
+	padding: .6em 1em;
+	color: white;
+	border-radius: 4px;
+	text-decoration: none;
+	transition: background-color .3s;
+
+	&:hover {
+		background: color(#2CA5E0 blackness(+10%));
+	}
+
+	g {
+		fill: currentColor;
+	}
+	strong {
+		font-weight: normal;
+	}
+}
+.button-icon {
+	margin-right: .5em;
 }
