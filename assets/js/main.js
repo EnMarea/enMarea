@@ -56,3 +56,16 @@ $('.js-share').click(function (e) {
 
     window.open($(this).attr('href'), 'share', 'toolbar=0, status=0, width=650, height=360');
 });
+
+/* Mensaxe de cookies */
+$cookies = $('.js-cookies');
+var cookies = localStorage.getItem('accept-cookies');
+
+if (cookies !== 'accepted') {
+    $cookies.removeClass('is-accepted');
+}
+
+$cookies.find('.js-cookies-accept').on('click', function () {
+    $cookies.fadeOut('normal');
+    localStorage.setItem('accept-cookies', 'accepted');
+});

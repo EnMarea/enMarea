@@ -52,10 +52,25 @@ https://oscarotero.com
         </div>
 
     	<?php $this->insert('partials/navfooter'); ?>
+
+        <div class="cookies js-cookies is-accepted">
+            <p>
+                Navegar por esta web coas cookies activadas no navegador conleva de maneira imprescindible a aceptación do uso das mesmas conforme a presente política.
+            </p>
+            <a class="cookies-link" href="<?= $this->url('privacy') ?>">Saber máis</a>
+            <button class="cookies-accept js-cookies-accept">De acordo</button>
+        </div>
         
         <script type="text/javascript" src="<?= $this->asset('js/main.js') ?>"></script>
         <script>
           try {console.log(document.createNodeIterator(document.head, NodeFilter.SHOW_COMMENT).nextNode().nodeValue)}catch(e){};
         </script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-83388930-1','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
     </body>
 </html>
