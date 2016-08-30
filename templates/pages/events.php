@@ -14,17 +14,28 @@ $this->layout('layouts/default', ['menu' => 'events', 'social' => $social]);
 
 //Ordenar eventos por data
 $days = [];
-$today = date('Y-m-d');
+$nameDays = [
+	date('Y-m-d') => 'hoxe',
+	date('Y-m-d', strtotime('+1 day')) => 'mañá',
+	date('Y-m-d', strtotime('-1 day')) => 'onte'
+];
 
 foreach ($events as $event) {
-	$day = $event->day;
-	$key = $day->format('Y-m-d');
+	$key = $event->day->format('Y-m-d');
 
 	if (!isset($days[$key])) {
-		$days[$key] = [];
+		$days[$key] = [
+			'title' => isset($nameDays[$key]) ? $nameDays[$key] : Date::instance($event->day)->format('l j F'),
+			'class' => '',
+			'events' => [],
+		];
+
+		if ($days[$key]['title'] === 'hoxe') {
+			$days[$key]['class'] = ' is-opened';
+		}
 	}
 
-	$days[$key][] = $event;
+	$days[$key]['events'][] = $event;
 }
 ?>
 
@@ -41,12 +52,12 @@ foreach ($events as $event) {
 
 <div class="page-content">
 	<div class="page-events">
-		<?php foreach ($days as $k => $day): ?>
-		<div class="page-events-day<?= $k === $today ? ' is-opened' : '' ?>">
-			<h2 class="js-toggle"><?= Date::instance($day[0]->day)->format('l j F') ?></h2>
+		<?php foreach ($days as $day): ?>
+		<div class="page-events-day<?= $day['class'] ?>">
+			<h2 class="js-toggle"><?= $day['title'] ?></h2>
 			<ul class="eventList">
 				<?php
-				foreach ($day as $event) {
+				foreach ($day['events'] as $event) {
 					$this->insert('partials/events/list', ['event' => $event]);
 				}
 				?>
