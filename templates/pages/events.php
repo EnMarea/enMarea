@@ -14,6 +14,7 @@ $this->layout('layouts/default', ['menu' => 'events', 'social' => $social]);
 
 //Ordenar eventos por data
 $days = [];
+$defaultClass = ' is-past';
 $nameDays = [
 	date('Y-m-d') => 'hoxe',
 	date('Y-m-d', strtotime('+1 day')) => 'mañá',
@@ -26,12 +27,13 @@ foreach ($events as $event) {
 	if (!isset($days[$key])) {
 		$days[$key] = [
 			'title' => isset($nameDays[$key]) ? $nameDays[$key] : Date::instance($event->day)->format('l j F'),
-			'class' => '',
+			'class' => $defaultClass,
 			'events' => [],
 		];
 
 		if ($days[$key]['title'] === 'hoxe') {
 			$days[$key]['class'] = ' is-opened';
+			$defaultClass = ' is-future';
 		}
 	}
 
@@ -66,7 +68,7 @@ foreach ($events as $event) {
 		<?php endforeach ?>
 
 		<?php $comun = $app->get('texts')['comun']; ?>
-		<a href="<?= $comun->rrss->telegram->url ?>" class="button is-telegram">
+		<a href="<?= $comun->rrss->telegram->url ?>" class="button has-icon">
 			<span class="button-icon">
 				<?= $this->svg('ico-telegram')->withA11y($comun->rrss->telegram->title) ?>
 			</span>
@@ -76,7 +78,7 @@ foreach ($events as $event) {
 		</a>
 	</div>
 	<div class="page-timeline">
-		<a class="twitter-timeline"  href="https://twitter.com/hashtag/rutaEnMarea" data-chrome="noheader nofooter noborders" data-widget-id="769118986873233408">#rutaEnMarea Tweets</a>
+		<a class="twitter-timeline" href="https://twitter.com/hashtag/rutaEnMarea" data-chrome="noheader nofooter noborders" data-widget-id="769118986873233408">#rutaEnMarea Tweets</a>
         
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	</div>

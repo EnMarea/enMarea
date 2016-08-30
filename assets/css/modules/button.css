@@ -1,0 +1,32 @@
+.button {
+	display: inline-block;
+	padding: 1em;
+	border: solid 3px;
+	font-weight: 700;
+	font-size: var(--font-18);
+	text-decoration: none;
+
+	&:hover {
+		color: white;
+		background: var(--color-blue)
+	}
+
+	g {
+		fill: currentColor;
+	}
+
+	&.has-icon {
+		display: flex;
+		align-items: center;
+		max-width: 20em;
+		margin: 0 auto;
+
+		strong {
+			font-weight: normal;
+		}
+	}
+}
+
+.button-icon {
+	margin-right: .5em;
+}

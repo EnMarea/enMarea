@@ -142,7 +142,7 @@ class Index
         $events = $db->events
             ->select()
             ->where('isActive = 1')
-            ->orderBy('day', 'DESC')
+            ->orderBy('day', 'ASC')
             ->orderBy('hour', 'ASC')
             ->run();
 
