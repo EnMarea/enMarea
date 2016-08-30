@@ -1,12 +1,12 @@
 .hero {
 	background-color: black;
-	background-position: 15% 25%;
+	background-position: 33% 25%;
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: white;
 
 	&.is-right {
-		background-position: 85% 25%;
+		background-position: 66% 25%;
 		.hero-content {
 			margin: 0 0 0 auto;
 		}
