@@ -1,9 +1,24 @@
 var $ = require('jquery');
 
 /* Abrir/pechar cousas */
-$('.js-toggle').click(function (e) {
+$('.js-toggle').on('click', function (e) {
 	$(this).parent().toggleClass('is-opened');
 });
+
+/* Abrir/pechar cousas con focus */
+$('.js-toggle-focus')
+	.on('focus', function (e) {
+		$(this).parent().addClass('is-opened');
+	})
+	.on('blur', function () {
+		var $parent = $(this).parent();
+
+		setTimeout(function () {
+			$parent.removeClass('is-opened');
+		}, 100);
+	});
+
+$('.js-toggle-focus')
 
 /* Cabeceira "sticky" */
 var sticked = false;

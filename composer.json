@@ -46,5 +46,8 @@
         "psr-4": {
             "App\\": "app/"
         }
+    },
+    "require-dev": {
+        "filp/whoops": "^2.1"
     }
 }

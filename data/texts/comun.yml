@@ -1,4 +1,13 @@
 rrss:
-  twitter: https://twitter.com/en_marea
-  facebook: https://www.facebook.com/En-Marea-1727994870757411
-  youtube: https://www.youtube.com/channel/UCeHD4CF-0B-2JOslfVfd01w
+  twitter:
+    title: Síguenos por twitter
+    url: https://twitter.com/en_marea
+  facebook:
+    title: Síguenos en facebook
+    url: https://www.facebook.com/En-Marea-1727994870757411
+  youtube:
+    title: A nosa canle de youtube
+    url: https://www.youtube.com/channel/UCeHD4CF-0B-2JOslfVfd01w
+  telegram:
+    title: A nosa canle de telegram
+    url: https://telegram.me/enmarea

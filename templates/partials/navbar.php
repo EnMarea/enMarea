@@ -9,14 +9,17 @@
 		<nav role="navigation" class="navbar-links js-navigation">
 			<ul class="is-desktop">
 				<li class="is-rrss">
-					<a href="<?= $comun->rrss->twitter ?>">
-						<?= $this->svg('ico-twitter') ?>
+					<a href="<?= $comun->rrss->twitter->url ?>">
+						<?= $this->svg('ico-twitter')->withA11y($comun->rrss->twitter->title) ?>
 					</a>
-					<a href="<?= $comun->rrss->facebook ?>">
-						<?= $this->svg('ico-facebook') ?>
+					<a href="<?= $comun->rrss->facebook->url ?>">
+						<?= $this->svg('ico-facebook')->withA11y($comun->rrss->facebook->title) ?>
 					</a>
-					<a href="<?= $comun->rrss->youtube ?>">
-						<?= $this->svg('ico-youtube') ?>
+					<a href="<?= $comun->rrss->telegram->url ?>">
+						<?= $this->svg('ico-telegram')->withA11y($comun->rrss->telegram->title) ?>
+					</a>
+					<a href="<?= $comun->rrss->youtube->url ?>">
+						<?= $this->svg('ico-youtube')->withA11y($comun->rrss->youtube->title) ?>
 					</a>
 				</li>
 				<li class="is-section">
@@ -55,19 +58,22 @@
 				</li>
 				*/ ?>
 			</ul>
-			<button class="navbar-toggle js-toggle">
+			<span class="navbar-toggle js-toggle-focus" tabindex="-1">
 				<?= $this->svg('ico-menu') ?>
-			</button>
+			</span>
 			<ul class="is-mobile">
 				<li class="is-rrss">
-					<a href="<?= $comun->rrss->twitter ?>">
-						<?= $this->svg('ico-twitter') ?>
+					<a href="<?= $comun->rrss->twitter->url ?>">
+						<?= $this->svg('ico-twitter')->withA11y($comun->rrss->twitter->title) ?>
 					</a>
-					<a href="<?= $comun->rrss->facebook ?>">
-						<?= $this->svg('ico-facebook') ?>
+					<a href="<?= $comun->rrss->facebook->url ?>">
+						<?= $this->svg('ico-facebook')->withA11y($comun->rrss->facebook->title) ?>
 					</a>
-					<a href="<?= $comun->rrss->youtube ?>">
-						<?= $this->svg('ico-youtube') ?>
+					<a href="<?= $comun->rrss->telegram->url ?>">
+						<?= $this->svg('ico-telegram')->withA11y($comun->rrss->telegram->title) ?>
+					</a>
+					<a href="<?= $comun->rrss->youtube->url ?>">
+						<?= $this->svg('ico-youtube')->withA11y($comun->rrss->youtube->title) ?>
 					</a>
 				</li>
 				<li>

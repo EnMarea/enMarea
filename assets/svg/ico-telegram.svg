@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-telegram</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ico-telegram" fill="#000000">
+            <path d="M12,24 C18.627417,24 24,18.627417 24,12 C24,5.372583 18.627417,0 12,0 C5.372583,0 0,5.372583 0,12 C0,18.627417 5.372583,24 12,24 L12,24 Z M15.793,15.69 C16.363,14.13 18.453,8.2 18.787,6.646 C19.167,4.886 18.373,4.716 16.567,5.306 C14.762,5.896 10.132,7.611 9.352,7.888 C8.572,8.165 4.779,9.44 3.992,9.82 C2.386,10.682 3.167,11.997 4.962,12.68 C10.332,15.257 8.807,13.944 11.204,18.712 C11.697,19.93 12.86,22.005 13.974,20.436 C14.56,19.544 15.344,16.916 15.794,15.689 L15.793,15.69 L15.793,15.69 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

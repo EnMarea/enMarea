@@ -19,7 +19,7 @@ class Middleware implements ServiceProviderInterface
                 M::FormatNegotiator(),
 
                 M::create(function () use ($app) {
-                    return env('APP_DEV') ? false : M::ErrorHandler($app->getNamespace('Controllers\\Index::error'))
+                    return env('APP_DEV') ? M::whoops() : M::ErrorHandler($app->getNamespace('Controllers\\Index::error'))
                         ->catchExceptions()
                         ->arguments($app);
                 }),

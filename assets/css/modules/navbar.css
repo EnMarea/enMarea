@@ -106,7 +106,7 @@
 			position: fixed;
 			right: 4%;
 			top: 50px;
-			transform: translateX(100px);
+			transform: translateX(500px);
 			opacity: 0;
 			transition: transform .3s, opacity .3s;
 			background: white;
@@ -119,7 +119,7 @@
 			}
 
 			a {
-				padding: .6em 2em;
+				padding: .6em 1em;
 				text-decoration: none;
 
 				&:hover {
@@ -141,9 +141,6 @@
 		.is-mobile {
 			transform: translateX(0);
 			opacity: 1;
-		}
-		.navbar-toggle {
-			opacity: .5;
 		}
 	}
 
@@ -212,6 +209,11 @@
 	padding: .5em;
 	margin-left: 1em;
 	color: inherit;
+
+	&:focus {
+		outline: solid 1px currentColor;
+		pointer-events: none;
+	}
 
 	g {
 		stroke: currentColor;
