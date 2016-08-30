@@ -9,6 +9,7 @@
 	&:hover {
 		color: white;
 		background: var(--color-blue)
+		text-decoration: none;
 	}
 
 	g {
@@ -20,10 +21,6 @@
 		align-items: center;
 		max-width: 20em;
 		margin: 0 auto;
-
-		strong {
-			font-weight: normal;
-		}
 	}
 }
 
