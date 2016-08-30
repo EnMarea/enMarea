@@ -8,7 +8,7 @@
 
 	&:hover {
 		color: white;
-		background: var(--color-blue)
+		background: var(--color-blue);
 		text-decoration: none;
 	}
 
