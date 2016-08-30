@@ -26,6 +26,11 @@ class Headers extends SimpleCrud
                 ->required()
                 ->label('Imaxe de fondo'),
 
+            'positionX' => $b->range()
+                ->min(0)
+                ->max(100)
+                ->label('Posición horizontal da imaxe (porcentaxe 0-100%)'),
+
             'text' => $b->text()
                 ->required()
                 ->label('Texto'),

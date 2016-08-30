@@ -16,6 +16,7 @@ $social = new SocialLinks\Page([
 <style type="text/css">
 	.hero {
 		background-image: url('<?= $this->img('uploads/headers/imageFile/'.$header->imageFile->getFilename(), 'landscape.') ?>');
+		background-position: <?= $header->positionX ?>% 15%;
 	}
 	@media (max-width: 700px) {
 		.hero {
