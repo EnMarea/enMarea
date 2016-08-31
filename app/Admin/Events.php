@@ -21,10 +21,12 @@ class Events extends SimpleCrud
         return $b->group([
             'city' => $b->text()
                 ->required()
+                ->maxlength(255)
                 ->label('Localidade'),
 
             'place' => $b->text()
                 ->required()
+                ->maxlength(255)
                 ->label('Lugar'),
 
             'day' => $b->date()
@@ -40,6 +42,7 @@ class Events extends SimpleCrud
                 ->label('Persoas que asistirán (separadas por coma)'),
 
             'intro' => $b->html()
+                ->maxlength(255)
                 ->label('Descripción do evento'),
 
             'isActive' => $b->checkbox()

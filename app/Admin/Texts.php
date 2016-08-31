@@ -21,6 +21,7 @@ class Texts extends SimpleCrud
         return $b->group([
             'title' => $b->text()
                 ->required()
+                ->maxlength(255)
                 ->label('Título'),
 
             'texts_id' => $b->relationOne($this)
@@ -28,6 +29,7 @@ class Texts extends SimpleCrud
 
             'name' => $b->text()
                 ->required()
+                ->maxlength(255)
                 ->label('Identificador (non cambiar)'),
 
             'intro' => $b->html()

@@ -26,13 +26,16 @@ class HighLights extends SimpleCrud
                 ->label('Imaxe'),
 
             'type' => $b->text()
+                ->maxlength(255)
                 ->label('Tipo de link'),
 
             'title' => $b->text()
+                ->maxlength(255)
                 ->required()
                 ->label('Título'),
 
             'url' => $b->text()
+                ->maxlength(255)
                 ->required()
                 ->label('Enderezo web'),
 

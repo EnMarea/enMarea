@@ -27,6 +27,7 @@ class News extends SimpleCrud
                 ->label('Imaxe'),
 
             'title' => $b->text()
+                ->maxlength(255)
                 ->required()
                 ->label('Título'),
 
@@ -34,10 +35,12 @@ class News extends SimpleCrud
                 ->label('Data de creación'),
 
             'slug' => $b->text()
+                ->maxlength(255)
                 ->required()
                 ->label('Id único (o que aparece na url)'),
 
             'intro' => $b->html()
+                ->maxlength(255)
                 ->label('Introducción'),
 
             'isActive' => $b->checkbox()

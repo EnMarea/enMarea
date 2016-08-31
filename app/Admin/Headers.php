@@ -33,9 +33,11 @@ class Headers extends SimpleCrud
 
             'text' => $b->text()
                 ->required()
+                ->maxlength(255)
                 ->label('Texto'),
 
             'url' => $b->url()
+                ->maxlength(255)
                 ->label('Url á que queres que vaia (opcional)'),
 
             'style' => $b->select()
