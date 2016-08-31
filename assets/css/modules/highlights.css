@@ -32,6 +32,9 @@
 		display: block;
 		margin: 0 !important;
 	}
+	.fb-post, .fb-post > span, .fb-post iframe {
+		max-width: 100%;
+	}
 
 	&.is-responsive {
 		position: relative;
