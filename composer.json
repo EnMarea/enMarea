@@ -30,17 +30,17 @@
         "league/plates": "^3.1",
         "aura/router": "^3.0",
         "robmorgan/phinx": "^0.6.4",
-        "consolidation/robo": "1.0.0-RC1",
+        "consolidation/robo": "^0.7",
         "simple-crud/simple-crud": "^6.4",
         "oscarotero/inline-svg": "^2.0",
         "cocur/slugify": "^2.3",
         "social-links/social-links": "^1.11",
         "gettext/gettext": "^4.0",
-        "gettext/robo": "^2.0",
-        "jenssegers/date": "dev-master",
+        "jenssegers/date": "^3.2",
         "fly-crud/fly-crud": "^2.0",
         "symfony/yaml": "^3.1",
-        "suin/php-rss-writer": "^1.5"
+        "suin/php-rss-writer": "^1.5",
+        "embed/embed": "^2.7"
     },
     "autoload": {
         "psr-4": {

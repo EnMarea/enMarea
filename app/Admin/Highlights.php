@@ -23,7 +23,6 @@ class HighLights extends SimpleCrud
                 ->data('config', [
                     'directory' => '../data/uploads/highlights/imageFile/'
                 ])
-                ->required()
                 ->label('Imaxe'),
 
             'type' => $b->text()
@@ -36,6 +35,9 @@ class HighLights extends SimpleCrud
             'url' => $b->text()
                 ->required()
                 ->label('Enderezo web'),
+
+            'isEmbed' => $b->checkbox()
+                ->label('Incrustar o contido'),
 
             'province' => $b->select()
                 ->options([
@@ -51,6 +53,7 @@ class HighLights extends SimpleCrud
                 ->label('Amosar'),
 
             'position' => $b->number()
+                ->required()
                 ->label('Posición'),
         ]);
     }

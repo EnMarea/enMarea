@@ -50,10 +50,6 @@ class Texts extends SimpleCrud
                             ->label('Imaxe'),
                         'isWide' => $b->checkbox()
                             ->label('Mostar a todo ancho'),
-                    ],
-                    'dropdown-text' => [
-                        'title' => $b->text()->label('Texto'),
-                        'html' => $b->html()->label('Contido')
                     ]
                 ])
                 ->required()
