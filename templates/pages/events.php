@@ -73,7 +73,7 @@ foreach ($events as $event) {
 				<?= $this->svg('ico-telegram')->withA11y($comun->rrss->telegram->title) ?>
 			</span>
 			<strong>
-				Segue o día a día da campaña na nosa canle de Telegram
+				Sigue o día a día da campaña na nosa canle de Telegram
 			</strong>
 		</a>
 	</div>
