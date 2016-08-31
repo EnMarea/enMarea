@@ -1,12 +1,11 @@
-<?php 
-$showTitle = !$highlight->isEmbed || strpos($highlight->url, 'twitter') === false;
-?>
 <li class="highlight is-list<?= empty($highlight->province) ? '' : ' is-'.$highlight->province ?>" data-folk="highlights,<?= $highlight->id ?>">
 
 	<?php if ($highlight->isEmbed): ?>
-		<div class="highlight-embed<?= $showTitle ? ' is-responsive' : ''; ?>">
-			<?= $highlight->code ?>
-		</div>
+		<?php if ($highlight->showOnlyCode()): ?>
+		<div class="highlight-embed"><?= $highlight->code ?></div>
+		<?php else: ?>
+		<div class="highlight-embed is-responsive"><?= $highlight->code ?></div>
+		<?php endif ?>
 	<?php else: ?>
 	<a href="<?= $highlight->url ?>" class="highlight-image">
 		<img src="<?= $this->img('uploads/highlights/imageFile/'.$highlight->imageFile->getFilename(), 'small.') ?>">
@@ -19,7 +18,7 @@ $showTitle = !$highlight->isEmbed || strpos($highlight->url, 'twitter') === fals
 	</a>
 	<?php endif ?>
 
-	<?php if ($showTitle): ?>
+	<?php if (!$highlight->showOnlyCode()): ?>
 	<a href="<?= $highlight->url ?>">
 		<h2 class="highlight-title"><?= $highlight->title ?></h2>
 	</a>

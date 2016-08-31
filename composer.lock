@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "137f7ffd18d6d191a8c93c8c6ad3258d",
-    "content-hash": "32986d1f14aaa4ac3d06a80e2e4a1d2b",
+    "hash": "41a11f2317a8a4bf376b6a1a91bf6a80",
+    "content-hash": "1ed5dfc5f51118fd3149951ee2670727",
     "packages": [
         {
             "name": "aura/router",
@@ -1298,16 +1298,16 @@
         },
         {
             "name": "simple-crud/simple-crud",
-            "version": "6.4.2",
+            "version": "6.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/simple-crud.git",
-                "reference": "1d7365f9a3b904bf461c121f35230687034f09ab"
+                "reference": "c0490382d30e534446acea4f77ffdabfdd1d5178"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/simple-crud/zipball/1d7365f9a3b904bf461c121f35230687034f09ab",
-                "reference": "1d7365f9a3b904bf461c121f35230687034f09ab",
+                "url": "https://api.github.com/repos/oscarotero/simple-crud/zipball/c0490382d30e534446acea4f77ffdabfdd1d5178",
+                "reference": "c0490382d30e534446acea4f77ffdabfdd1d5178",
                 "shasum": ""
             },
             "require": {
@@ -1341,7 +1341,7 @@
                 "mysql",
                 "sqlite"
             ],
-            "time": "2016-08-29 11:20:03"
+            "time": "2016-08-31 16:03:20"
         },
         {
             "name": "social-links/social-links",

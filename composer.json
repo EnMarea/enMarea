@@ -31,7 +31,7 @@
         "aura/router": "^3.0",
         "robmorgan/phinx": "^0.6.4",
         "consolidation/robo": "^0.7",
-        "simple-crud/simple-crud": "^6.4",
+        "simple-crud/simple-crud": "^6.5",
         "oscarotero/inline-svg": "^2.0",
         "cocur/slugify": "^2.3",
         "social-links/social-links": "^1.11",
