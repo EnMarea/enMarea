@@ -18,6 +18,9 @@
 					<a href="<?= $comun->rrss->telegram->url ?>">
 						<?= $this->svg('ico-telegram')->withA11y($comun->rrss->telegram->title) ?>
 					</a>
+					<a href="<?= $comun->rrss->instagram->url ?>">
+						<?= $this->svg('ico-instagram')->withA11y($comun->rrss->instagram->title) ?>
+					</a>
 					<a href="<?= $comun->rrss->youtube->url ?>">
 						<?= $this->svg('ico-youtube')->withA11y($comun->rrss->youtube->title) ?>
 					</a>
@@ -71,6 +74,9 @@
 					</a>
 					<a href="<?= $comun->rrss->telegram->url ?>">
 						<?= $this->svg('ico-telegram')->withA11y($comun->rrss->telegram->title) ?>
+					</a>
+					<a href="<?= $comun->rrss->instagram->url ?>">
+						<?= $this->svg('ico-instagram')->withA11y($comun->rrss->instagram->title) ?>
 					</a>
 					<a href="<?= $comun->rrss->youtube->url ?>">
 						<?= $this->svg('ico-youtube')->withA11y($comun->rrss->youtube->title) ?>
