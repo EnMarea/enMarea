@@ -52,3 +52,38 @@
 		}
 	}
 }
+
+.hero-title,
+.hero-menu,
+.hero-social,
+.hero-quote {
+	animation-name: fadeInLeft;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-timing-function: ease-out;
+}
+.hero-title {
+	animation-delay: 1s;
+}
+.hero-quote {
+	animation-delay: 1.2s;
+}
+.hero-menu {
+	animation-delay: 1.4s;
+}
+.hero-social {
+	animation-delay: 1.6s;
+}
+
+@keyframes fadeInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-200px);
+	}
+	50% {
+		opacity: 1;
+	}
+	to {
+		transform: translateX(0);
+	}
+}
