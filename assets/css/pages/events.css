@@ -34,7 +34,7 @@
 .page-events-day {
 	> h2 {
 		color: var(--color-blue);
-		background: url('../../svg/ico-arrow-right.svg') no-repeat left center;
+		background: url('../../img/svg/ico-arrow-right.svg') no-repeat left center;
 		padding-left: 24px;
 		cursor: pointer;
 
@@ -49,7 +49,7 @@
 
 	&.is-opened {
 		> h2 {
-			background-image: url('../../svg/ico-arrow-down.svg');
+			background-image: url('../../img/svg/ico-arrow-down.svg');
 		}
 		> ul {
 			display: block;

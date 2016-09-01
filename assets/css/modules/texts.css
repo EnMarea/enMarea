@@ -43,12 +43,12 @@
 		}
 
 		a {
-			background: url('../../svg/ico-arrow-right.svg') no-repeat 20px center;
+			background: url('../../img/svg/ico-arrow-right.svg') no-repeat 20px center;
 			padding-left: 40px;
 			display: inline-block;
 
 			&.is-back {
-				background-image: url('../../svg/ico-arrow-left.svg');
+				background-image: url('../../img/svg/ico-arrow-left.svg');
 				background-position: left center;
 				padding-left: 20px;
 				margin-bottom: 1em;

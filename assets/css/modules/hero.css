@@ -60,7 +60,7 @@
 		}
 
 		> a {
-			background-image: url('../../svg/ico-arrow-right.svg');
+			background-image: url('../../img/svg/ico-arrow-right.svg');
 			background-position: 99% center;
 			background-repeat: no-repeat;
 			transition: background .3s;
