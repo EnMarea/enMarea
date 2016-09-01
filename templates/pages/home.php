@@ -24,6 +24,11 @@ $social = new SocialLinks\Page([
 			background-position: center center;
 		}
 	}
+	@media (min-width: 1400px) {
+		.hero {
+			background-image: url('<?= $this->img('uploads/headers/imageFile/'.$header->imageFile->getFilename(), 'biglandscape.') ?>');
+		}
+	}
 </style>
 <?php endif ?>
 <?php $this->stop(); ?>
