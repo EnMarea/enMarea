@@ -43,6 +43,8 @@
 }
 .navfooter-links {
 	margin-top: 1.5rem;
+	position: relative;
+	z-index: 2;
 
 	ul {
 		border-top: solid 1px;
