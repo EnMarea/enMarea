@@ -1,11 +1,11 @@
 <?php
 
 $social = new SocialLinks\Page([
-	'url' => $this->url('candidates'),
-	'title' => 'Listas para o cambio - En marea',
-	'text' => 'En Marea, a alternativa de cambio en Galicia. Coñece a Luís Villares, o futuro presidente da Xunta',
-	'image' => $this->asset('img/img-rrss.png'),
-	'twitterUser' => '@en_marea',
+    'url' => $this->url('candidates'),
+    'title' => 'Listas para o cambio - En marea',
+    'text' => 'En Marea, a alternativa de cambio en Galicia. Coñece a Luís Villares, o futuro presidente da Xunta',
+    'image' => $this->asset('img/img-rrss.png'),
+    'twitterUser' => '@en_marea',
 ]);
 
 $this->layout('layouts/default', ['menu' => 'candidates', 'social' => $social]);
@@ -28,17 +28,17 @@ $this->layout('layouts/default', ['menu' => 'candidates', 'social' => $social]);
 		<h2><?= $province->title ?></h2>
 
 		<?php /*
-		<ol class="page-candidates-main">
-			<?php foreach ($province->main_candidates as $candidate): ?>
-			<li>
-				<img src="//placehold.it/92x92">
-				<strong>
-					<?= $candidate->name ?>
-				</strong>
-			</li>
-			<?php endforeach ?>
-		</ol>
-		*/ ?>
+        <ol class="page-candidates-main">
+            <?php foreach ($province->main_candidates as $candidate): ?>
+            <li>
+                <img src="//placehold.it/92x92">
+                <strong>
+                    <?= $candidate->name ?>
+                </strong>
+            </li>
+            <?php endforeach ?>
+        </ol>
+        */ ?>
 		<ol class="page-candidates-secondary">
 			<?php foreach ($province->main_candidates as $candidate): ?>
 			<li>

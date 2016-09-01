@@ -21,7 +21,7 @@ class Headers extends SimpleCrud
         return $b->group([
             'imageFile' => $b->imageUpload()
                 ->data('config', [
-                    'directory' => '../data/uploads/headers/imageFile/'
+                    'directory' => '../data/uploads/headers/imageFile/',
                 ])
                 ->required()
                 ->label('Imaxe de fondo'),
@@ -43,7 +43,7 @@ class Headers extends SimpleCrud
             'style' => $b->select()
                 ->options([
                     'left' => 'Texto á esquerda',
-                    'right' => 'Texto á dereita'
+                    'right' => 'Texto á dereita',
                 ])
                 ->label('Estilo'),
 

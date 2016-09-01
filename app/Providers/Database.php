@@ -19,7 +19,7 @@ class Database implements ServiceProviderInterface
             $db = new SimpleCrud($app['pdo']);
 
             $db->getFieldFactory()->mapNames([
-                'body' => 'Serializable'
+                'body' => 'Serializable',
             ]);
 
             $db->getTableFactory()->addNamespace($app->getNamespace('Models\\'));

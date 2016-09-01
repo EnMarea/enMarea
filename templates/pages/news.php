@@ -1,10 +1,10 @@
 <?php 
 $social = new SocialLinks\Page([
-	'url' => $this->url('news'),
-	'title' => 'Actualidade - En Marea',
-	'text' => 'En Marea, a alternativa de cambio en Galicia. Coñece a Luís Villares, o futuro presidente da Xunta',
-	'image' => $this->asset('img/img-rrss.png'),
-	'twitterUser' => '@en_marea',
+    'url' => $this->url('news'),
+    'title' => 'Actualidade - En Marea',
+    'text' => 'En Marea, a alternativa de cambio en Galicia. Coñece a Luís Villares, o futuro presidente da Xunta',
+    'image' => $this->asset('img/img-rrss.png'),
+    'twitterUser' => '@en_marea',
 ]);
 ?>
 
@@ -22,10 +22,10 @@ $social = new SocialLinks\Page([
 
 <ul class="newList">
 	<?php
-	foreach ($news as $new) {
-		$this->insert('partials/news/list', ['new' => $new]);
-	}
-	?>
+    foreach ($news as $new) {
+        $this->insert('partials/news/list', ['new' => $new]);
+    }
+    ?>
 </ul>
 
 <nav class="page-navigation">

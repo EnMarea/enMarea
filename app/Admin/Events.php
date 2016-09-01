@@ -46,7 +46,7 @@ class Events extends SimpleCrud
                 ->label('Descripción do evento'),
 
             'isActive' => $b->checkbox()
-                ->label('Amosar')
+                ->label('Amosar'),
         ]);
     }
 }

@@ -21,7 +21,7 @@ class HighLights extends SimpleCrud
         return $b->group([
             'imageFile' => $b->imageUpload()
                 ->data('config', [
-                    'directory' => '../data/uploads/highlights/imageFile/'
+                    'directory' => '../data/uploads/highlights/imageFile/',
                 ])
                 ->label('Imaxe'),
 

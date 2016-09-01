@@ -1,13 +1,11 @@
 <?php 
 
-use Jenssegers\Date\Date;
-
 $social = new SocialLinks\Page([
-	'url' => $this->url('home'),
-	'title' => $text->title.' - En Marea',
-	'text' => empty($text->intro) ? 'En Marea, a alternativa de cambio en Galicia. Coñece a Luís Villares, o futuro presidente da Xunta' : $text->intro,
-	'image' => $this->asset('img/img-rrss.png'),
-	'twitterUser' => '@en_marea',
+    'url' => $this->url('home'),
+    'title' => $text->title.' - En Marea',
+    'text' => empty($text->intro) ? 'En Marea, a alternativa de cambio en Galicia. Coñece a Luís Villares, o futuro presidente da Xunta' : $text->intro,
+    'image' => $this->asset('img/img-rrss.png'),
+    'twitterUser' => '@en_marea',
 ]);
 ?>
 
@@ -42,10 +40,10 @@ $social = new SocialLinks\Page([
 
 	<div class="text-body">
 		<?php
-		foreach ($text->body as $section) {
-			$this->insert('partials/sections/'.$section['type'], ['section' => $section, 'context' => 'texts']);
-		}
-		?>
+        foreach ($text->body as $section) {
+            $this->insert('partials/sections/'.$section['type'], ['section' => $section, 'context' => 'texts']);
+        }
+        ?>
 	</div>
 
 	<?php if ($menu->count()): ?>

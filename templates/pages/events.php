@@ -3,11 +3,11 @@
 use Jenssegers\Date\Date;
 
 $social = new SocialLinks\Page([
-	'url' => $this->url('events'),
-	'title' => 'Axenda - En marea',
-	'text' => 'En Marea, a alternativa de cambio en Galicia. Coñece a Luís Villares, o futuro presidente da Xunta',
-	'image' => $this->asset('img/img-rrss.png'),
-	'twitterUser' => '@en_marea',
+    'url' => $this->url('events'),
+    'title' => 'Axenda - En marea',
+    'text' => 'En Marea, a alternativa de cambio en Galicia. Coñece a Luís Villares, o futuro presidente da Xunta',
+    'image' => $this->asset('img/img-rrss.png'),
+    'twitterUser' => '@en_marea',
 ]);
 
 $this->layout('layouts/default', ['menu' => 'events', 'social' => $social]);
@@ -16,28 +16,28 @@ $this->layout('layouts/default', ['menu' => 'events', 'social' => $social]);
 $days = [];
 $defaultClass = ' is-past';
 $nameDays = [
-	date('Y-m-d') => 'hoxe',
-	date('Y-m-d', strtotime('+1 day')) => 'mañá',
-	date('Y-m-d', strtotime('-1 day')) => 'onte'
+    date('Y-m-d') => 'hoxe',
+    date('Y-m-d', strtotime('+1 day')) => 'mañá',
+    date('Y-m-d', strtotime('-1 day')) => 'onte',
 ];
 
 foreach ($events as $event) {
-	$key = $event->day->format('Y-m-d');
+    $key = $event->day->format('Y-m-d');
 
-	if (!isset($days[$key])) {
-		$days[$key] = [
-			'title' => isset($nameDays[$key]) ? $nameDays[$key] : Date::instance($event->day)->format('l j F'),
-			'class' => $defaultClass,
-			'events' => [],
-		];
+    if (!isset($days[$key])) {
+        $days[$key] = [
+            'title' => isset($nameDays[$key]) ? $nameDays[$key] : Date::instance($event->day)->format('l j F'),
+            'class' => $defaultClass,
+            'events' => [],
+        ];
 
-		if ($days[$key]['title'] === 'hoxe') {
-			$days[$key]['class'] = ' is-opened';
-			$defaultClass = ' is-future';
-		}
-	}
+        if ($days[$key]['title'] === 'hoxe') {
+            $days[$key]['class'] = ' is-opened';
+            $defaultClass = ' is-future';
+        }
+    }
 
-	$days[$key]['events'][] = $event;
+    $days[$key]['events'][] = $event;
 }
 ?>
 
@@ -59,10 +59,10 @@ foreach ($events as $event) {
 			<h2 class="js-toggle"><?= $day['title'] ?></h2>
 			<ul class="eventList">
 				<?php
-				foreach ($day['events'] as $event) {
-					$this->insert('partials/events/list', ['event' => $event]);
-				}
-				?>
+                foreach ($day['events'] as $event) {
+                    $this->insert('partials/events/list', ['event' => $event]);
+                }
+                ?>
 			</ul>
 		</div>
 		<?php endforeach ?>

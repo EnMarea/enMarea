@@ -3,11 +3,11 @@
 use Jenssegers\Date\Date;
 
 $social = new SocialLinks\Page([
-	'url' => $this->url('new', ['slug' => $new->slug]),
-	'title' => $new->title.' - En Marea',
-	'text' => $new->intro,
-	'image' => $new->imageFile ? $this->img('uploads/news/imageFile/'.$new->imageFile->getFilename(), 'small.') : $this->asset('img/img-rrss.png'),
-	'twitterUser' => '@en_marea'
+    'url' => $this->url('new', ['slug' => $new->slug]),
+    'title' => $new->title.' - En Marea',
+    'text' => $new->intro,
+    'image' => $new->imageFile ? $this->img('uploads/news/imageFile/'.$new->imageFile->getFilename(), 'small.') : $this->asset('img/img-rrss.png'),
+    'twitterUser' => '@en_marea',
 ]);
 ?>
 
@@ -41,10 +41,10 @@ $social = new SocialLinks\Page([
 
 		<div class="new-body">
 			<?php
-			foreach ($new->body as $section) {
-				$this->insert('partials/sections/'.$section['type'], ['section' => $section]);
-			}
-			?>
+            foreach ($new->body as $section) {
+                $this->insert('partials/sections/'.$section['type'], ['section' => $section]);
+            }
+            ?>
 		</div>
 	</article>
 
@@ -55,10 +55,10 @@ $social = new SocialLinks\Page([
 	<aside class="page-morenews">
 		<ul class="newList">
 			<?php
-			foreach ($latests as $latest) {
-				$this->insert('partials/news/list', ['new' => $latest]);
-			}
-			?>
+            foreach ($latests as $latest) {
+                $this->insert('partials/news/list', ['new' => $latest]);
+            }
+            ?>
 		</ul>
 	</aside>
 </div>

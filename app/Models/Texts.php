@@ -12,11 +12,11 @@ class Texts extends Table
         $imageField = new File($this, 'imageFile');
 
         if (isset($data['body'])) {
-        	foreach ($data['body'] as &$section) {
-        		if ($section['type'] === 'image') {
-        			$section['imageFile'] = $imageField->dataToDatabase($section['imageFile']);
-        		}
-        	}
+            foreach ($data['body'] as &$section) {
+                if ($section['type'] === 'image') {
+                    $section['imageFile'] = $imageField->dataToDatabase($section['imageFile']);
+                }
+            }
         }
 
         return $data;

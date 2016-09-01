@@ -35,7 +35,7 @@ class Middleware implements ServiceProviderInterface
                 M::imageTransformer([
                     'small.' => 'resizeCrop,380,230',
                     'normal.' => 'resize,900',
-                    'landscape.' => 'resizeCrop,1200,600'
+                    'landscape.' => 'resizeCrop,1200,600',
                 ]),
 
                 M::create('/uploads', function () use ($app) {

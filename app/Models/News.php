@@ -11,7 +11,7 @@ class News extends Table
     public function dataToDatabase(array $data, $new)
     {
         if (isset($data['slug'])) {
-        	$slugify = new Slugify();
+            $slugify = new Slugify();
 
             $data['slug'] = $slugify->slugify($data['slug']);
         }
@@ -19,11 +19,11 @@ class News extends Table
         $imageField = new File($this, 'imageFile');
 
         if (isset($data['body'])) {
-        	foreach ($data['body'] as &$section) {
-        		if ($section['type'] === 'image') {
-        			$section['imageFile'] = $imageField->dataToDatabase($section['imageFile']);
-        		}
-        	}
+            foreach ($data['body'] as &$section) {
+                if ($section['type'] === 'image') {
+                    $section['imageFile'] = $imageField->dataToDatabase($section['imageFile']);
+                }
+            }
         }
 
         return $data;

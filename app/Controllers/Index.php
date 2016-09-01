@@ -20,12 +20,13 @@ class Index
 
         $app['templates']->registerFunction('img', function ($url, $transform) use ($app, $imgGenerator) {
             $url = $imgGenerator($url, $transform);
+
             return $app->getUrl($url);
         });
     }
 
     /**
-     * Páxina de portada
+     * Páxina de portada.
      */
     public function home(Request $request, Response $response, App $app)
     {
@@ -59,7 +60,7 @@ class Index
     }
 
     /**
-     * Páxina de noticias
+     * Páxina de noticias.
      */
     public function news(Request $request, Response $response, App $app)
     {
@@ -95,24 +96,24 @@ class Index
 
         return $app['templates']->render('pages/news', [
             'news' => $news,
-            'nextPage' => $nextPage
+            'nextPage' => $nextPage,
         ]);
     }
 
     /**
-     * Páxina de noticia
+     * Páxina de noticia.
      */
     public function newPermalink(Request $request, Response $response, App $app)
     {
-    	$db = $app->get('db');
+        $db = $app->get('db');
         $slug = $request->getAttribute('slug');
 
-    	$new = $db->news
-    		->select()
+        $new = $db->news
+            ->select()
             ->one()
-        	->where('isActive = 1')
+            ->where('isActive = 1')
             ->by('slug', $slug)
-        	->run();
+            ->run();
 
         if (!$new) {
             return $response->withStatus(404);
@@ -128,12 +129,12 @@ class Index
 
         return $app['templates']->render('pages/new', [
             'new' => $new,
-            'latests' => $latests
+            'latests' => $latests,
         ]);
     }
 
     /**
-     * Páxina de eventos
+     * Páxina de eventos.
      */
     public function events(Request $request, Response $response, App $app)
     {
@@ -152,7 +153,7 @@ class Index
     }
 
     /**
-     * Páxina de candidatos
+     * Páxina de candidatos.
      */
     public function candidates(Request $request, Response $response, App $app)
     {
@@ -162,7 +163,7 @@ class Index
     }
 
     /**
-     * Privacidade
+     * Privacidade.
      */
     public function privacy(Request $request, Response $response, App $app)
     {
@@ -170,7 +171,7 @@ class Index
     }
 
     /**
-     * Contacto
+     * Contacto.
      */
     public function contact(Request $request, Response $response, App $app)
     {
@@ -178,17 +179,17 @@ class Index
     }
 
     /**
-     * En marea
+     * En marea.
      */
     public function about(Request $request, Response $response, App $app)
     {
         $app['templates']->addData(['menu' => 'about'], 'layouts/default');
-        
+
         return $this->text('enmarea', $request, $response, $app);
     }
 
     /**
-     * Biografía
+     * Biografía.
      */
     public function bio(Request $request, Response $response, App $app)
     {
@@ -196,7 +197,7 @@ class Index
     }
 
     /**
-     * Devolve unha páxina de texto corrido
+     * Devolve unha páxina de texto corrido.
      */
     private function text($name, Request $request, Response $response, App $app)
     {
@@ -231,12 +232,12 @@ class Index
         return $app['templates']->render('pages/text', [
             'text' => $text,
             'menu' => $menu,
-            'subText' => $subText
+            'subText' => $subText,
         ]);
     }
 
     /**
-     * Rutas que coinciden coa web antiga
+     * Rutas que coinciden coa web antiga.
      */
     public function redirect(Request $request, Response $response, App $app)
     {
@@ -260,7 +261,7 @@ class Index
     }
 
     /**
-     * Páxina de candidatos
+     * Páxina de candidatos.
      */
     public function error(Request $request, Response $response, App $app)
     {
@@ -270,12 +271,11 @@ class Index
                     'texts' => $app->get('texts')['404'],
                 ]);
                 break;
-            
+
             default:
                 return $app['templates']->render('pages/error', [
                     'texts' => $app->get('texts')['500'],
                 ]);
         }
-        
     }
 }

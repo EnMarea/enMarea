@@ -10,10 +10,21 @@
 }
 .page-highlights-content {
 	margin-top: 1rem;
+	background: white;
 	@extend %grid-1-2-2-3-3-4;
 
 	@media (--from-narrow) {
 		margin-top: 2rem;
+	}
+
+	@media (--from-intermedium) {
+		margin-top: -3rem;
+		padding: 3rem 3rem 0
+	}
+}
+@media (--from-intermedium) {
+	.hero {
+		padding-bottom: 3rem;
 	}
 }
 

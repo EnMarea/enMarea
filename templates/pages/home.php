@@ -1,10 +1,10 @@
 <?php 
 $social = new SocialLinks\Page([
-	'url' => $this->url('home'),
-	'title' => 'En Marea',
-	'text' => 'En Marea, a alternativa de cambio en Galicia. Coñece a Luís Villares, o futuro presidente da Xunta',
-	'image' => $this->asset('img/img-rrss.png'),
-	'twitterUser' => '@en_marea',
+    'url' => $this->url('home'),
+    'title' => 'En Marea',
+    'text' => 'En Marea, a alternativa de cambio en Galicia. Coñece a Luís Villares, o futuro presidente da Xunta',
+    'image' => $this->asset('img/img-rrss.png'),
+    'twitterUser' => '@en_marea',
 ]);
 ?>
 
@@ -55,19 +55,19 @@ $social = new SocialLinks\Page([
 						</a>
 					</li>
 					<?php /*
-					<li><a href="#">O meu blog</a></li>
-					<li><a href="#">Transparencia</a></li>
-					*/ ?>
+                    <li><a href="#">O meu blog</a></li>
+                    <li><a href="#">Transparencia</a></li>
+                    */ ?>
 					<?php if ($events->count()): ?>
 					<li class="is-extended">
 						<strong>Hoxe estaremos en:</strong>
 						
 						<ul class="eventList">
 							<?php
-							foreach ($events as $event) {
-								$this->insert('partials/events/minilist', ['event' => $event]);
-							}
-							?>
+                            foreach ($events as $event) {
+                                $this->insert('partials/events/minilist', ['event' => $event]);
+                            }
+                            ?>
 						</ul>
 						<a href="<?= $this->url('events') ?>">Ver axenda completa</a>
 					</li>
@@ -96,24 +96,24 @@ $social = new SocialLinks\Page([
 	</div>
 
 	<?php
-	/* Eliminaos os filtros mentres non haxa suficiente contido
+    /* Eliminaos os filtros mentres non haxa suficiente contido
 
-	<ul class="page-highlights-filters js-filter" data-target="#highlights">
-		<li data-filter="*" class="is-actived">Movémonos</li>
-		<li data-filter=".is-acoruna">A Coruña</li>
-		<li data-filter=".is-lugo">Lugo</li>
-		<li data-filter=".is-ourense">Ourense</li>
-		<li data-filter=".is-pontevedra">Pontevedra</li>
-	</ul>
-	*/ ?>
+    <ul class="page-highlights-filters js-filter" data-target="#highlights">
+        <li data-filter="*" class="is-actived">Movémonos</li>
+        <li data-filter=".is-acoruna">A Coruña</li>
+        <li data-filter=".is-lugo">Lugo</li>
+        <li data-filter=".is-ourense">Ourense</li>
+        <li data-filter=".is-pontevedra">Pontevedra</li>
+    </ul>
+    */ ?>
 </div>
 
 <section class="page-highlights">
 	<ul class="page-highlights-content" id="highlights">
 		<?php
-		foreach ($highlights as $highlight) {
-			$this->insert('partials/highlights/list', ['highlight' => $highlight]);
-		}
-		?>
+        foreach ($highlights as $highlight) {
+            $this->insert('partials/highlights/list', ['highlight' => $highlight]);
+        }
+        ?>
 	</ul>
 </section>

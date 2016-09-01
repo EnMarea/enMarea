@@ -1,4 +1,5 @@
 <?php
+
 require 'bootstrap.php';
 
 $app = new App\App();
@@ -14,7 +15,6 @@ return [
         'development' => [
             'name' => 'enmarea',
             'connection' => $app['pdo'],
-        ]
-    ]
+        ],
+    ],
 ];
-
