@@ -20,7 +20,7 @@ class Templates implements ServiceProviderInterface
             	return call_user_func_array([$app, 'getUrl'], func_get_args()).'?v6';
             });
 
-            $svg = Collection::fromPath($app->getPath('assets/svg'));
+            $svg = Collection::fromPath($app->getPath('www/img/svg'));
 
             $templates->registerFunction('svg', function ($name) use ($svg) {
                 return $svg->get($name);

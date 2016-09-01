@@ -30,7 +30,7 @@
 	@extend %wrapper;
 }
 .navfooter-logo {
-	g {
+	path {
 		fill: white;
 	}
 	strong {
@@ -80,7 +80,7 @@
 			}
 		}
 	}
-	g {
+	path {
 		fill: currentColor;
 	}
 	a {

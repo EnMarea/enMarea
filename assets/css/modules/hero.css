@@ -25,7 +25,7 @@
 		width: 100%;
 		height: auto;
 	}
-	g {
+	path {
 		fill: currentColor;
 	}
 }
@@ -124,7 +124,7 @@
 		width: 16px;
 		height: 16px;
 	}
-	g {
+	path {
 		fill: currentColor;
 	}
 }

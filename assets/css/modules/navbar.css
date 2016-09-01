@@ -39,14 +39,12 @@
 	svg {
 		display: block;
 		max-width: 100%;
+		fill: currentColor;
 
 		@media (--to-intermedium) {
 			width: 200px;
 			height: 41px;
 		}
-	}
-	path {
-		fill: currentColor;
 	}
 }
 .navbar-links {
@@ -54,7 +52,7 @@
 	display: flex;
 	align-items: center;
 
-	g {
+	path {
 		fill: currentColor;
 	}
 
@@ -215,7 +213,7 @@
 		pointer-events: none;
 	}
 
-	g {
+	path {
 		stroke: currentColor;
 		stroke-width: 3px;
 	}
