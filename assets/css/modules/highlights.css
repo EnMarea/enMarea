@@ -6,7 +6,8 @@
 .highlight-type {
 	background: var(--color-blue);
 	color: white;
-	padding: .2em .3em;
+	padding: .1em .35em;
+	font-size: var(--font-16);
 }
 .highlight-province {
 	background: white;
