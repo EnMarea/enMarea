@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "41a11f2317a8a4bf376b6a1a91bf6a80",
-    "content-hash": "1ed5dfc5f51118fd3149951ee2670727",
+    "hash": "03155f7d93ad065fb7f3ededa040df86",
+    "content-hash": "bcc80e91fdcf1b2571dbadd9a45e2661",
     "packages": [
         {
             "name": "aura/router",
@@ -203,16 +203,16 @@
         },
         {
             "name": "embed/embed",
-            "version": "v2.7.5",
+            "version": "v2.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "c2f75651ae1c9c9206a5224c021cd59ade2655ca"
+                "reference": "71735820539f4b96ed8946acb681101064a701d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/c2f75651ae1c9c9206a5224c021cd59ade2655ca",
-                "reference": "c2f75651ae1c9c9206a5224c021cd59ade2655ca",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/71735820539f4b96ed8946acb681101064a701d6",
+                "reference": "71735820539f4b96ed8946acb681101064a701d6",
                 "shasum": ""
             },
             "require": {
@@ -253,7 +253,7 @@
                 "opengraph",
                 "twitter cards"
             ],
-            "time": "2016-07-27 07:11:46"
+            "time": "2016-09-01 15:31:22"
         },
         {
             "name": "fly-crud/fly-crud",
@@ -1298,16 +1298,16 @@
         },
         {
             "name": "simple-crud/simple-crud",
-            "version": "6.5.0",
+            "version": "v6.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/simple-crud.git",
-                "reference": "c0490382d30e534446acea4f77ffdabfdd1d5178"
+                "reference": "bcc15fc2188d5a9fa90fcb338151c30c5f3ea2ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/simple-crud/zipball/c0490382d30e534446acea4f77ffdabfdd1d5178",
-                "reference": "c0490382d30e534446acea4f77ffdabfdd1d5178",
+                "url": "https://api.github.com/repos/oscarotero/simple-crud/zipball/bcc15fc2188d5a9fa90fcb338151c30c5f3ea2ce",
+                "reference": "bcc15fc2188d5a9fa90fcb338151c30c5f3ea2ce",
                 "shasum": ""
             },
             "require": {
@@ -1341,7 +1341,7 @@
                 "mysql",
                 "sqlite"
             ],
-            "time": "2016-08-31 16:03:20"
+            "time": "2016-09-01 16:21:29"
         },
         {
             "name": "social-links/social-links",
@@ -1935,16 +1935,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v2.3.0",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "9ca5644c536654e9509b9d257f53c58630eb2a6a"
+                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/9ca5644c536654e9509b9d257f53c58630eb2a6a",
-                "reference": "9ca5644c536654e9509b9d257f53c58630eb2a6a",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
+                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
                 "shasum": ""
             },
             "require": {
@@ -1956,7 +1956,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -1981,7 +1981,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2016-06-14 14:14:52"
+            "time": "2016-09-01 10:05:43"
         },
         {
             "name": "willdurand/negotiation",

@@ -22,7 +22,7 @@
         "fol/core": "^11.1",
         "oscarotero/psr7-middlewares": "3.x",
         "oscarotero/env": "^1.0",
-        "oscarotero/folk": "^1.8",
+        "oscarotero/folk": "^1.13",
         "zendframework/zend-diactoros": "1.x",
         "relay/relay": "1.x",
         "vlucas/phpdotenv": "2.x",

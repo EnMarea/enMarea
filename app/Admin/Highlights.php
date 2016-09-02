@@ -56,6 +56,7 @@ class HighLights extends SimpleCrud
                 ->label('Amosar'),
 
             'position' => $b->number()
+                ->set('editable', true)
                 ->required()
                 ->label('Posición'),
         ]);
