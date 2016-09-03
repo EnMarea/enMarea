@@ -22,7 +22,6 @@
         "fol/core": "^11.1",
         "oscarotero/psr7-middlewares": "3.x",
         "oscarotero/env": "^1.0",
-        "oscarotero/folk": "^1.13",
         "zendframework/zend-diactoros": "1.x",
         "relay/relay": "1.x",
         "vlucas/phpdotenv": "2.x",
@@ -40,7 +39,9 @@
         "fly-crud/fly-crud": "^2.0",
         "symfony/yaml": "^3.1",
         "suin/php-rss-writer": "^1.5",
-        "embed/embed": "^2.7"
+        "embed/embed": "^2.7",
+        "oscarotero/folk": "^1.13",
+        "imagecow/imagecow": "^2.1"
     },
     "autoload": {
         "psr-4": {

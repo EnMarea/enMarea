@@ -6,7 +6,7 @@
 		<?php else: ?>
 		<div class="highlight-embed is-responsive"><?= $highlight->code ?></div>
 		<?php endif ?>
-	<?php else: ?>
+	<?php elseif ($highlight->imageFile): ?>
 	<a href="<?= $highlight->url ?>" class="highlight-image">
 		<img src="<?= $this->img('uploads/highlights/imageFile/'.$highlight->imageFile->getFilename(), 'small.') ?>">
 	</a>
