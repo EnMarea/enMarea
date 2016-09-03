@@ -151,7 +151,7 @@
 		}
 	}
 
-	@media (min-width: 750px) {
+	@media (min-width: 800px) {
 		ul.is-desktop > li:nth-child(2) {
 			display: block;
 		}
@@ -160,7 +160,7 @@
 		}
 	}
 
-	@media (min-width: 850px) {
+	@media (min-width: 900px) {
 		ul.is-desktop > li:nth-child(3) {
 			display: block;
 		}
@@ -169,7 +169,7 @@
 		}
 	}
 
-	@media (min-width: 950px) {
+	@media (min-width: 1000px) {
 		ul.is-desktop > li:nth-child(4) {
 			display: block;
 		}
@@ -178,7 +178,7 @@
 		}
 	}
 
-	@media (min-width: 1050px) {
+	@media (min-width: 1100px) {
 		ul.is-desktop > li:nth-child(5) {
 			display: block;
 		}
@@ -187,9 +187,16 @@
 		}
 	}
 
-	/* cambiar a (min-width: 1100px) cando haxa unha opción máis */
-	/* cambiar a (min-width: 1200px) cando haxa dúas opción máis */
-	@media (min-width: 1150px) {
+	@media (min-width: 1200px) {
+		ul.is-desktop > li:nth-child(6) {
+			display: block;
+		}
+		ul.is-mobile > li:nth-child(6) {
+			display: none;
+		}
+	}
+
+	@media (min-width: 1300px) {
 		ul.is-desktop > li {
 			display: block;
 		}

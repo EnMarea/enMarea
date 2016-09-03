@@ -51,6 +51,11 @@
 					</a>
 				</li>
 				<li class="is-section">
+					<a href="https://achegas.enmarea.gal">
+						Achegas
+					</a>
+				</li>
+				<li class="is-section">
 					<a href="http://congreso.enmarea.gal">
 						Congreso
 					</a>
@@ -105,6 +110,11 @@
 				<li>
 					<a href="<?= $this->url('about') ?>">
 						En marea
+					</a>
+				</li>
+				<li>
+					<a href="https://achegas.enmarea.gal">
+						Achegas
 					</a>
 				</li>
 				<li>
