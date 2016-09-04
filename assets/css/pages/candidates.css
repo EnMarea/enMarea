@@ -5,8 +5,50 @@
 	background-color: var(--color-blue);
 }
 
+.page-navigation {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+	@extend %font-16-18;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+
+	a {
+		padding: .5rem 1rem;
+		background: white;
+		color: var(--color-blue);
+		white-space: nowrap;
+		margin-right: 1px;
+		cursor: pointer;
+
+		&.is-actived {
+			color: white;
+			background: var(--color-blue);
+		}
+	}
+}
+
 .page-header-container {
-	@extend %header-blue;
+	min-height: 300px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center 5%;
+	padding: 2rem;
+	text-align: center;
+	border-top: solid 3px var(--color-blue);
+
+	h2 {
+		@extend %font-black-36__72;
+		padding-top: 15vh;
+		padding-bottom: 15vh;
+		color: var(--color-blue);
+	}
+}
+
+.page-header {
+	@extend %header-white;
 }
 
 .page-province {
@@ -14,11 +56,16 @@
 	color: var(--color-blue);
 	counter-reset: candidate;
 	text-align: center;
+	@extend %wrapper;
+	background: white;
+	padding: 20px;
+	max-width: var(--max-width);
+	min-height: 100px;
 
-	h2 {
-		@extend %font-black-24__36;
-		color: var(--color-black);
+	@media (--from-intermedium) {
+		margin-top: -100px;
 	}
+
 	h3 {
 		display: inline;
 		margin: 0 .5em 0 0;

@@ -29,7 +29,7 @@ class Middleware implements ServiceProviderInterface
                 }),
 
                 M::create('/uploads', function () use ($app) {
-                    return M::saveResponse($app->getPath('www'));
+                    return env('APP_DEV') ? false : M::saveResponse($app->getPath('www'));
                 }),
 
                 M::imageTransformer([
@@ -37,10 +37,15 @@ class Middleware implements ServiceProviderInterface
                     'normal.' => 'resize,900',
                     'landscape.' => 'resizeCrop,1200,650',
                     'biglandscape.' => 'resizeCrop,1600,800',
+                    'cand-small.' => 'resizeCrop,380,300,center,top',
                 ]),
 
                 M::create('/uploads', function () use ($app) {
                     return M::readResponse($app->getPath('data'))->continueOnError();
+                }),
+
+                M::create('/img/candidatura', function () use ($app) {
+                    return M::readResponse($app->getPath('assets'))->continueOnError();
                 }),
 
                 M::AuraRouter($app->get('router'))->arguments($app),
