@@ -1,5 +1,7 @@
 var $ = require('jquery');
 
+require('minitabs');
+
 /* Abrir/pechar cousas */
 $('.js-toggle').on('click', function (e) {
 	$(this).parent().toggleClass('is-opened');
@@ -68,4 +70,9 @@ if (cookies !== 'accepted') {
 $cookies.find('.js-cookies-accept').on('click', function () {
     $cookies.fadeOut('normal');
     localStorage.setItem('accept-cookies', 'accepted');
+});
+
+/* Minitabs */
+$('.js-tabs').tabs({
+	indexSelector: '> nav a'
 });

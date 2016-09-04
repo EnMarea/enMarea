@@ -107,6 +107,26 @@
 	}
 }
 
+/*
+ * minValue: 2.25rem
+ * maxValue: 8rem
+ * minWidth: 30
+ * maxWidth: 56rem
+ */
+%font-black-36__128 {
+	font-weight: 900;
+	font-size: calc(2.25rem + (8 - 2.25) * ((100vw - 30rem) / (56 - 30)));
+	line-height: 1;
+
+	@media (--to-narrow) {
+		font-size: var(--font-36);
+	}
+
+	@media (--from-medium) {
+		font-size: var(--font-128);
+	}
+}
+
 /* Grellas */
 %grid {
 	list-style: none;
