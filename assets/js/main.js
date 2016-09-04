@@ -74,5 +74,7 @@ $cookies.find('.js-cookies-accept').on('click', function () {
 
 /* Minitabs */
 $('.js-tabs').tabs({
-	indexSelector: '> nav a'
+	indexSelector: '> nav a',
+	contentSelector: '> section',
+	clickFirst: true
 });
