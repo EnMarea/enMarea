@@ -214,6 +214,7 @@
 	padding: .5em;
 	margin-left: 1em;
 	color: inherit;
+	user-select: none;
 
 	&:focus {
 		outline: solid 1px currentColor;
