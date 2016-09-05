@@ -14,6 +14,7 @@
 	--font-36: 2.25rem;
 	--font-64: 4rem;
 	--font-72: 4.5rem;
+	--font-128: 8rem;
 }
 
 @custom-media --to-narrow (max-width: 30rem);

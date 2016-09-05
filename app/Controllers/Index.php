@@ -157,8 +157,15 @@ class Index
      */
     public function candidates(Request $request, Response $response, App $app)
     {
+        $db = $app->get('db');
+
+        $candidates = $db->candidates
+            ->select()
+            ->orderBy('position ASC')
+            ->run();
+
         return $app['templates']->render('pages/candidates', [
-            'texts' => $app->get('texts'),
+            'candidates' => $candidates,
         ]);
     }
 
@@ -261,7 +268,7 @@ class Index
     }
 
     /**
-     * Páxina de candidatos.
+     * Páxina de erro.
      */
     public function error(Request $request, Response $response, App $app)
     {
