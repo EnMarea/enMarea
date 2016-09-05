@@ -13,8 +13,12 @@ $social = new SocialLinks\Page([
 $this->layout('layouts/default', ['menu' => 'events', 'social' => $social]);
 
 //Ordenar eventos por data
-$days = [];
-$defaultClass = ' is-past';
+$time = 'past';
+$days = [
+	'past' => [],
+	'future' => [],
+];
+$today = date('Y-m-d');
 $nameDays = [
     date('Y-m-d') => 'hoxe',
     date('Y-m-d', strtotime('+1 day')) => 'mañá',
@@ -24,20 +28,23 @@ $nameDays = [
 foreach ($events as $event) {
     $key = $event->day->format('Y-m-d');
 
-    if (!isset($days[$key])) {
-        $days[$key] = [
+    if ($key >= $today) {
+    	$time = 'future';
+    }
+
+    if (!isset($days[$time][$key])) {
+        $days[$time][$key] = [
             'title' => isset($nameDays[$key]) ? $nameDays[$key] : Date::instance($event->day)->format('l j F'),
-            'class' => $defaultClass,
+            'class' => '',
             'events' => [],
         ];
 
-        if ($days[$key]['title'] === 'hoxe') {
-            $days[$key]['class'] = ' is-opened';
-            $defaultClass = ' is-future';
+        if ($days[$time][$key]['title'] === 'hoxe') {
+            $days[$time][$key]['class'] = ' is-opened';
         }
     }
 
-    $days[$key]['events'][] = $event;
+    $days[$time][$key]['events'][] = $event;
 }
 ?>
 
@@ -54,9 +61,9 @@ foreach ($events as $event) {
 
 <div class="page-content">
 	<div class="page-events">
-		<?php foreach ($days as $day): ?>
+		<?php foreach ($days['future'] as $day): ?>
 		<div class="page-events-day<?= $day['class'] ?>">
-			<h2 class="js-toggle"><?= $day['title'] ?></h2>
+			<h3 class="js-toggle"><?= $day['title'] ?></h3>
 			<ul class="eventList">
 				<?php
                 foreach ($day['events'] as $event) {
@@ -76,6 +83,21 @@ foreach ($events as $event) {
 				Sigue o día a día da campaña na nosa canle de Telegram
 			</strong>
 		</a>
+
+		<h2>Tamén estivemos en:</h2>
+
+		<?php foreach ($days['past'] as $day): ?>
+		<div class="page-events-day<?= $day['class'] ?>">
+			<h3 class="js-toggle is-past"><?= $day['title'] ?></h3>
+			<ul class="eventList">
+				<?php
+                foreach ($day['events'] as $event) {
+                    $this->insert('partials/events/list', ['event' => $event]);
+                }
+                ?>
+			</ul>
+		</div>
+		<?php endforeach ?>
 	</div>
 	<div class="page-timeline">
 		<a class="twitter-timeline" href="https://twitter.com/hashtag/rutaEnMarea" data-chrome="noheader nofooter noborders" data-widget-id="769118986873233408">#rutaEnMarea Tweets</a>
