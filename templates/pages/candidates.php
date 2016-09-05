@@ -9,61 +9,126 @@ $social = new SocialLinks\Page([
 ]);
 
 $this->layout('layouts/default', ['menu' => 'candidates', 'social' => $social]);
+
+//Ordernar candidatos
+$provinces = [
+	'acoruna' => [
+		'title' => 'A Coruña',
+		'slice' => [8, 17],
+		'candidates' => []
+	],
+	'lugo' => [
+		'title' => 'Lugo',
+		'slice' => [4, 10],
+		'candidates' => []
+	],
+	'pontevedra' => [
+		'title' => 'Pontevedra',
+		'slice' => [8, 14],
+		'candidates' => []
+	],
+	'ourense' => [
+		'title' => 'Ourense',
+		'slice' => [4, 10],
+		'candidates' => []
+	],
+];
+
+foreach ($candidates as $candidate) {
+	$provinces[$candidate->province]['candidates'][] = $candidate;
+}
 ?>
 
 <?php $this->start('extra-head') ?>
 <link rel="stylesheet" type="text/css" href="<?= $this->asset('css/pages/candidates.css') ?>">
+
+<style type="text/css">
+	<?php foreach (array_keys($provinces) as $id): ?>
+	#<?= $id ?> .page-province-header {
+		background-image: url('<?= $this->img('img/candidatura/'.$id.'.jpg', 'cand-landscape.') ?>');
+	}
+	@media (max-width: 700px) {
+		#<?= $id ?> .page-province-header {
+			background-image: url('<?= $this->img('img/candidatura/'.$id.'.jpg', 'normal.') ?>');
+		}
+	}
+	@media (min-width: 1400px) {
+		#<?= $id ?> .page-province-header {
+			background-image: url('<?= $this->img('img/candidatura/'.$id.'.jpg', 'cand-biglandscape.') ?>');
+		}
+	}
+	<?php endforeach ?>
+</style>
 <?php $this->stop(); ?>
 
-<div class="page-header-container">
-	<header class="page-header">
-		<h1><?= $texts['candidatos']->header->title ?></h1>
-		<p><?= $texts['candidatos']->header->subtitle ?></p>
-	</header>
-</div>
+<header class="page-header">
+	<h1>Candidaturas</h1>
+	<p>Listas para o cambio</p>
+</header>
 
-<div class="page-content">
-	<?php foreach ($texts['candidatos']->provinces as $province): ?>
-	<section class="page-province">
-		<h2><?= $province->title ?></h2>
+<div class="js-tabs">
+	<nav class="page-navigation">
+		<a href="#acoruna">A Coruña</a>
+		<a href="#lugo">Lugo</a>
+		<a href="#ourense">Ourense</a>
+		<a href="#pontevedra">Pontevedra</a>
+	</nav>
 
-		<?php /*
-        <ol class="page-candidates-main">
-            <?php foreach ($province->main_candidates as $candidate): ?>
-            <li>
-                <img src="//placehold.it/92x92">
-                <strong>
-                    <?= $candidate->name ?>
-                </strong>
-            </li>
-            <?php endforeach ?>
-        </ol>
-        */ ?>
-		<ol class="page-candidates-secondary">
-			<?php foreach ($province->main_candidates as $candidate): ?>
-			<li>
-				<strong>
+	<?php foreach ($provinces as $key => $province): ?>
+	<section class="page-province" id="<?= $key ?>">
+		<div class="page-province-header">
+			<h2><?= $province['title'] ?></h2>
+		</div>
+
+		<div class="page-province-content">
+		    <ol class="page-candidates-main">
+				<?php foreach (array_slice($province['candidates'], 0, $province['slice'][0]) as $subkey => $candidate): ?>
+		        <li>
+		        	<a href="#candidato-<?= $key ?>-<?= $subkey ?>" class="js-inline-popup">
+		        		<div class="page-candidate-img">
+			            	<img src="<?= $this->img('uploads/candidates/imageFile/'.$candidate->imageFile->getFilename(), 'cand-small.') ?>">
+			            </div>
+			            <strong>
+			                <?= $candidate->name ?>
+			            </strong>
+			        </a>
+
+		            <div class="page-popup popup is-inline mfp-hide" id="candidato-<?= $key ?>-<?= $subkey ?>">
+		            	<div class="page-popup-bio">
+				            <strong>
+				                <?= $candidate->name ?>
+				            </strong>
+
+			            	<?= $candidate->bio ?>
+		            	</div>
+		            	<div class="page-popup-img">
+		            		<img src="<?= $this->img('uploads/candidates/imageFile/'.$candidate->imageFile->getFilename(), 'cand.') ?>">
+		            	</div>
+		            </div>
+		        </li>
+		        <?php endforeach ?>
+		    </ol>
+
+			<ol class="page-candidates-secondary">
+				<?php foreach (array_slice($province['candidates'], $province['slice'][0], $province['slice'][1]) as $candidate): ?>
+				<li>
+					<strong>
+						<?= $candidate->name ?>
+					</strong>
+				</li>
+				<?php endforeach ?>
+			</ol>
+
+			<h3>Suplentes:</h3>
+
+			<ol class="page-substitutes">
+				<?php foreach (array_slice($province['candidates'], $province['slice'][1]) as $candidate): ?>
+				<li>
 					<?= $candidate->name ?>
-				</strong>
-			</li>
-			<?php endforeach ?>
-
-			<?php foreach ($province->secondary_candidates as $candidate): ?>
-			<li>
-				<strong>
-					<?= $candidate->name ?>
-				</strong>
-			</li>
-			<?php endforeach ?>
-		</ol>
-		<h3>Suplentes:</h3>
-		<ol class="page-substitutes">
-			<?php foreach ($province->substitutes as $substitute): ?>
-			<li>
-				<?= $substitute->name ?>
-			</li>
-			<?php endforeach ?>
-		</ol>
+				</li>
+				<?php endforeach ?>
+			</ol>
+		</div>
 	</section>
 	<?php endforeach ?>
 </div>

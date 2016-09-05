@@ -1,5 +1,8 @@
 var $ = require('jquery');
 
+require('minitabs');
+require('magnific-popup');
+
 /* Abrir/pechar cousas */
 $('.js-toggle').on('click', function (e) {
 	$(this).parent().toggleClass('is-opened');
@@ -69,3 +72,16 @@ $cookies.find('.js-cookies-accept').on('click', function () {
     $cookies.fadeOut('normal');
     localStorage.setItem('accept-cookies', 'accepted');
 });
+
+/* Minitabs */
+$('.js-tabs').tabs({
+	indexSelector: '> nav a',
+	contentSelector: '> section',
+	clickFirst: true
+});
+
+/* Popups */
+$('.js-inline-popup').magnificPopup({
+	type: 'inline'
+});
+
