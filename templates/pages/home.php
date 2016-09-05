@@ -60,10 +60,11 @@ $social = new SocialLinks\Page([
 							Coñéceme
 						</a>
 					</li>
-					<?php /*
-                    <li><a href="#">O meu blog</a></li>
-                    <li><a href="#">Transparencia</a></li>
-                    */ ?>
+					<li>
+						<a href="<?= $this->url('candidates') ?>">
+							As nosas candidaturas
+						</a>
+					</li>
 					<?php if ($events->count()): ?>
 					<li class="is-extended">
 						<strong>Hoxe estaremos en:</strong>
