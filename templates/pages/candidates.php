@@ -82,12 +82,29 @@ foreach ($candidates as $candidate) {
 
 		<div class="page-province-content">
 		    <ol class="page-candidates-main">
-				<?php foreach (array_slice($province['candidates'], 0, $province['slice'][0]) as $candidate): ?>
+				<?php foreach (array_slice($province['candidates'], 0, $province['slice'][0]) as $subkey => $candidate): ?>
 		        <li>
-		            <img src="<?= $this->img('uploads/candidates/imageFile/'.$candidate->imageFile->getFilename(), 'cand-small.') ?>">
-		            <strong>
-		                <?= $candidate->name ?>
-		            </strong>
+		        	<a href="#candidato-<?= $key ?>-<?= $subkey ?>" class="js-inline-popup">
+		        		<div class="page-candidate-img">
+			            	<img src="<?= $this->img('uploads/candidates/imageFile/'.$candidate->imageFile->getFilename(), 'cand-small.') ?>">
+			            </div>
+			            <strong>
+			                <?= $candidate->name ?>
+			            </strong>
+			        </a>
+
+		            <div class="page-popup popup is-inline mfp-hide" id="candidato-<?= $key ?>-<?= $subkey ?>">
+		            	<div class="page-popup-bio">
+				            <strong>
+				                <?= $candidate->name ?>
+				            </strong>
+
+			            	<?= $candidate->bio ?>
+		            	</div>
+		            	<div class="page-popup-img">
+		            		<img src="<?= $this->img('uploads/candidates/imageFile/'.$candidate->imageFile->getFilename(), 'cand.') ?>">
+		            	</div>
+		            </div>
 		        </li>
 		        <?php endforeach ?>
 		    </ol>

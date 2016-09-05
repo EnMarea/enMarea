@@ -40,6 +40,7 @@ class Middleware implements ServiceProviderInterface
                     'cand-landscape.' => 'resizeCrop,1200,650,center,15%',
                     'cand-biglandscape.' => 'resizeCrop,1600,700,center,15%',
                     'cand-small.' => 'resizeCrop,380,300,center,top',
+                    'cand.' => 'resize,380',
                 ]),
 
                 M::create('/uploads', function () use ($app) {

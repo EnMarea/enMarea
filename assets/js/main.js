@@ -1,6 +1,7 @@
 var $ = require('jquery');
 
 require('minitabs');
+require('magnific-popup');
 
 /* Abrir/pechar cousas */
 $('.js-toggle').on('click', function (e) {
@@ -78,3 +79,9 @@ $('.js-tabs').tabs({
 	contentSelector: '> section',
 	clickFirst: true
 });
+
+/* Popups */
+$('.js-inline-popup').magnificPopup({
+	type: 'inline'
+});
+
