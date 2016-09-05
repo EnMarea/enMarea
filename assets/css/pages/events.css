@@ -28,18 +28,26 @@
 	@media (--from-medium) {
 		flex: 1 1 200px;
 		max-width: 50%;
+	}
 
+	> h2 {
+		@extend %font-18-24;
 	}
 }
 .page-events-day {
-	> h2 {
+	> h3 {
 		color: var(--color-blue);
 		background: url('../../img/svg/ico-arrow-right.svg') no-repeat left center;
 		padding-left: 24px;
 		cursor: pointer;
+		font-size: var(--font-24);
 
 		&:hover {
 			text-decoration: underline;
+		}
+
+		&.is-past {
+			opacity: .4;
 		}
 	}
 	> ul {
@@ -48,8 +56,9 @@
 	}
 
 	&.is-opened {
-		> h2 {
+		> h3 {
 			background-image: url('../../img/svg/ico-arrow-down.svg');
+			opacity: 1;
 		}
 		> ul {
 			display: block;
@@ -58,5 +67,6 @@
 
 	+ .button {
 		margin-top: 6rem;
+		margin-bottom: 6rem;
 	}
 }
