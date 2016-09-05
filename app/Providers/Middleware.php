@@ -36,7 +36,9 @@ class Middleware implements ServiceProviderInterface
                     'small.' => 'resizeCrop,380,230',
                     'normal.' => 'resize,900',
                     'landscape.' => 'resizeCrop,1200,650',
-                    'biglandscape.' => 'resizeCrop,1600,800,center,15%',
+                    'biglandscape.' => 'resizeCrop,1600,800',
+                    'cand-landscape.' => 'resizeCrop,1200,650,center,15%',
+                    'cand-biglandscape.' => 'resizeCrop,1600,700,center,15%',
                     'cand-small.' => 'resizeCrop,380,300,center,top',
                 ]),
 

@@ -45,7 +45,7 @@ foreach ($candidates as $candidate) {
 <style type="text/css">
 	<?php foreach (array_keys($provinces) as $id): ?>
 	#<?= $id ?> .page-province-header {
-		background-image: url('<?= $this->img('img/candidatura/'.$id.'.jpg', 'landscape.') ?>');
+		background-image: url('<?= $this->img('img/candidatura/'.$id.'.jpg', 'cand-landscape.') ?>');
 	}
 	@media (max-width: 700px) {
 		#<?= $id ?> .page-province-header {
@@ -54,7 +54,7 @@ foreach ($candidates as $candidate) {
 	}
 	@media (min-width: 1400px) {
 		#<?= $id ?> .page-province-header {
-			background-image: url('<?= $this->img('img/candidatura/'.$id.'.jpg', 'biglandscape.') ?>');
+			background-image: url('<?= $this->img('img/candidatura/'.$id.'.jpg', 'cand-biglandscape.') ?>');
 		}
 	}
 	<?php endforeach ?>
