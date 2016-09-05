@@ -122,7 +122,7 @@ foreach ($candidates as $candidate) {
 			<h3>Suplentes:</h3>
 
 			<ol class="page-substitutes">
-				<?php foreach (array_slice($province['candidates'], $province['slice'][1]) as $candidate): ?>
+				<?php foreach (array_slice($province['candidates'], $province['slice'][0] + $province['slice'][1]) as $candidate): ?>
 				<li>
 					<?= $candidate->name ?>
 				</li>
