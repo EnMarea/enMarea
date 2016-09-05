@@ -8,7 +8,7 @@
 
 .popup.is-inline {
 	position: relative;
-	max-width: 43rem;
+	max-width: 47rem;
 	margin: 0 auto;
 	padding: 0;
 	box-shadow: 0 0 3px color(black a(.3));
