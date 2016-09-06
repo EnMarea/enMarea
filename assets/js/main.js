@@ -82,10 +82,13 @@ $cookies.find('.js-cookies-accept').on('click', function () {
 });
 
 /* Minitabs */
-$('.js-tabs').tabs({
-	indexSelector: '> nav a',
-	contentSelector: '> section',
-	clickFirst: true
+$('.js-tabs').each(function () {
+	$(this).tabs({
+		indexSelector: '> nav a',
+		contentSelector: '> section',
+		clickFirst: true,
+		index: $(this).data('index') || 0
+	});
 });
 
 /* Popups */

@@ -66,7 +66,7 @@ foreach ($candidates as $candidate) {
 	<p>Listas para o cambio</p>
 </header>
 
-<div class="js-tabs">
+<div class="js-tabs" data-index=<?= rand(0, 3) ?>>
 	<nav class="page-navigation">
 		<a href="#acoruna">A Coruña</a>
 		<a href="#lugo">Lugo</a>
