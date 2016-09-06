@@ -19,7 +19,15 @@ $('.js-toggle-focus')
 		setTimeout(function () {
 			$parent.removeClass('is-opened');
 		}, 100);
-	});
+	})
+	.on('touchstart', function (e) {
+		if (/iPad|iPhone|iPod/g.test(navigator.userAgent)) {
+			var $parent = $(this).parent();
+			setTimeout(function () {
+				$parent.toggleClass('is-opened');
+			}, 100);
+		}
+	})
 
 $('.js-toggle-focus')
 
