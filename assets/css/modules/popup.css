@@ -2,7 +2,7 @@
 
 .mfp-bg {
 	background: white;
-	opacity: .5;
+	opacity: .7;
 	transition: opacity .3s;
 }
 
@@ -13,22 +13,37 @@
 	padding: 0;
 	box-shadow: 0 0 3px color(black a(.3));
 }
+button.mfp-arrow {
+	transform: scale(2);
+	color: var(--color-blue);
+
+	&:hover {
+		color: color(var(--color-blue) blackness(+20%));
+	}
+	@media (max-width: 900px) {
+		display: none;
+	}
+}
 button.mfp-arrow-left {
+	opacity: 1;
+
 	&::before {
-		border-right-color: var(--color-blue);
+		border-right-color: currentColor;
 		opacity: 1;
 	}
 	&::after {
-		border-right-color: var(--color-blue);
+		border-right-color: currentColor;
 	}
 }
 button.mfp-arrow-right {
+	opacity: 1;
+
 	&::before {
-		border-left-color: var(--color-blue);
+		border-left-color: currentColor;
 		opacity: 1;
 	}
 	&::after {
-		border-left-color: var(--color-blue);
+		border-left-color: currentColor;
 	}
 }
 .mfp-close-btn-in .mfp-close {
