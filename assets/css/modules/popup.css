@@ -12,7 +12,24 @@
 	margin: 0 auto;
 	padding: 0;
 	box-shadow: 0 0 3px color(black a(.3));
-
+}
+button.mfp-arrow-left {
+	&::before {
+		border-right-color: var(--color-blue);
+		opacity: 1;
+	}
+	&::after {
+		border-right-color: var(--color-blue);
+	}
+}
+button.mfp-arrow-right {
+	&::before {
+		border-left-color: var(--color-blue);
+		opacity: 1;
+	}
+	&::after {
+		border-left-color: var(--color-blue);
+	}
 }
 .mfp-close-btn-in .mfp-close {
 	color: inherit;

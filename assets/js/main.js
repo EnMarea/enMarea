@@ -89,7 +89,16 @@ $('.js-tabs').tabs({
 });
 
 /* Popups */
-$('.js-inline-popup').magnificPopup({
-	type: 'inline'
+$('.js-inline-gallery').each(function () {
+	$(this).magnificPopup({
+		delegate: '.js-inline-gallery-element',
+		type: 'inline',
+		gallery: {
+			enabled: true,
+			tPrev: 'Anterior (Tecla flecha á esquerda)',
+		    tNext: 'Seguinte (Tecla flecha á dereita)',
+		    tCounter: '%curr% de %total%'
+		}
+	});
 });
 

@@ -81,10 +81,10 @@ foreach ($candidates as $candidate) {
 		</div>
 
 		<div class="page-province-content">
-		    <ol class="page-candidates-main">
+		    <ol class="page-candidates-main js-inline-gallery">
 				<?php foreach (array_slice($province['candidates'], 0, $province['slice'][0]) as $subkey => $candidate): ?>
 		        <li>
-		        	<a href="#candidato-<?= $key ?>-<?= $subkey ?>" class="js-inline-popup">
+		        	<a href="#candidato-<?= $key ?>-<?= $subkey ?>" class="js-inline-gallery-element">
 		        		<div class="page-candidate-img">
 			            	<img src="<?= $this->img('uploads/candidates/imageFile/'.$candidate->imageFile->getFilename(), 'cand-small.') ?>">
 			            </div>
