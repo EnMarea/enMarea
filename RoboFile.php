@@ -19,6 +19,7 @@ class RoboFile extends \Robo\Tasks
         $env = [
             'APP_DEV' => 'true',
             'APP_URL' => 'http://127.0.0.1:8000',
+            'APP_ADMIN_PATH' => '/admin',
             'APP_SYNC_OPEN' => $opts['open'],
         ];
 

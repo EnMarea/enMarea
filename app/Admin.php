@@ -27,6 +27,10 @@ class Admin extends \Folk\Admin
             Admin\Headers::class,
             Admin\Texts::class,
             Admin\Candidates::class,
+            Admin\ProgramPoint::class,
+            Admin\ProgramBlock::class,
+            Admin\ProgramChapter::class,
+            Admin\ProgramAction::class,
         ]);
     }
 }

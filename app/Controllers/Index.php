@@ -285,4 +285,92 @@ class Index
                 ]);
         }
     }
+
+    /**
+     * Portada co programa.
+     */
+    public function program(Request $request, Response $response, App $app)
+    {
+        $db = $app->get('db');
+
+        $blocks = $db->programBlock
+            ->select()
+            ->where('isActive = 1')
+            ->orderBy('position')
+            ->run();
+
+        return $app['templates']->render('pages/program', [
+            'blocks' => $blocks,
+        ]);
+    }
+
+    /**
+     * Bloque do programa.
+     */
+    public function programBlock(Request $request, Response $response, App $app)
+    {
+        $db = $app->get('db');
+
+        $block = $db->programBlock
+            ->select()
+            ->one()
+            ->where('isActive = 1')
+            ->by('slug', $request->getAttribute('block'))
+            ->run();
+
+        if (!$block) {
+            return $response->withStatus(404);
+        }
+
+        $chapters = $block->programChapter()
+            ->where('isActive = 1')
+            ->orderBy('position')
+            ->run();
+
+        return $app['templates']->render('pages/program-block', [
+            'block' => $block,
+            'chapters' => $chapters,
+        ]);
+    }
+
+    /**
+     * Capítulo do programa.
+     */
+    public function programChapter(Request $request, Response $response, App $app)
+    {
+        $db = $app->get('db');
+
+        $block = $db->programBlock
+            ->select()
+            ->one()
+            ->where('isActive = 1')
+            ->by('slug', $request->getAttribute('block'))
+            ->run();
+
+        if (!$block) {
+            return $response->withStatus(404);
+        }
+
+        $chapter = $block->programChapter()
+            ->relatedWith($block)
+            ->one()
+            ->where('isActive = 1')
+            ->by('slug', $request->getAttribute('chapter'))
+            ->run();
+
+        if (!$chapter) {
+            return $response->withStatus(404);
+        }
+
+        $actions = $chapter->programAction()
+            ->where('isActive = 1')
+            ->orderBy('position')
+            ->run();
+
+        return $app['templates']->render('pages/program-chapter', [
+            'block' => $block,
+            'chapter' => $chapter,
+            'actions' => $actions,
+        ]);
+    }
 }
