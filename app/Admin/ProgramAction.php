@@ -25,6 +25,10 @@ class ProgramAction extends SimpleCrud
             'programPoint_id' => $b->relationOne($this->admin->getEntity('programPoint'))
                 ->label('Metelo no tema transversal...'),
 
+            'number' => $b->number()
+                ->set('editable', true)
+                ->label('Número de medida'),
+
             'title' => $b->text()
                 ->required()
                 ->maxlength(255)

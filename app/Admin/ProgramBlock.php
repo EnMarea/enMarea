@@ -36,6 +36,12 @@ class ProgramBlock extends SimpleCrud
                 ->set('editable', true)
                 ->label('Posición'),
 
+            'imageFile' => $b->imageUpload()
+                ->data('config', [
+                    'directory' => '../data/uploads/programBlock/imageFile/',
+                ])
+                ->label('Imaxe'),
+
             'isActive' => $b->checkbox()
                 ->label('Amosar'),
         ]);
