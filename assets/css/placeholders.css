@@ -246,6 +246,51 @@
 	}
 }
 
+%grid-1-2-3-4-5 {
+	@extend %grid-1-2;
+
+	@media (--from-narrow) AND (--to-intermedium) {
+		> li {
+			width: calc((100% / 2) - (20px / 2));
+
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	@media (--from-intermedium) AND (--to-medium) {
+		> li {
+			width: calc((100% / 3) - ((20px * 2) / 3));
+
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+		}
+	}
+	
+
+	@media (--from-interme) AND (--to-wide) {
+		> li {
+			width: calc((100% / 4) - ((20px * 3) / 4));
+
+			&:nth-child(4n) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	@media (--from-wide) {
+		> li {
+			width: calc((100% / 5) - ((20px * 4) / 5));
+
+			&:nth-child(5n) {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
 
 /* Utilidades */
 %header-blue {

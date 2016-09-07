@@ -17,7 +17,11 @@ $social = new SocialLinks\Page([
 
 <div class="page-header-container">
 	<header>
-		<h1>Programa</h1>
+		<h1>
+			<a href="<?= $this->url('program') ?>">
+				Programa
+			</a>
+		</h1>
 	</header>
 
 	<nav class="page-navigation-main">

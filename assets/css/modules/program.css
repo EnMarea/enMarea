@@ -86,7 +86,7 @@
 	a {
 		display: block;
 		background: var(--color-green);
-		color: white;
+		color: black;
 		padding: 1em;
 		height: 100%;
 		box-sizing: border-box;
@@ -94,9 +94,11 @@
 		font-size: var(--font-18);
 		min-height: 6em;
 		transition: background-color .3s;
+		font-weight: bold;
 
 		&:hover {
 			background-color: var(--color-blue);
+			color: white;
 		}
 	}
 }

@@ -9,6 +9,10 @@
 	background: var(--color-green);
 	color: white;
 
+	a {
+		color: inherit;
+	}
+
 	> header {
 		@extend %wrapper;
 		max-width: var(--max-width);
