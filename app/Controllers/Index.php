@@ -367,8 +367,15 @@ class Index
             ->orderBy('position')
             ->run();
 
+        $blocks = $db->programBlock
+            ->select()
+            ->where('isActive = 1')
+            ->orderBy('position')
+            ->run();
+
         return $app['templates']->render('pages/program-chapter', [
             'block' => $block,
+            'blocks' => $blocks,
             'chapter' => $chapter,
             'actions' => $actions,
         ]);

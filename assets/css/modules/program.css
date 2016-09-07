@@ -1,0 +1,116 @@
+.program-chapter.is-permalink {
+	max-width: var(--max-width-text);
+	margin: 0 auto;
+
+	.program-chapter-title {
+		@extend %font-bold-24__64;
+		margin: 0;
+	}
+	.program-chapter-text {
+		@extend %font-18-24;
+		line-height: 1.2;
+		margin-bottom: 2em;
+	}
+}
+
+.program-action-title {
+	strong {
+		font-weight: normal;
+		font-size: var(--font-16);
+		display: inline-block;
+		vertical-align: bottom;
+		padding: .3em .5em;
+		line-height: 1;
+		border: solid 1px var(--color-gray-light);
+		color: var(--color-gray);
+		border-radius: 3px;
+	}
+}
+
+.program-action-text {
+	@extend %font-16-18;
+	li {
+		margin: .5em 0;
+	}
+}
+.program-action.is-list {
+	border-top: solid 1px var(--color-gray-light);
+
+	.program-action-title {
+		color: var(--color-blue);
+		background: url('../../img/svg/ico-arrow-right.svg') no-repeat left 6px;
+		padding-left: 24px;
+		cursor: pointer;
+		@extend %font-18-24;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.program-action-text {
+		display: none;
+		margin-left: 24px;
+	}
+
+	&.is-opened {
+		.program-action-title {
+			background-image: url('../../img/svg/ico-arrow-down.svg');
+			opacity: 1;
+		}
+		.program-action-text {
+			display: block;
+		}
+	}
+}
+
+/*
+.text-body {
+	h2 {
+		border-bottom: solid 2px var(--color-blue);
+	}
+}
+.text.is-permalink {
+	.text-header {
+		@extend %wrapper;
+		max-width: var(--max-width-text);
+	}
+	.text-intro {
+		@extend %wrapper;
+		max-width: var(--max-width-text);
+		margin-bottom: 4rem;
+	}
+	.text-navigation {
+		@extend %wrapper;
+		max-width: var(--max-width-text);
+		margin-top: 4rem;
+		padding-top: 2rem;
+		border-top: solid 3px var(--color-blue);
+		@extend %font-16-18;
+		font-weight: 700;
+		
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		a {
+			background: url('../../img/svg/ico-arrow-right.svg') no-repeat 20px center;
+			padding-left: 40px;
+			display: inline-block;
+
+			&.is-back {
+				background-image: url('../../img/svg/ico-arrow-left.svg');
+				background-position: left center;
+				padding-left: 20px;
+				margin-bottom: 1em;
+			}
+			&.is-selected {
+				color: var(--color-black);
+				text-decoration: line-through;
+			}
+		}
+	}
+}
+*/

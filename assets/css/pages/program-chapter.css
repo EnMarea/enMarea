@@ -1,0 +1,76 @@
+@import "../variables.css";
+@import "../placeholders.css";
+
+.navbar {
+	background-color: var(--color-blue);
+}
+
+.page-header-container {
+	background: var(--color-blue);
+	color: white;
+
+	> header {
+		@extend %wrapper;
+		max-width: var(--max-width);
+		margin-top: 20px;
+		padding-bottom: 2rem;
+		text-align: center;
+
+		@media (--from-intermedium) {
+			margin-top: 40px;
+		}
+
+		h1 {
+			@extend %font-black-36__72;
+			margin: 0;
+		}
+	}
+
+	+ div {
+		@extend %wrapper;
+		background: white;
+		max-width: var(--max-width);
+	}
+}
+.page-navigation-main {
+	display: flex;
+	justify-content: center;
+	@extend %wrapper;
+	text-align: center;
+	text-transform: uppercase;
+	align-items: flex-end;
+	font-weight: bold;
+	max-width: var(--max-width);
+
+	a {
+		color: white;
+		display: inline-block;
+		padding: 1em;
+	}
+
+	.is-active {
+		background: white;
+		color: var(--color-blue);
+	}
+
+	@media (--to-medium) {
+		display: none;
+	}
+}
+.page-navigation-secondary {
+	@extend %wrapper;
+	border-bottom: solid 3px var(--color-blue);
+	@extend %font-16-18;
+	font-weight: bold;
+	max-width: var(--max-width);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 2rem;
+
+	a {
+		background: url('../../img/svg/ico-arrow-left.svg') no-repeat left center;
+		padding-left: 20px;
+		display: inline-block;
+		white-space: nowrap;
+	}
+}
