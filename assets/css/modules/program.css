@@ -10,6 +10,15 @@
 		@extend %font-16-18;
 		line-height: 1.35;
 		margin-bottom: 2em;
+
+		svg {
+			float: right;
+			margin: 0 0 1em 2em;
+
+			@media (--to-intermedium) {
+				display: none;
+			}
+		}
 	}
 }
 
@@ -85,8 +94,8 @@
 
 	a {
 		display: block;
-		background: var(--color-green);
-		color: black;
+		background: var(--color-blue);
+		color: white;
 		padding: 1em;
 		height: 100%;
 		box-sizing: border-box;
@@ -94,11 +103,9 @@
 		font-size: var(--font-18);
 		min-height: 6em;
 		transition: background-color .3s;
-		font-weight: bold;
 
 		&:hover {
-			background-color: var(--color-blue);
-			color: white;
+			background-color: black;
 		}
 	}
 }

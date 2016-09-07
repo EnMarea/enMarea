@@ -32,7 +32,7 @@ class V16 extends AbstractMigration
             ->update();
 
         $this->table('programBlock')
-            ->addColumn('imageFile', 'string')
+            ->addColumn('icon', 'string')
             ->update();
     }
 }

@@ -24,6 +24,17 @@ $social = new SocialLinks\Page([
 		<p>En Marea nacemos para mudalo todo. Somos o espazo político das de abaixo, en que xentes diversas, plurais, como o propio país, poñemos as nosas mans para construírmos un futuro colectivo máis xusto. Somos un espazo aberto, de cooperación, que procura unha política a prol dos máis e non secuestrada por unha minoría. Queremos unha Galicia onde a xente decida sobre a súa vida. Unha Galicia en que a xustiza social sexa horizonte común e ninguén fique atrás. Unha Galicia en que a economía sirva para mellorar a vida das persoas, o autogoberno axude ao benestar común e as institucións sexan de todas. Unha Galicia xusta.</p>
 	</div>
 
+	<ul class="page-blocks">
+		<?php foreach ($blocks as $block): ?>
+		<li>
+			<a href="<?= $this->url('program-block', ['block' => $block->slug]) ?>">
+				<?= $this->svg($block->icon)->withA11y($block->title) ?>
+				<?= $block->title ?>
+			</a>
+		</li>
+		<?php endforeach ?>
+	</ul>
+
 	<div class="page-text">
 		<section>
 			<h2>Construír un país mellor en común.</h2>
@@ -43,14 +54,4 @@ $social = new SocialLinks\Page([
 			<p> En Marea devolverá o goberno á xente e acabará co secuestro da democracia por unha minoría. Con En Marea será a cidadanía quen decida sobre a súa vida e o seu futuro. Iso é, para nós, a soberanía. Decidilo todo. Porque xa é tempo de que o goberno galego deixe de ser un atranco para o propio país e as súas potencialidades. Galicia non se laia, Galicia está na vangarda política e social, e o 25 de setembro amosará, de novo, a súa vontade colectiva de pasar páxina e apropiarse do seu porvir.</p>
 		</section>
 	</div>
-
-	<ul class="page-blocks">
-		<?php foreach ($blocks as $block): ?>
-		<li>
-			<a href="<?= $this->url('program-block', ['block' => $block->slug]) ?>">
-				<?= $block->title ?>
-			</a>
-		</li>
-		<?php endforeach ?>
-	</ul>
 </div>

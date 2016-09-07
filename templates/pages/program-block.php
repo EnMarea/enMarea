@@ -39,6 +39,7 @@ $social = new SocialLinks\Page([
 	</h1>
 
 	<div class="program-block-text">
+		<?= $this->svg($block->icon)->withA11y($block->title) ?>
 		<?= $block->text ?>
 	</div>
 
