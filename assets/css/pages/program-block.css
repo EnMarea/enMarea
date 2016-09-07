@@ -63,21 +63,7 @@
 		display: none;
 	}
 }
-.page-navigation-secondary {
+.page-content {
+	padding-top: 3rem;
 	@extend %wrapper;
-	border-bottom: solid 3px var(--color-green);
-	@extend %font-16-18;
-	font-weight: bold;
-	max-width: var(--max-width);
-	padding-top: 10px;
-	padding-bottom: 10px;
-	margin-bottom: 2rem;
-
-	a {
-		color: var(--color-green);
-		background: url('../../img/svg/ico-arrow-left-green.svg') no-repeat left center;
-		padding-left: 20px;
-		display: inline-block;
-		white-space: nowrap;
-	}
 }

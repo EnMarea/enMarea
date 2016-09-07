@@ -1,6 +1,7 @@
 :root {
 	--font: enMarea, helvetica, arial, sans-serif;
 	--color-blue: #004FFF;
+	--color-green: #00CCCC;
 	--color-black: #313131;
 	--color-gray-light: color(var(--color-black) tint(85%));
 	--color-gray: color(var(--color-black) tint(60%));

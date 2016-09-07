@@ -1,3 +1,18 @@
+.program-block.is-permalink {
+	max-width: var(--max-width-text);
+	margin: 0 auto;
+
+	.program-block-title {
+		@extend %font-bold-24__64;
+		margin: 0;
+	}
+	.program-block-text {
+		@extend %font-16-18;
+		line-height: 1.35;
+		margin-bottom: 2em;
+	}
+}
+
 .program-chapter.is-permalink {
 	max-width: var(--max-width-text);
 	margin: 0 auto;
@@ -7,8 +22,9 @@
 		margin: 0;
 	}
 	.program-chapter-text {
-		@extend %font-18-24;
-		line-height: 1.2;
+		/*@extend %font-18-24;*/
+		@extend %font-16-18;
+		line-height: 1.35;
 		margin-bottom: 2em;
 	}
 }
@@ -64,53 +80,23 @@
 	}
 }
 
-/*
-.text-body {
-	h2 {
-		border-bottom: solid 2px var(--color-blue);
-	}
-}
-.text.is-permalink {
-	.text-header {
-		@extend %wrapper;
-		max-width: var(--max-width-text);
-	}
-	.text-intro {
-		@extend %wrapper;
-		max-width: var(--max-width-text);
-		margin-bottom: 4rem;
-	}
-	.text-navigation {
-		@extend %wrapper;
-		max-width: var(--max-width-text);
-		margin-top: 4rem;
-		padding-top: 2rem;
-		border-top: solid 3px var(--color-blue);
-		@extend %font-16-18;
-		font-weight: 700;
-		
-		ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-		}
+.program-chaptersList {
+	@extend %grid-1-2-3;
 
-		a {
-			background: url('../../img/svg/ico-arrow-right.svg') no-repeat 20px center;
-			padding-left: 40px;
-			display: inline-block;
+	a {
+		display: block;
+		background: var(--color-green);
+		color: white;
+		padding: 1em;
+		height: 100%;
+		box-sizing: border-box;
+		text-decoration: none;
+		font-size: var(--font-18);
+		min-height: 6em;
+		transition: background-color .3s;
 
-			&.is-back {
-				background-image: url('../../img/svg/ico-arrow-left.svg');
-				background-position: left center;
-				padding-left: 20px;
-				margin-bottom: 1em;
-			}
-			&.is-selected {
-				color: var(--color-black);
-				text-decoration: line-through;
-			}
+		&:hover {
+			background-color: var(--color-blue);
 		}
 	}
 }
-*/
