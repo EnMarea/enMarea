@@ -103,9 +103,10 @@
 		font-size: var(--font-18);
 		min-height: 6em;
 		transition: background-color .3s;
+		font-weight: bold;
 
 		&:hover {
-			background-color: black;
+			background-color: color(var(--color-blue) blackness(+20%));
 		}
 	}
 }

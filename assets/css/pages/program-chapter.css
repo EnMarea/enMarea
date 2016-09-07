@@ -59,7 +59,7 @@
 
 		&:hover {
 			color: white;
-			background-color: black;
+			background-color: color(var(--color-blue) blackness(+20%));
 		}
 	}
 
