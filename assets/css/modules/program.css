@@ -31,7 +31,6 @@
 		margin: 0;
 	}
 	.program-chapter-text {
-		/*@extend %font-18-24;*/
 		@extend %font-16-18;
 		line-height: 1.35;
 		margin-bottom: 2em;
@@ -54,6 +53,8 @@
 
 .program-action-text {
 	@extend %font-16-18;
+	line-height: 1.35;
+
 	li {
 		margin: .5em 0;
 	}
