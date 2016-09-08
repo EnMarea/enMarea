@@ -20,7 +20,7 @@ $social = new SocialLinks\Page([
 	}
 	@media (max-width: 700px) {
 		.hero {
-			background-image: linear-gradient(rgba(0, 30, 100, .6), rgba(0, 30, 100, .6)), url('<?= $this->img('uploads/headers/imageFile/'.$header->imageFile->getFilename(), 'normal.') ?>');
+			background-image: linear-gradient(rgba(0, 30, 100, .6), rgba(0, 30, 100, .6)), url('<?= $this->img('uploads/headers/imageFile/'.$header->imageFile->getFilename(), 'smalllandscape.') ?>');
 			background-position: center center;
 		}
 	}

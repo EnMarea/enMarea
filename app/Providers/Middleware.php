@@ -35,6 +35,7 @@ class Middleware implements ServiceProviderInterface
                 M::imageTransformer([
                     'small.' => 'resizeCrop,380,230',
                     'normal.' => 'resize,900',
+                    'smalllandscape.' => 'resizeCrop,900,650,CROP_ENTROPY',
                     'landscape.' => 'resizeCrop,1200,650',
                     'biglandscape.' => 'resizeCrop,1600,800',
                     'cand-landscape.' => 'resizeCrop,1200,650,center,15%',
