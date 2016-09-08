@@ -40,11 +40,11 @@
 						Candidaturas
 					</a>
 				</li>
-				<?php /*
-                <li class="is-section">
-                    <a href="#">Programa</a>
-                </li>
-                */ ?>
+				<li class="is-section">
+					<a href="<?= $this->url('program') ?>"<?= $menu === 'program' ? ' class="is-actived"' : '' ?>>
+						Programa
+					</a>
+				</li>
 				<li class="is-section">
 					<a href="<?= $this->url('about') ?>"<?= $menu === 'about' ? ' class="is-actived"' : '' ?>>
 						En marea
@@ -60,11 +60,6 @@
 						Congreso
 					</a>
 				</li>
-				<?php /*
-                <li class="is-section">
-                    <a href="#">Repositorio</a>
-                </li>
-                */ ?>
 			</ul>
 			<span class="navbar-toggle js-toggle-focus" tabindex="-1">
 				<?= $this->svg('ico-menu') ?>
@@ -102,11 +97,11 @@
 						Candidaturas
 					</a>
 				</li>
-				<?php /*
-                <li>
-                    <a href="#">Programa</a>
-                </li>
-                */ ?>
+				<li>
+					<a href="<?= $this->url('program') ?>">
+						Programa
+					</a>
+				</li>
 				<li>
 					<a href="<?= $this->url('about') ?>">
 						En marea
@@ -122,11 +117,6 @@
 						Congreso
 					</a>
 				</li>
-				<?php /*
-                <li>
-                    <a href="#">Repositorio</a>
-                </li>
-                */ ?>
 			</ul>
 		</nav>
 	</div>

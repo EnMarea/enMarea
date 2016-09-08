@@ -68,7 +68,7 @@
 			&:hover {
 				color: black;
 				text-decoration: none;
-				background-color: var(--color-gray-light);
+				background-color: color(var(--color-blue) tint(85%));
 			}
 		}
 	}
