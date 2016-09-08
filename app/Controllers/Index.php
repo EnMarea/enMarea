@@ -299,8 +299,15 @@ class Index
             ->orderBy('position')
             ->run();
 
+        $text = $db->texts
+            ->select()
+            ->one()
+            ->by('name', 'programa')
+            ->run();
+
         return $app['templates']->render('pages/program', [
             'blocks' => $blocks,
+            'text' => $text,
         ]);
     }
 

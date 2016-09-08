@@ -29,6 +29,7 @@
 	line-height: 1.3;
 	@extend %wrapper;
 	padding-bottom: 2rem;
+	max-width: var(--max-width);
 }
 .page-text {
 	margin-top: 3rem;
