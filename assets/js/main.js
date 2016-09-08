@@ -5,7 +5,15 @@ require('magnific-popup');
 
 /* Abrir/pechar cousas */
 $('.js-toggle').on('click', function (e) {
-	$(this).parent().toggleClass('is-opened');
+	e.preventDefault();
+
+	var $this = $(this);
+
+	$this.parent().toggleClass('is-opened');
+
+	if ($this.data('id')) {
+		history.replaceState({}, '', '#'+$this.data('id'));
+	}
 });
 
 /* Abrir/pechar cousas con focus */
@@ -105,3 +113,13 @@ $('.js-inline-gallery').each(function () {
 	});
 });
 
+/* hash */
+$(function () {
+	var $element = $(':target');
+
+	if ($element.length) {
+		$element.find('.js-toggle[data-id="' + $element.attr('id') + '"]').click();
+
+		$(window).scrollTop($element.position().top - 150);
+	}
+});

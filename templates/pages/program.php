@@ -2,7 +2,7 @@
 
 $social = new SocialLinks\Page([
     'url' => $this->url('program'),
-    'title' => 'Programa - En Marea',
+    'title' => 'Programa 2016',
     'text' => 'En Marea, a alternativa de cambio en Galicia. Coñece a Luís Villares, o futuro presidente da Xunta',
     'image' => $this->asset('img/img-rrss.png'),
     'twitterUser' => '@en_marea',
@@ -15,7 +15,7 @@ $social = new SocialLinks\Page([
 <link rel="stylesheet" type="text/css" href="<?= $this->asset('css/pages/program.css') ?>">
 <?php $this->stop(); ?>
 
-<div class="page-content">
+<div class="page-header-container">
 	<header>
 		<h1>Programa</h1>
 	</header>
@@ -23,7 +23,9 @@ $social = new SocialLinks\Page([
 	<div class="page-intro">
 		<p>En Marea nacemos para mudalo todo. Somos o espazo político das de abaixo, en que xentes diversas, plurais, como o propio país, poñemos as nosas mans para construírmos un futuro colectivo máis xusto. Somos un espazo aberto, de cooperación, que procura unha política a prol dos máis e non secuestrada por unha minoría. Queremos unha Galicia onde a xente decida sobre a súa vida. Unha Galicia en que a xustiza social sexa horizonte común e ninguén fique atrás. Unha Galicia en que a economía sirva para mellorar a vida das persoas, o autogoberno axude ao benestar común e as institucións sexan de todas. Unha Galicia xusta.</p>
 	</div>
+</div>
 
+<div class="page-content">
 	<ul class="page-blocks">
 		<?php foreach ($blocks as $block): ?>
 		<li>

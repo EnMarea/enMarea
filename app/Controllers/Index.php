@@ -387,4 +387,39 @@ class Index
             'actions' => $actions,
         ]);
     }
+
+    /**
+     * Medida do programa.
+     */
+    public function programAction(Request $request, Response $response, App $app)
+    {
+        $db = $app->get('db');
+
+        $action = $db->programAction
+            ->select()
+            ->one()
+            ->where('isActive = 1')
+            ->by('number', $request->getAttribute('number'))
+            ->run();
+
+        if (!$action
+         || !$action->programChapter
+         || !$action->programChapter->isActive
+         || !$action->programChapter->programBlock
+         || !$action->programChapter->programBlock->isActive
+        ) {
+            return $response->withStatus(404);
+        }
+
+        $blocks = $db->programBlock
+            ->select()
+            ->where('isActive = 1')
+            ->orderBy('position')
+            ->run();
+
+        return $app['templates']->render('pages/program-action', [
+            'action' => $action,
+            'blocks' => $blocks,
+        ]);
+    }
 }

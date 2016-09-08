@@ -1,9 +1,6 @@
 @import "../variables.css";
 @import "../placeholders.css";
-
-.navbar {
-	background-color: var(--color-blue);
-}
+@import "common/program.css";
 
 .page-content {
 	padding-top: 3rem;
@@ -29,6 +26,9 @@
 }
 .page-intro {
 	@extend %font-18-24;
+	line-height: 1.3;
+	@extend %wrapper;
+	padding-bottom: 2rem;
 }
 .page-text {
 	margin-top: 3rem;

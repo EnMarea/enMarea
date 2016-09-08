@@ -1,8 +1,7 @@
 <?php 
-
 $social = new SocialLinks\Page([
-    'url' => $this->url('program'),
-    'title' => $chapter->title.' - '.$block->title.' - En Marea',
+    'url' => $this->url('program-chapter', ['block' => $block->slug, 'chapter' => $chapter->slug]),
+    'title' => $chapter->title.' - '.$block->title,
     'text' => $chapter->text,
     'image' => $this->asset('img/img-rrss.png'),
     'twitterUser' => '@en_marea',
@@ -15,23 +14,7 @@ $social = new SocialLinks\Page([
 <link rel="stylesheet" type="text/css" href="<?= $this->asset('css/pages/program-chapter.css') ?>">
 <?php $this->stop(); ?>
 
-<div class="page-header-container">
-	<header>
-		<h1>
-			<a href="<?= $this->url('program') ?>">
-				Programa
-			</a>
-		</h1>
-	</header>
-
-	<nav class="page-navigation-main">
-		<?php foreach ($blocks as $val): ?>
-		<a href="<?= $this->url('program-block', ['block' => $val->slug]) ?>"<?= $val->id === $block->id ? ' class="is-active"' : '' ?>>
-			<?= $val->title ?>
-		</a>
-		<?php endforeach ?>
-	</nav>
-</div>
+<?php $this->insert('partials/program-header', ['blocks' => $blocks, 'block' => $block]) ?>
 
 <div class="page-content">
 	<nav class="page-navigation-secondary">
@@ -43,18 +26,27 @@ $social = new SocialLinks\Page([
 			<?= $chapter->title ?>
 		</h1>
 
+		<?php $this->insert('partials/share', ['social' => $social]) ?>
+
 		<div class="program-chapter-text">
 			<?= $chapter->text ?>
 		</div>
 
 		<?php foreach ($actions as $action): ?>
-		<section class="program-action is-list">
-			<h2 class="program-action-title js-toggle">
+		<section class="program-action is-list" id="medida-<?= $action->number ?>">
+			<a href="<?= $this->url('program-action', ['number' => $action->number]) ?>" class="program-action-title js-toggle" data-id="medida-<?= $action->number ?>">
 				<strong><?= $action->number ?></strong> <?= $action->title ?>
-			</h2>
+			</a>
 
 			<div class="program-action-text">
 				<?= $action->text ?>
+
+				<?php $this->insert('partials/share', ['social' => new SocialLinks\Page([
+					    'url' => $this->url('program-action', ['number' => $action->number]),
+					    'title' => $action->title,
+					    'text' => $action->text,
+					    'twitterUser' => '@en_marea',
+					])]) ?>
 			</div>
 		</section>
 		<?php endforeach ?>

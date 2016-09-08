@@ -1,8 +1,8 @@
 <?php 
 
 $social = new SocialLinks\Page([
-    'url' => $this->url('program'),
-    'title' => $block->title.' - En Marea',
+    'url' => $this->url('program-block', ['block' => $block->slug]),
+    'title' => $block->title,
     'text' => $block->text,
     'image' => $this->asset('img/img-rrss.png'),
     'twitterUser' => '@en_marea',
@@ -15,28 +15,14 @@ $social = new SocialLinks\Page([
 <link rel="stylesheet" type="text/css" href="<?= $this->asset('css/pages/program-block.css') ?>">
 <?php $this->stop(); ?>
 
-<div class="page-header-container">
-	<header>
-		<h1>
-			<a href="<?= $this->url('program') ?>">
-				Programa
-			</a>
-		</h1>
-	</header>
-
-	<nav class="page-navigation-main">
-		<?php foreach ($blocks as $val): ?>
-		<a href="<?= $this->url('program-block', ['block' => $val->slug]) ?>"<?= $val->id === $block->id ? ' class="is-active"' : '' ?>>
-			<?= $val->title ?>
-		</a>
-		<?php endforeach ?>
-	</nav>
-</div>
+<?php $this->insert('partials/program-header', ['blocks' => $blocks, 'block' => $block]) ?>
 
 <article class="page-content program-block is-permalink">
 	<h1 class="program-block-title">
 		<?= $block->title ?>
 	</h1>
+
+	<?php $this->insert('partials/share', ['social' => $social]) ?>
 
 	<div class="program-block-text">
 		<?= $this->svg($block->icon.'-img')->withA11y($block->title) ?>
