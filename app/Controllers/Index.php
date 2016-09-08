@@ -48,6 +48,7 @@ class Index
         $events = $db->events
             ->select()
             ->where('isActive = 1')
+            ->where('isNotInHome = 0')
             ->where('DATE(`day`) = DATE(NOW())')
             ->orderBy('day,hour')
             ->run();
