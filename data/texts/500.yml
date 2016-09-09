@@ -2,4 +2,7 @@ header:
   title: Vaia, houbo un erro
   subtitle: |
     Sentímolo, houbo un erro na páxina. Intentaremos arranxalo o antes posible
-btn: Ir á portada
+
+btn:
+  text: Ir á portada
+  url: /

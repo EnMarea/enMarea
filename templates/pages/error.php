@@ -20,8 +20,8 @@ $this->layout('layouts/default', ['social' => $social]);
 	<p><?= $texts->header->subtitle ?></p>
 
 	<?php if (isset($texts->btn)): ?>
-	<a href="<?= $this->url('home') ?>" class="button">
-		<?= $texts->btn ?>
+	<a href="<?= $texts->btn->url ?>" class="button">
+		<?= $texts->btn->text ?>
 	</a>
 	<?php endif ?>
 </div>
