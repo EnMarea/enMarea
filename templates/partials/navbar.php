@@ -40,11 +40,13 @@
 						Candidaturas
 					</a>
 				</li>
+				<?php /*
 				<li class="is-section">
 					<a href="<?= $this->url('program') ?>"<?= $menu === 'program' ? ' class="is-actived"' : '' ?>>
 						Programa
 					</a>
 				</li>
+				*/ ?>
 				<li class="is-section">
 					<a href="<?= $this->url('about') ?>"<?= $menu === 'about' ? ' class="is-actived"' : '' ?>>
 						En marea
@@ -97,11 +99,13 @@
 						Candidaturas
 					</a>
 				</li>
+				<?php /*
 				<li>
 					<a href="<?= $this->url('program') ?>">
 						Programa
 					</a>
 				</li>
+				*/ ?>
 				<li>
 					<a href="<?= $this->url('about') ?>">
 						En marea
