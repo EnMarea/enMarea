@@ -41,7 +41,8 @@
         "suin/php-rss-writer": "^1.5",
         "embed/embed": "^2.7",
         "oscarotero/folk": "^1.13",
-        "imagecow/imagecow": "^2.1"
+        "imagecow/imagecow": "^2.1",
+        "form-manager/form-manager": "^5.0"
     },
     "autoload": {
         "psr-4": {

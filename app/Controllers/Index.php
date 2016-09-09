@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\App;
+use App\Forms;
 use Zend\Diactoros\Response;
 use Zend\Diactoros\ServerRequest as Request;
 use Psr7Middlewares\Middleware;
@@ -433,5 +434,47 @@ class Index
             'action' => $action,
             'blocks' => $blocks,
         ]);
+    }
+
+    /**
+     * Formulario do censo.
+     */
+    public function census(Request $request, Response $response, App $app)
+    {
+        $form = Forms::census($app);
+
+        return $app['templates']->render('pages/census', [
+            'form' => $form,
+        ]);
+    }
+
+    /**
+     * Gardar os datos do censo.
+     */
+    public function censusSave(Request $request, Response $response, App $app)
+    {
+        $form = Forms::census($app);
+
+        $form->loadFromPsr7($request);
+
+        if (!$form->validate()) {
+            return $app['templates']->render('pages/census', [
+                'form' => $form,
+            ]);
+        }
+
+        $db = $app->get('db');
+
+        $val = $form->val();
+
+        $db->census->create([
+            'name' => $val['name'],
+            'dni' => $val['dni'],
+            'email' => $val['email'],
+            'phone' => $val['phone'],
+            'council_id' => $val['council_id'],
+        ])->save();
+
+        return '!OK';
     }
 }
