@@ -2,8 +2,8 @@
 
 $social = new SocialLinks\Page([
     'url' => $this->url('home'),
-    'title' => 'Erro',
-    'text' => 'En Marea, a alternativa de cambio en Galicia. Coñece a Luís Villares, o futuro presidente da Xunta',
+    'title' => $texts->header->title,
+    'text' => $texts->header->subtitle,
     'image' => $this->asset('img/img-rrss.png'),
     'twitterUser' => '@en_marea',
 ]);
@@ -19,7 +19,9 @@ $this->layout('layouts/default', ['social' => $social]);
 	<h1><?= $texts->header->title ?></h1>
 	<p><?= $texts->header->subtitle ?></p>
 
+	<?php if (isset($texts->btn)): ?>
 	<a href="<?= $this->url('home') ?>" class="button">
 		<?= $texts->btn ?>
 	</a>
+	<?php endif ?>
 </div>
