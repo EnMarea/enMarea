@@ -19,7 +19,9 @@ $this->layout('layouts/default', ['social' => $social]);
 	<h1><?= $texts->header->title ?></h1>
 	<p><?= $texts->header->subtitle ?></p>
 
+	<?php if (isset($texts->btn)): ?>
 	<a href="<?= $this->url('home') ?>" class="button">
 		<?= $texts->btn ?>
 	</a>
+	<?php endif ?>
 </div>
