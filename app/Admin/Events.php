@@ -47,6 +47,9 @@ class Events extends SimpleCrud
 
             'isActive' => $b->checkbox()
                 ->label('Amosar'),
+
+            'isNotInHome' => $b->checkbox()
+                ->label('Non amosar na portada'),
         ]);
     }
 }

@@ -1,0 +1,137 @@
+.program-block.is-permalink {
+	max-width: var(--max-width-text);
+	margin: 0 auto;
+
+	.program-block-title {
+		@extend %font-bold-24__64;
+		margin: 0;
+	}
+	.program-block-text {
+		@extend %font-16-18;
+		line-height: 1.35;
+		margin-bottom: 2em;
+
+		svg {
+			float: right;
+			margin: 0 0 1em 2em;
+
+			@media (--to-intermedium) {
+				display: none;
+			}
+		}
+	}
+}
+
+.program-action.is-permalink {
+	max-width: var(--max-width-text);
+	margin: 0 auto;
+
+	.program-action-title {
+		@extend %font-bold-24__64;
+		margin: 0;
+
+		strong {
+			vertical-align: middle;
+		}
+	}
+	.program-action-text {
+		@extend %font-16-18;
+		line-height: 1.35;
+		margin-bottom: 2em;
+	}
+}
+
+.program-chapter.is-permalink {
+	max-width: var(--max-width-text);
+	margin: 0 auto;
+
+	.program-chapter-title {
+		@extend %font-bold-24__64;
+		margin: 0;
+	}
+	.program-chapter-text {
+		@extend %font-16-18;
+		line-height: 1.35;
+		margin-bottom: 2em;
+	}
+}
+
+.program-action-title {
+	strong {
+		font-weight: normal;
+		font-size: var(--font-16);
+		display: inline-block;
+		vertical-align: bottom;
+		padding: .3em .5em;
+		line-height: 1;
+		border-radius: 3px;
+		color: white;
+		background-color: var(--color-blue);
+		letter-spacing: 0.03em;
+	}
+}
+
+.program-action-text {
+	@extend %font-16-18;
+	line-height: 1.35;
+
+	li {
+		margin: .5em 0;
+	}
+}
+.program-action.is-list {
+	border-top: solid 1px var(--color-gray-light);
+
+	.program-action-title {
+		color: var(--color-blue);
+		background: url('../../img/svg/ico-arrow-right.svg') no-repeat left 6px;
+		padding-left: 24px;
+		cursor: pointer;
+		@extend %font-18-24;
+		display: block;
+		font-weight: bold;
+		margin: 1em 0;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.program-action-text {
+		display: none;
+		margin-left: 24px;
+	}
+
+	&.is-opened {
+		.program-action-title {
+			background-image: url('../../img/svg/ico-arrow-down.svg');
+			opacity: 1;
+		}
+		.program-action-text {
+			display: block;
+			padding-bottom: 1em;
+		}
+	}
+}
+
+.program-chaptersList {
+	@extend %grid-1-2-3;
+
+	a {
+		display: block;
+		background: var(--color-blue);
+		color: white;
+		padding: 1em;
+		height: 100%;
+		box-sizing: border-box;
+		text-decoration: none;
+		font-size: var(--font-18);
+		min-height: 6em;
+		transition: background-color .3s;
+		font-weight: bold;
+
+		&:hover {
+			background-color: color(var(--color-blue) blackness(+20%));
+		}
+	}
+}

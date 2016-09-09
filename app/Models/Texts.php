@@ -10,11 +10,16 @@ class Texts extends Table
     public function dataToDatabase(array $data, $new)
     {
         $imageField = new File($this, 'imageFile');
+        $fileField = new File($this, 'file');
 
         if (isset($data['body'])) {
             foreach ($data['body'] as &$section) {
-                if ($section['type'] === 'image') {
+                if (isset($section['imageFile'])) {
                     $section['imageFile'] = $imageField->dataToDatabase($section['imageFile']);
+                }
+
+                if (isset($section['file'])) {
+                    $section['file'] = $fileField->dataToDatabase($section['file']);
                 }
             }
         }

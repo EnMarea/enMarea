@@ -9,7 +9,7 @@ Deseño e desenvolvemento:
 └─┘└─┘└─┘┴ ┴┴└─  └─┘ ┴ └─┘┴└─└─┘
 https://oscarotero.com
 -->
-        <title><?= $social->getTitle() ?></title>
+        <title><?= $social->getTitle() ?> - En Marea</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         

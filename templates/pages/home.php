@@ -1,7 +1,7 @@
 <?php 
 $social = new SocialLinks\Page([
     'url' => $this->url('home'),
-    'title' => 'En Marea',
+    'title' => 'A alternativa de cambio en Galicia',
     'text' => 'En Marea, a alternativa de cambio en Galicia. Coñece a Luís Villares, o futuro presidente da Xunta',
     'image' => $this->asset('img/img-rrss.png'),
     'twitterUser' => '@en_marea',
@@ -20,7 +20,7 @@ $social = new SocialLinks\Page([
 	}
 	@media (max-width: 700px) {
 		.hero {
-			background-image: linear-gradient(rgba(0, 30, 100, .6), rgba(0, 30, 100, .6)), url('<?= $this->img('uploads/headers/imageFile/'.$header->imageFile->getFilename(), 'normal.') ?>');
+			background-image: linear-gradient(rgba(0, 30, 100, .6), rgba(0, 30, 100, .6)), url('<?= $this->img('uploads/headers/imageFile/'.$header->imageFile->getFilename(), 'smalllandscape.') ?>');
 			background-position: center center;
 		}
 	}
@@ -63,6 +63,11 @@ $social = new SocialLinks\Page([
 					<li>
 						<a href="<?= $this->url('candidates') ?>">
 							As nosas candidaturas
+						</a>
+					</li>
+					<li>
+						<a href="<?= $this->url('program') ?>">
+							O noso programa
 						</a>
 					</li>
 					<?php if ($events->count()): ?>

@@ -1,0 +1,8 @@
+@import "../variables.css";
+@import "../placeholders.css";
+@import "common/program.css";
+
+.page-content {
+	padding-top: 3rem;
+	@extend %wrapper;
+}

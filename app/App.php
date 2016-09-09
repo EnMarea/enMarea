@@ -5,7 +5,7 @@ namespace App;
 use Fol;
 use Jenssegers\Date\Date;
 use Zend\Diactoros\ServerRequestFactory;
-use Zend\Diactoros\Response\SapiEmitter;
+use Zend\Diactoros\Response\SapiStreamEmitter;
 use Zend\Diactoros\Response;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -22,7 +22,7 @@ class App extends Fol
         $request = ServerRequestFactory::fromGlobals();
         $response = $app->dispatch($request, new Response());
 
-        (new SapiEmitter())->emit($response);
+        (new SapiStreamEmitter())->emit($response);
     }
 
     /**
