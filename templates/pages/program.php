@@ -37,11 +37,24 @@ $social = new SocialLinks\Page([
 		<?php endforeach ?>
 	</ul>
 
+	<?php $download = null; ?>
 	<div class="page-text">
 		<?php foreach ($text->body as $section): ?>
+		<?php
+		if ($section['type'] === 'file') {
+			$download = $section;
+			continue;
+		}
+		?>
 		<section>
 			<?= $section['html'] ?>
 		</section>
 		<?php endforeach ?>
 	</div>
+
+	<footer class="page-footer">
+		<a href="<?= $this->asset('uploads/texts/file/'.$download['file']) ?>" class="button">
+			<?= $download['title'] ?>
+		</a>
+	</footer>
 </div>

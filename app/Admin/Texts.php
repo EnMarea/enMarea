@@ -40,18 +40,32 @@ class Texts extends SimpleCrud
                         'html' => $b->html()
                             ->label('Contido'),
                     ],
+
                     'video' => [
                         'code' => $b->textarea()
                             ->label('Código do vídeo'),
                     ],
+
                     'image' => [
                         'imageFile' => $b->imageUpload()
                             ->data('config', [
                                 'directory' => '../data/uploads/texts/imageFile/',
                             ])
                             ->label('Imaxe'),
+
                         'isWide' => $b->checkbox()
                             ->label('Mostar a todo ancho'),
+                    ],
+
+                    'file' => [
+                        'title' => $b->text()
+                            ->label('Texto'),
+
+                        'file' => $b->fileUpload()
+                            ->data('config', [
+                                'directory' => '../data/uploads/texts/file/',
+                            ])
+                            ->label('Arquivo'),
                     ],
                 ])
                 ->required(),
