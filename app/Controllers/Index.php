@@ -494,7 +494,7 @@ class Index
 
         return $app['templates']->render('pages/census-ok', [
             'form' => $form,
-            'total' => $total
+            'total' => $total + 1
         ]);
     }
 }

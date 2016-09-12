@@ -30,8 +30,8 @@ class Router implements ServiceProviderInterface
             $map->get('program-action', '/programa2016/medida/{number}', "{$ns}\\Index::programAction");
             $map->get('program-block', '/programa2016/{block}', "{$ns}\\Index::programBlock");
             $map->get('program-chapter', '/programa2016/{block}/{chapter}', "{$ns}\\Index::programChapter");
-            $map->get('census', '/censo', "{$ns}\\Index::census");
-            $map->post('census-save', '/censo', "{$ns}\\Index::censusSave");
+            $map->get('census', '/en-marea/principios-basicos/asina', "{$ns}\\Index::census");
+            $map->post('census-save', '/en-marea/principios-basicos/asina', "{$ns}\\Index::censusSave");
 
             $map->get('blog-vello', '/{slug}', "{$ns}\\Index::redirect");
 
