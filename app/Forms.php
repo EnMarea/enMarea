@@ -5,6 +5,8 @@ namespace App;
 use App\App;
 use FormManager\Builder as B;
 use FormManager\InvalidValueException;
+use IsoCodes\Nif;
+use IsoCodes\PhoneNumber;
 
 class Forms
 {
@@ -30,6 +32,10 @@ class Forms
                     return strtoupper($value);
                 })
                 ->addValidator(function ($input) use ($db) {
+                    if (!Nif::validate($input->val())) {
+                        throw new InvalidValueException('O DNI non é válido. Comproba que os números e letra estan correctos');
+                    }
+
                     $exists = $db->census->count()
                         ->by('dni', $input->val())
                         ->limit(1)
@@ -65,6 +71,10 @@ class Forms
                 ->wrapperAttr(['class' => 'form-field'])
                 ->required()
                 ->addValidator(function ($input) use ($db) {
+                    if (!PhoneNumber::validate($input->val(), 'ES')) {
+                        throw new InvalidValueException('O teléfono non é válido. Comproba que todos os números estan correctos e que é español');
+                    }
+
                     $exists = $db->census->count()
                         ->by('phone', $input->val())
                         ->limit(1)

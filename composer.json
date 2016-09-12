@@ -43,7 +43,8 @@
         "oscarotero/folk": "^1.13",
         "imagecow/imagecow": "^2.1",
         "form-manager/form-manager": "^5.0",
-        "drewm/mailchimp-api": "^2.2"
+        "drewm/mailchimp-api": "^2.2",
+        "ronanguilloux/isocodes": "^2.1"
     },
     "autoload": {
         "psr-4": {
