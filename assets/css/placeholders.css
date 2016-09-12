@@ -315,7 +315,8 @@
 
 		h1 {
 			@extend %font-black-36__72;
-			margin: 0;
+			margin: 0 auto;
+			max-width: 10em;
 		}
 		p {
 			@extend %font-18-24;
@@ -346,7 +347,8 @@
 
 	h1 {
 		@extend %font-black-36__72;
-		margin: 0;
+		margin: 0 auto;
+		max-width: 10em;
 	}
 	p {
 		@extend %font-18-24;

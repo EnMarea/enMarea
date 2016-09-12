@@ -6,24 +6,26 @@
 }
 
 .page-header {
-	@extend %header-blue;
+	@extend %header-white;
 }
-.page-navigation {
-	@extend %wrapper;
+
+.page-content {
+	.form {
+		margin-top: 2em;
+	}
+}
+
+.page-legal {
+	font-size: var(--font-14);
+	max-width: var(--max-width-text);
+	margin: 4em auto 0 auto;
+}
+.page-message-ok {
+	max-width: var(--max-width-text);
 	text-align: center;
-	margin-top: 2rem;
+	margin: 2rem auto;
 
-	.button {
-		display: inline-block;
-		padding: 1em;
-		border: solid 3px;
-		font-weight: 700;
-		font-size: var(--font-18);
-		text-decoration: none;
-
-		&:hover {
-			color: white;
-			background: var(--color-blue)
-		}
+	h2 {
+		@extend %font-black-24__36;
 	}
 }

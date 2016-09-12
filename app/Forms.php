@@ -12,7 +12,7 @@ class Forms
     {
         $db = $app->get('db');
 
-        $concellos = $db->council->select()->run();
+        $concellos = $db->council->select()->orderBy('name')->run();
 
         return B::form([
             'name' => B::text()

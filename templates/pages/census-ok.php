@@ -21,9 +21,9 @@ $social = new SocialLinks\Page([
 </div>
 
 <div class="page-content">
-    <?= $form ?>
+    <div class="page-message-ok">
+        <h2>Datos gardados correctamente</h2>
 
-    <p class="page-legal">
-        De acordo co artigo 5 da Lei Orgánica 15/1999, de protección de datos de carácter persoal, informamos que os datos facilitados serán incorporados e tratados nun ficheiro titularidade de EN MAREA para o seu uso exclusivo no eido desta iniciativa.
-    </p>
+        <p>Moitas grazas por asinares os nosos principios. A partir dagora recibirás no teu email as novidades, aínda que podes desuscribirte en calquera momento</p>
+    </div>
 </div>

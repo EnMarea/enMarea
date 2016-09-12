@@ -42,7 +42,8 @@
         "embed/embed": "^2.7",
         "oscarotero/folk": "^1.13",
         "imagecow/imagecow": "^2.1",
-        "form-manager/form-manager": "^5.0"
+        "form-manager/form-manager": "^5.0",
+        "drewm/mailchimp-api": "^2.2"
     },
     "autoload": {
         "psr-4": {
