@@ -5,7 +5,7 @@
 		<span class="navfooter-logo">
 			<?= $this->svg('logo-enmarea-simbolo') ?>
 			<strong>
-				Hai marea!
+				Un país xusto
 			</strong>
 		</span>
 
