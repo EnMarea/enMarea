@@ -31,10 +31,6 @@ class Index
      */
     public function home(Request $request, Response $response, App $app)
     {
-        return $app['templates']->render('pages/error', [
-            'texts' => $app->get('texts')['home'],
-        ]);
-
         $db = $app->get('db');
 
         $highlights = $db->highlights
