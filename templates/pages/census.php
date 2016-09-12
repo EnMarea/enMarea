@@ -8,13 +8,19 @@ $social = new SocialLinks\Page([
 ]);
 ?>
 
-<?= $this->layout('layouts/default', ['menu' => 'news', 'social' => $social]) ?>
+<?= $this->layout('layouts/default', ['social' => $social]) ?>
 
 <?php $this->start('extra-head') ?>
-<link rel="stylesheet" type="text/css" href="<?= $this->asset('css/pages/news.css') ?>">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="<?= $this->url('news-rss') ?>">
+<link rel="stylesheet" type="text/css" href="<?= $this->asset('css/pages/census.css') ?>">
 <?php $this->stop(); ?>
 
-<div>
+<div class="page-header">
+	<header>
+		<h1>Censo</h1>
+		<p>Cada día somos máis</p>
+	</header>
+</div>
+
+<div class="page-content">
     <?= $form ?>
 </div>

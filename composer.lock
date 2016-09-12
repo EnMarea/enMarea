@@ -355,16 +355,16 @@
         },
         {
             "name": "form-manager/form-manager",
-            "version": "v5.0.4",
+            "version": "v5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/form-manager.git",
-                "reference": "e2cdfd1ade54dc1142b7dee8ac531221b465e84c"
+                "reference": "7b94e2c1082473ac63339312abe2410068c10e7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/form-manager/zipball/e2cdfd1ade54dc1142b7dee8ac531221b465e84c",
-                "reference": "e2cdfd1ade54dc1142b7dee8ac531221b465e84c",
+                "url": "https://api.github.com/repos/oscarotero/form-manager/zipball/7b94e2c1082473ac63339312abe2410068c10e7a",
+                "reference": "7b94e2c1082473ac63339312abe2410068c10e7a",
                 "shasum": ""
             },
             "require": {
@@ -372,7 +372,7 @@
                 "psr/http-message": "~1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0",
+                "phpunit/phpunit": "*",
                 "zendframework/zend-diactoros": "1.*"
             },
             "type": "library",
@@ -402,7 +402,7 @@
                 "psr-7",
                 "validator"
             ],
-            "time": "2016-06-28 08:10:26"
+            "time": "2016-09-12 08:34:48"
         },
         {
             "name": "gettext/gettext",

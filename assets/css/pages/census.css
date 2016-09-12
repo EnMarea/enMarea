@@ -1,0 +1,29 @@
+@import "../variables.css";
+@import "../placeholders.css";
+
+.navbar {
+	background-color: var(--color-blue);
+}
+
+.page-header {
+	@extend %header-blue;
+}
+.page-navigation {
+	@extend %wrapper;
+	text-align: center;
+	margin-top: 2rem;
+
+	.button {
+		display: inline-block;
+		padding: 1em;
+		border: solid 3px;
+		font-weight: 700;
+		font-size: var(--font-18);
+		text-decoration: none;
+
+		&:hover {
+			color: white;
+			background: var(--color-blue)
+		}
+	}
+}

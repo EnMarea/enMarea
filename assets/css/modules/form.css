@@ -1,0 +1,90 @@
+.form {	
+	margin: 0 auto;
+	max-width: 30rem;
+
+	@media (--from-medium) {
+		max-width: 42rem;
+	}
+
+	select,
+	input[type="text"],
+	input[type="tel"],
+	input[type="email"] {
+		border: solid 3px var(--color-gray-light);
+		border-radius: 3px;
+		padding: .5em 1em;
+		background: white;
+		width: 100%;
+		box-sizing: border-box;
+
+		&::placeholder {
+			color: var(--color-gray-light);
+		}
+		&:hover {
+			border-color: var(--color-gray);
+		}
+		&:focus {
+			border-color: var(--color-blue);
+			outline: none;
+		}
+
+		@media (--from-medium) {
+			max-width: 30em;
+		}
+	}
+	select {
+		appearance: none;
+		padding-right: 2em;
+		background-image: url('../../img/svg/ico-arrow-down.svg');
+		background-repeat: no-repeat;
+		background-position: 95% center;
+	}
+
+}
+.form-field {
+	margin-bottom: 1em;
+
+	> label:first-child {
+		display: block;
+		font-weight: bold;
+		margin-right: 1em;
+		color: var(--color-blue);
+
+		@media (--from-medium) {
+			display: inline-block;
+			width: 10em;
+			text-align: right;
+
+		}
+	}
+	label.error {
+		display: block;
+		padding: .3em 0;
+		color: red;
+
+		@media (--from-medium) {
+			margin-left: 11.3em;
+		}
+	}
+}
+
+.form-footer,
+.form-check {
+	@media (--from-medium) {
+		margin-left: 11.3em;
+	}
+}
+
+.form-footer {
+	margin-top: 2em;
+
+	.button {
+		color: var(--color-blue);
+		background: white;
+
+		&:hover {
+			background: var(--color-blue);
+			color: white;
+		}
+	}
+}
