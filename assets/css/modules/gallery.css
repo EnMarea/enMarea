@@ -10,25 +10,47 @@
 	}
 
 	> li {
-		margin: .5em;
+		margin: 1px;
 	}
 }
 
 .gallery-image {
 	margin: 0;
 	position: relative;
+	background-color: var(--color-blue);
+
+	img {
+		transition: opacity .3s;
+	}
 
 	figcaption {
-		position: absolute;
-		bottom: 0;
 		width: 100%;
 		box-sizing: border-box;
-		padding: .5rem 0;
+		padding: 1rem 0;
+		background: white;
+
+		p {
+			margin: 0;
+		}
 	}
 	strong {
 		padding: .5rem;
 		background-color: var(--color-blue);
 		color: white;
 		box-decoration-break: clone;
+	}
+
+	&.is-over {
+		figcaption {
+			position: absolute;
+			bottom: 0;
+			background: none;
+		}
+
+		&:hover {
+			img {
+				opacity: .5;
+			}
+		}
 	}
 }

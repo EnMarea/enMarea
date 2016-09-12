@@ -448,9 +448,16 @@ class Index
             ->where('isActive = 1')
             ->run();
 
+        $text = $db->texts
+            ->select()
+            ->one()
+            ->by('name', 'descargas')
+            ->run();
+
         return $app['templates']->render('pages/repository', [
             'gallery' => $gallery,
             'posters' => $posters,
+            'text' => $text,
         ]);
     }
 }
