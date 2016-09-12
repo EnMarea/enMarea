@@ -3,7 +3,7 @@ $social = new SocialLinks\Page([
     'url' => $this->url('program-chapter', ['block' => $block->slug, 'chapter' => $chapter->slug]),
     'title' => $chapter->title.' - '.$block->title,
     'text' => $chapter->text,
-    'image' => $this->asset('img/img-rrss.png'),
+    'image' => $this->asset('img/programa/'.$block->icon.'.png'),
     'twitterUser' => '@en_marea',
 ]);
 ?>

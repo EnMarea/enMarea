@@ -4,7 +4,7 @@ $social = new SocialLinks\Page([
     'url' => $this->url('program-action', ['number' => $action->number]),
     'title' => $action->title,
     'text' => $action->text,
-    'image' => $this->asset('img/img-rrss.png'),
+    'image' => $this->asset('img/programa/'.$action->programChapter->programBlock->icon.'.png'),
     'twitterUser' => '@en_marea',
 ]);
 ?>
