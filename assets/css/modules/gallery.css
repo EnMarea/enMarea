@@ -1,0 +1,34 @@
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	a {
+		display: block;
+	}
+
+	> li {
+		margin: .5em;
+	}
+}
+
+.gallery-image {
+	margin: 0;
+	position: relative;
+
+	figcaption {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		box-sizing: border-box;
+		padding: .5rem 0;
+	}
+	strong {
+		padding: .5rem;
+		background-color: var(--color-blue);
+		color: white;
+		box-decoration-break: clone;
+	}
+}

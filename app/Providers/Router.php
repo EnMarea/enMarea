@@ -31,6 +31,7 @@ class Router implements ServiceProviderInterface
             //$map->get('program-block', '/programa2016/{block}', "{$ns}\\Index::programBlock");
             //$map->get('program-chapter', '/programa2016/{block}/{chapter}', "{$ns}\\Index::programChapter");
 
+            $map->get('repository', '/descargas', "{$ns}\\Index::repository");
             $map->get('blog-vello', '/{slug}', "{$ns}\\Index::redirect");
 
             return $routerContainer;

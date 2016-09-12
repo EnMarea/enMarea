@@ -430,4 +430,27 @@ class Index
             'blocks' => $blocks,
         ]);
     }
+
+    /**
+     * Repositorio de descargas.
+     */
+    public function repository(Request $request, Response $response, App $app)
+    {
+        $db = $app->get('db');
+
+        $gallery = $db->gallery
+            ->select()
+            ->where('isActive = 1')
+            ->run();
+
+        $posters = $db->posters
+            ->select()
+            ->where('isActive = 1')
+            ->run();
+
+        return $app['templates']->render('pages/repository', [
+            'gallery' => $gallery,
+            'posters' => $posters,
+        ]);
+    }
 }
