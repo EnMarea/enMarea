@@ -36,6 +36,11 @@ class Posters extends SimpleCrud
                 ])
                 ->label('Imaxe en miniatura'),
 
+            'position' => $b->number()
+                ->set('editable', true)
+                ->required()
+                ->label('Posición'),
+
             'isActive' => $b->checkbox()
                 ->label('Amosar'),
         ]);

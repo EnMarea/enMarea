@@ -441,11 +441,13 @@ class Index
         $gallery = $db->gallery
             ->select()
             ->where('isActive = 1')
+            ->orderBy('position')
             ->run();
 
         $posters = $db->posters
             ->select()
             ->where('isActive = 1')
+            ->orderBy('position')
             ->run();
 
         $text = $db->texts

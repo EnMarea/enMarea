@@ -31,7 +31,7 @@ class Admin extends \Folk\Admin
             Admin\ProgramBlock::class,
             Admin\ProgramChapter::class,
             Admin\ProgramAction::class,
-            Admin\Galleries::class,
+            Admin\Gallery::class,
             Admin\Posters::class,
         ]);
     }

@@ -5,7 +5,7 @@ namespace App\Admin;
 use Folk\Entities\SimpleCrud;
 use FormManager\Builder;
 
-class Galleries extends SimpleCrud
+class Gallery extends SimpleCrud
 {
     public $title = 'Galería de imaxes';
     public $description = 'Galería de imaxes en alta resolución para descarga';
@@ -29,6 +29,11 @@ class Galleries extends SimpleCrud
                     'directory' => '../data/uploads/gallery/imageFile/',
                 ])
                 ->label('Imaxe'),
+
+            'position' => $b->number()
+                ->set('editable', true)
+                ->required()
+                ->label('Posición'),
 
             'isActive' => $b->checkbox()
                 ->label('Amosar'),
