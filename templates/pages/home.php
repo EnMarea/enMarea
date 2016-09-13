@@ -65,13 +65,11 @@ $social = new SocialLinks\Page([
 							As nosas candidaturas
 						</a>
 					</li>
-					<?php /*
 					<li>
 						<a href="<?= $this->url('program') ?>">
 							O noso programa
 						</a>
 					</li>
-					*/ ?>
 					<?php if ($events->count()): ?>
 					<li class="is-extended">
 						<strong>Hoxe estaremos en:</strong>

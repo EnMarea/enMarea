@@ -4,7 +4,7 @@ $social = new SocialLinks\Page([
     'url' => $this->url('program'),
     'title' => 'Programa 2016',
     'text' => 'En Marea, a alternativa de cambio en Galicia. Coñece a Luís Villares, o futuro presidente da Xunta',
-    'image' => $this->asset('img/img-rrss.png'),
+    'image' => $this->asset('img/programa/program.png'),
     'twitterUser' => '@en_marea',
 ]);
 ?>
