@@ -46,18 +46,23 @@
 					</a>
 				</li>
 				<li class="is-section">
-					<a href="<?= $this->url('about') ?>"<?= $menu === 'about' ? ' class="is-actived"' : '' ?>>
-						En marea
-					</a>
-				</li>
-				<li class="is-section">
 					<a href="https://achegas.enmarea.gal">
 						Achegas
 					</a>
 				</li>
 				<li class="is-section">
+					<a href="<?= $this->url('about') ?>"<?= $menu === 'about' ? ' class="is-actived"' : '' ?>>
+						En marea
+					</a>
+				</li>
+				<li class="is-section">
 					<a href="http://congreso.enmarea.gal">
 						Congreso
+					</a>
+				</li>
+				<li class="is-section">
+					<a href="<?= $this->url('repository') ?>">
+						Descargas
 					</a>
 				</li>
 			</ul>
@@ -103,18 +108,23 @@
 					</a>
 				</li>
 				<li>
-					<a href="<?= $this->url('about') ?>">
-						En marea
-					</a>
-				</li>
-				<li>
 					<a href="https://achegas.enmarea.gal">
 						Achegas
 					</a>
 				</li>
 				<li>
+					<a href="<?= $this->url('about') ?>">
+						En marea
+					</a>
+				</li>
+				<li>
 					<a href="http://congreso.enmarea.gal">
 						Congreso
+					</a>
+				</li>
+				<li>
+					<a href="<?= $this->url('repository') ?>">
+						Descargas
 					</a>
 				</li>
 			</ul>

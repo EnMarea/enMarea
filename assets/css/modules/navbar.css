@@ -24,7 +24,7 @@
 
 .navbar-content {
 	@extend %wrapper;
-	max-width: var(--max-width);
+	/* max-width: var(--max-width); */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -206,6 +206,15 @@
 	}
 
 	@media (min-width: 1400px) {
+		ul.is-desktop > li:nth-child(8) {
+			display: block;
+		}
+		ul.is-mobile > li:nth-child(8) {
+			display: none;
+		}
+	}
+
+	@media (min-width: 1500px) {
 		ul.is-desktop > li {
 			display: block;
 		}
