@@ -45,7 +45,7 @@ $social = new SocialLinks\Page([
 		<?php foreach ($posters as $poster): ?>
 		<li>
 			<a href="<?= $this->asset('uploads/posters/file/'.$poster->file->getFilename()) ?>" download>
-				<figure class="gallery-image">
+				<figure class="gallery-image is-bottom">
 					<img src="<?= $this->img('uploads/posters/thumbFile/'.$poster->thumbFile->getFilename(), 'gallery.') ?>">
 
 					<figcaption>
