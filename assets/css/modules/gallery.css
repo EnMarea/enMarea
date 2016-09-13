@@ -28,7 +28,6 @@
 		width: 100%;
 		box-sizing: border-box;
 		padding: 1rem 0;
-		background: white;
 
 		p {
 			margin: 0;
@@ -47,13 +46,21 @@
 		figcaption {
 			position: absolute;
 			bottom: 0;
-			background: none;
 		}
 
 		&:hover {
 			img {
 				opacity: .5;
 			}
+		}
+	}
+
+	&.is-bottom {
+		padding-bottom: 7em;
+		background-color: var(--color-blue);
+
+		figcaption {
+			position: absolute;
 		}
 	}
 }
