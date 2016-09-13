@@ -57,7 +57,6 @@
 
 	&.is-bottom {
 		padding-bottom: 7em;
-		background-color: var(--color-blue);
 
 		figcaption {
 			position: absolute;
