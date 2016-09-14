@@ -51,6 +51,11 @@
 					</a>
 				</li>
 				<li class="is-section">
+					<a href="https://apoderadas.enmarea.gal">
+						Apoderadas
+					</a>
+				</li>
+				<li class="is-section">
 					<a href="<?= $this->url('about') ?>"<?= $menu === 'about' ? ' class="is-actived"' : '' ?>>
 						En marea
 					</a>
@@ -110,6 +115,11 @@
 				<li>
 					<a href="https://achegas.enmarea.gal">
 						Achegas
+					</a>
+				</li>
+				<li>
+					<a href="https://apoderadas.enmarea.gal">
+						Apoderadas
 					</a>
 				</li>
 				<li>
