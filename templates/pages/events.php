@@ -100,7 +100,13 @@ foreach ($events as $event) {
 		<?php endforeach ?>
 	</div>
 	<div class="page-timeline">
-		<a class="twitter-timeline" href="https://twitter.com/hashtag/rutaEnMarea" data-chrome="noheader nofooter noborders" data-widget-id="769118986873233408">#rutaEnMarea Tweets</a>
+		<a class="twitter-timeline"
+		href="https://twitter.com/hashtag/rutaEnMarea"
+		data-chrome="nofooter"
+		data-widget-id="769118986873233408"
+		data-tweet-limit="10">
+			#rutaEnMarea Tweets
+		</a>
         
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	</div>
