@@ -9,7 +9,7 @@ $social = new SocialLinks\Page([
 ]);
 ?>
 
-<?= $this->layout('layouts/default', ['social' => $social]) ?>
+<?= $this->layout('layouts/default', ['social' => $social, 'menu' => 'repository']) ?>
 
 <?php $this->start('extra-head') ?>
 <link rel="stylesheet" type="text/css" href="<?= $this->asset('css/pages/repository.css') ?>">

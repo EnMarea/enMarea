@@ -8,7 +8,7 @@ $social = new SocialLinks\Page([
 ]);
 ?>
 
-<?= $this->layout('layouts/default', ['social' => $social]) ?>
+<?= $this->layout('layouts/default', ['social' => $social, 'menu' => 'program']) ?>
 
 <?php $this->start('extra-head') ?>
 <link rel="stylesheet" type="text/css" href="<?= $this->asset('css/pages/program-chapter.css') ?>">

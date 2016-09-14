@@ -61,7 +61,7 @@
 					</a>
 				</li>
 				<li class="is-section">
-					<a href="<?= $this->url('repository') ?>">
+					<a href="<?= $this->url('repository') ?>"<?= $menu === 'repository' ? ' class="is-actived"' : '' ?>>
 						Descargas
 					</a>
 				</li>
