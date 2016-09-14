@@ -17,7 +17,14 @@ class Templates implements ServiceProviderInterface
             $templates->addData(['app' => $app]);
 
             $templates->registerFunction('asset', function () use ($app) {
-                return call_user_func_array([$app, 'getUrl'], func_get_args()).'?v14';
+                $url = call_user_func_array([$app, 'getUrl'], func_get_args());
+                $ext = strrchr($url, '.');
+
+                if ($ext === '.css' || $ext === '.js') {
+                    return $url.'?14';
+                }
+
+                return $url;
             });
 
             $svg = Collection::fromPath($app->getPath('www/img/svg'));
