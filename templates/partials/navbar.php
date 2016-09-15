@@ -118,7 +118,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="https://apoderadas.enmarea.gal">
+					<a href="<?= $this->url('apoderadas') ?>">
 						Apoderadas
 					</a>
 				</li>
