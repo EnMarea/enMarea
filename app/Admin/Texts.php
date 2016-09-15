@@ -67,6 +67,14 @@ class Texts extends SimpleCrud
                             ])
                             ->label('Arquivo'),
                     ],
+
+                    'button' => [
+                        'title' => $b->text()
+                            ->label('Texto'),
+
+                        'url' => $b->url()
+                            ->label('Link'),
+                    ],
                 ])
                 ->required(),
         ]);

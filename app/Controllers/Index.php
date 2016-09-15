@@ -205,6 +205,16 @@ class Index
     }
 
     /**
+     * Apoderadas.
+     */
+    public function apoderadas(Request $request, Response $response, App $app)
+    {
+        $app['templates']->addData(['menu' => 'apoderadas'], 'layouts/default');
+
+        return $this->text('apoderadas', $request, $response, $app);
+    }
+
+    /**
      * Devolve unha páxina de texto corrido.
      */
     private function text($name, Request $request, Response $response, App $app)
