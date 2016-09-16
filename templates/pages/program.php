@@ -58,6 +58,7 @@ $social = new SocialLinks\Page([
 		</a>
 	</footer>
 
+	<?php if ($points->count()): ?>
 	<section class="page-points">
 		<h2>Documentos sectoriais</h2>
 
@@ -77,5 +78,6 @@ $social = new SocialLinks\Page([
 			<?php endforeach ?>
 		</ul>
 	</section>
+	<?php endif ?>
 
 </div>
