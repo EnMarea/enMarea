@@ -22,9 +22,6 @@ class ProgramAction extends SimpleCrud
             'programChapter_id' => $b->relationOne($this->admin->getEntity('programChapter'))
                 ->label('Capítulo ao que pertence'),
 
-            'programPoint_id' => $b->relationOne($this->admin->getEntity('programPoint'))
-                ->label('Metelo no tema transversal...'),
-
             'number' => $b->number()
                 ->set('editable', true)
                 ->label('Número de medida'),

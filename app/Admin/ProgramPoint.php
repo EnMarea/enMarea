@@ -24,20 +24,21 @@ class ProgramPoint extends SimpleCrud
                 ->maxlength(255)
                 ->label('Título'),
 
-            'slug' => $b->text()
-                ->maxlength(255)
-                ->required()
-                ->label('Id único (o que aparece na url)'),
-
-            'text' => $b->html()
-                ->label('Texto'),
-
             'position' => $b->number()
                 ->set('editable', true)
                 ->label('Posición'),
 
             'isActive' => $b->checkbox()
                 ->label('Amosar'),
+
+            'thumbFile' => $b->imageUpload()
+                ->data('config', [
+                    'directory' => '../data/uploads/programPoint/thumbFile/'
+                ])
+                ->label('Imaxe de portada'),
+
+            'file' => $b->fileUpload()
+                ->label('Arquivo pdf descargable'),
         ]);
     }
 }

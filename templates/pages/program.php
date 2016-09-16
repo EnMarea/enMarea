@@ -57,4 +57,25 @@ $social = new SocialLinks\Page([
 			<?= $download['title'] ?>
 		</a>
 	</footer>
+
+	<section class="page-points">
+		<h2>Documentos sectoriais</h2>
+
+		<ul class="gallery">
+			<?php foreach ($points as $point): ?>
+			<li>
+				<a href="<?= $this->asset('uploads/programPoint/file', $point->file->getFilename()) ?>" download>
+					<figure class="gallery-image is-bottom">
+						<img src="<?= $this->img('uploads/programPoint/thumbFile/'.$point->thumbFile->getFilename(), 'gallery.') ?>">
+
+						<figcaption>
+							<p><?= $point->title ?></p>
+						</figcaption>
+					</figure>
+				</a>
+			</li>
+			<?php endforeach ?>
+		</ul>
+	</section>
+
 </div>

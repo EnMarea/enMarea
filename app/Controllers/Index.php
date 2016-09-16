@@ -316,8 +316,15 @@ class Index
             ->by('name', 'programa')
             ->run();
 
+        $points = $db->programPoint
+            ->select()
+            ->where('isActive = 1')
+            ->orderBy('position')
+            ->run();
+
         return $app['templates']->render('pages/program', [
             'blocks' => $blocks,
+            'points' => $points,
             'text' => $text,
         ]);
     }
