@@ -21,7 +21,7 @@ class Templates implements ServiceProviderInterface
                 $ext = strrchr($url, '.');
 
                 if ($ext === '.css' || $ext === '.js') {
-                    return $url.'?15';
+                    return $url.'?16';
                 }
 
                 return $url;
