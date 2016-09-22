@@ -95,4 +95,8 @@
 .page-points {
 	margin-top: 6rem;
 	text-align: center;
+
+	img {
+		max-width: 162px;
+	}
 }
