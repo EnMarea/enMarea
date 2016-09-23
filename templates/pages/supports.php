@@ -29,28 +29,8 @@ $social = new SocialLinks\Page([
     }
     ?>
 
-    <h2>Asinantes:</h2>
-
-    <ol class="page-people">
-        <?php foreach ($supports as $person): ?>
-        <?php
-        if (!$person->isInitial) {
-            continue;
-        }
-        ?>
-        <li class="person">
-            <strong class="person-name">
-                <?= $person->name ?>
-            </strong>
-            <span class="person-profession">
-                <?= $person->profession ?>
-            </span>
-        </li>
-        <?php endforeach ?>
-    </ol>
-
     <div class="page-form">
-        <h2>Asina ti tamén o manifesto</h2>
+        <h2>Asina o manifesto</h2>
 
         <?= $form ?>
 
@@ -59,15 +39,10 @@ $social = new SocialLinks\Page([
         </p>
     </div>
 
-    <h2 id="asinantes">Tamén asinaron:</h2>
+    <h2 id="asinantes">Asinantes:</h2>
 
     <ol class="page-people">
         <?php foreach ($supports as $person): ?>
-        <?php
-        if ($person->isInitial) {
-            continue;
-        }
-        ?>
         <li class="person">
             <strong class="person-name">
                 <?= $person->name ?>
