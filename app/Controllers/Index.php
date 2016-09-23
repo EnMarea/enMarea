@@ -3,10 +3,12 @@
 namespace App\Controllers;
 
 use App\App;
+use App\Forms;
 use Zend\Diactoros\Response;
 use Zend\Diactoros\ServerRequest as Request;
 use Psr7Middlewares\Middleware;
 use Zend\Diactoros\Response\RedirectResponse;
+use DrewM\MailChimp\MailChimp;
 
 class Index
 {
@@ -477,6 +479,71 @@ class Index
             'gallery' => $gallery,
             'posters' => $posters,
             'text' => $text,
+        ]);
+    }
+
+    /**
+     * Formulario do censo.
+     */
+    public function census(Request $request, Response $response, App $app)
+    {
+        $db = $app->get('db');
+        $form = Forms::census($app);
+
+        $total = $db->census->count()->run();
+
+        return $app['templates']->render('pages/census', [
+            'form' => $form,
+            'total' => $total
+        ]);
+    }
+
+    /**
+     * Gardar os datos do censo.
+     */
+    public function censusSave(Request $request, Response $response, App $app)
+    {
+        $db = $app->get('db');
+        $form = Forms::census($app);
+
+        $form->loadFromPsr7($request);
+
+        $total = $db->census->count()->run();
+
+        if (!$form->validate()) {
+            return $app['templates']->render('pages/census', [
+                'form' => $form,
+                'total' => $total
+            ]);
+        }
+
+        $val = $form->val();
+
+        $person = $db->census->create([
+            'name' => $val['name'],
+            'dni' => $val['dni'],
+            'email' => $val['email'],
+            'phone' => $val['phone'],
+            'council_id' => $val['council_id'],
+        ])->save();
+
+        $mailchip = new MailChimp(env('APP_MAILCHIMP_API_KEY'));
+        $list_id = env('APP_MAILCHIMP_LIST_ID');
+
+        $name = array_filter(array_map('trim', explode(' ', $person->name)));
+
+        $result = $mailchip->post("lists/{$list_id}/members", [
+            'email_address' => $person->email,
+            'status' => 'subscribed',
+            'merge_fields' => [
+                'FNAME' => array_shift($name),
+                'LNAME' => implode(' ', $name),
+            ]
+        ]);
+
+        return $app['templates']->render('pages/census-ok', [
+            'form' => $form,
+            'total' => $total + 1
         ]);
     }
 }

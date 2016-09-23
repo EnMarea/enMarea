@@ -1,0 +1,31 @@
+@import "../variables.css";
+@import "../placeholders.css";
+
+.navbar {
+	background-color: var(--color-blue);
+}
+
+.page-header {
+	@extend %header-white;
+}
+
+.page-content {
+	.form {
+		margin-top: 2em;
+	}
+}
+
+.page-legal {
+	font-size: var(--font-14);
+	max-width: var(--max-width-text);
+	margin: 4em auto 0 auto;
+}
+.page-message-ok {
+	max-width: var(--max-width-text);
+	text-align: center;
+	margin: 2rem auto;
+
+	h2 {
+		@extend %font-black-24__36;
+	}
+}

@@ -33,6 +33,8 @@ class Admin extends \Folk\Admin
             Admin\ProgramAction::class,
             Admin\Gallery::class,
             Admin\Posters::class,
+            Admin\Council::class,
+            Admin\Census::class,
         ]);
     }
 }
