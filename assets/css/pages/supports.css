@@ -7,6 +7,7 @@
 
 .page-header {
 	@extend %header-white;
+	max-width: var(--max-width-text);
 }
 
 .page-content {
