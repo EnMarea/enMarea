@@ -483,50 +483,69 @@ class Index
     }
 
     /**
-     * Formulario do censo.
+     * Formulario de apoio a Villares.
      */
-    public function census(Request $request, Response $response, App $app)
+    public function supports(Request $request, Response $response, App $app)
     {
         $db = $app->get('db');
-        $form = Forms::census($app);
+        $form = Forms::supports($app);
+        $text = $db->texts
+            ->select()
+            ->one()
+            ->by('name', 'apoio-villares')
+            ->run();
 
-        $total = $db->census->count()->run();
+        $supports = $db->supports->select()
+            ->where('isActive = 1')
+            ->run();
 
-        return $app['templates']->render('pages/census', [
+        return $app['templates']->render('pages/supports', [
+            'text' => $text,
             'form' => $form,
-            'total' => $total
+            'supports' => $supports
         ]);
     }
 
     /**
-     * Gardar os datos do censo.
+     * Gardar os datos de apoio a Villares.
      */
-    public function censusSave(Request $request, Response $response, App $app)
+    public function supportsSave(Request $request, Response $response, App $app)
     {
         $db = $app->get('db');
-        $form = Forms::census($app);
+        $form = Forms::supports($app);
 
         $form->loadFromPsr7($request);
 
-        $total = $db->census->count()->run();
+        $text = $db->texts
+            ->select()
+            ->one()
+            ->by('name', 'apoio-villares')
+            ->run();
+return $app['templates']->render('pages/supports-ok', [
+            'text' => $text,
+        ]);
+        $supports = $db->supports->select()
+            ->where('isActive = 1')
+            ->run();
 
         if (!$form->validate()) {
-            return $app['templates']->render('pages/census', [
+            return $app['templates']->render('pages/supports', [
                 'form' => $form,
-                'total' => $total
+                'supports' => $supports,
+                'text' => $text,
             ]);
         }
 
         $val = $form->val();
 
-        $person = $db->census->create([
+        $person = $db->supports->create([
             'name' => $val['name'],
             'dni' => $val['dni'],
-            'email' => $val['email'],
-            'phone' => $val['phone'],
-            'council_id' => $val['council_id'],
+            'profession' => $val['profession'],
+            'isActive' => true,
         ])->save();
 
+        /*
         $mailchip = new MailChimp(env('APP_MAILCHIMP_API_KEY'));
         $list_id = env('APP_MAILCHIMP_LIST_ID');
 
@@ -540,10 +559,10 @@ class Index
                 'LNAME' => implode(' ', $name),
             ]
         ]);
+        */
 
-        return $app['templates']->render('pages/census-ok', [
-            'form' => $form,
-            'total' => $total + 1
+        return $app['templates']->render('pages/supports-ok', [
+            'text' => $text,
         ]);
     }
 }
