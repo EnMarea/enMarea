@@ -61,6 +61,11 @@ $social = new SocialLinks\Page([
 						</a>
 					</li>
 					<li>
+						<a href="<?= $this->url('supports') ?>">
+							Asina
+						</a>
+					</li>
+					<li>
 						<a href="<?= $this->url('candidates') ?>">
 							As nosas candidaturas
 						</a>
