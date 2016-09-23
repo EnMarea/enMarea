@@ -25,10 +25,9 @@ class Supports extends SimpleCrud
                 ->label('Nome'),
 
             'dni' => $b->text()
-                ->required()
                 ->label('DNI'),
 
-            'profession' => $b->email()
+            'profession' => $b->text()
                 ->required()
                 ->label('Profesión'),
 
