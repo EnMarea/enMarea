@@ -17,6 +17,15 @@ class Database implements ServiceProviderInterface
 
         $app['db'] = function ($app) {
             $db = new SimpleCrud($app['pdo']);
+            $cache = $app->get('cache');
+            $scheme = $cache->getItem('db_scheme');
+
+            if (!$scheme->isHit()) {
+                $scheme->set($db->getScheme());
+                $cache->save($scheme);
+            } else {
+                $db->setScheme($scheme->get());
+            }
 
             $db->getFieldFactory()->mapNames([
                 'body' => 'Serializable',
