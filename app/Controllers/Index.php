@@ -521,9 +521,7 @@ class Index
             ->one()
             ->by('name', 'apoio-villares')
             ->run();
-return $app['templates']->render('pages/supports-ok', [
-            'text' => $text,
-        ]);
+
         $supports = $db->supports->select()
             ->where('isActive = 1')
             ->run();
