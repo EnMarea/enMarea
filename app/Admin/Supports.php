@@ -35,6 +35,7 @@ class Supports extends SimpleCrud
                 ->label('É un firmante inicial'),
 
             'isActive' => $b->checkbox()
+                ->set('editable', true)
                 ->label('Amosar'),
         ]);
     }

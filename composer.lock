@@ -1053,16 +1053,16 @@
         },
         {
             "name": "oscarotero/folk",
-            "version": "v1.14.1",
+            "version": "v1.14.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/folk.git",
-                "reference": "35f032c8debf576ace26940f3de4de67e9fff2f6"
+                "reference": "6bd4890c3bcf089ca220f31e6976202b9b67a4c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/folk/zipball/35f032c8debf576ace26940f3de4de67e9fff2f6",
-                "reference": "35f032c8debf576ace26940f3de4de67e9fff2f6",
+                "url": "https://api.github.com/repos/oscarotero/folk/zipball/6bd4890c3bcf089ca220f31e6976202b9b67a4c5",
+                "reference": "6bd4890c3bcf089ca220f31e6976202b9b67a4c5",
                 "shasum": ""
             },
             "require": {
@@ -1111,7 +1111,7 @@
                 "crud",
                 "psr-7"
             ],
-            "time": "2016-09-07 08:12:49"
+            "time": "2016-09-24 10:21:14"
         },
         {
             "name": "oscarotero/inline-svg",
