@@ -540,7 +540,7 @@ class Index
             'name' => $val['name'],
             'dni' => $val['dni'],
             'profession' => $val['profession'],
-            'isActive' => true,
+            'isActive' => false,
         ])->save();
 
         /*

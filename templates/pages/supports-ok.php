@@ -25,7 +25,7 @@ $social = new SocialLinks\Page([
     <div class="page-message-ok">
         <h2>Datos gardados correctamente</h2>
 
-        <p>Moitas grazas por asinares o manifesto de apoio a Luís Villares. A partir dagora sairás na lista de asinantes</p>
+        <p>Moitas grazas por asinares o manifesto de apoio a Luís Villares. En breve sairás na lista de asinantes</p>
 
         <a href="<?= $this->url('supports') ?>" class="button">
             Ver lista de asinantes
