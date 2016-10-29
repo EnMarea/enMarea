@@ -37,12 +37,6 @@ $social = new SocialLinks\Page([
 <div class="hero is-<?= $header->style ?>">
 	<div class="hero-container">
 		<section class="hero-content">
-			<header>
-				<h1 class="hero-title">
-					<?= $this->svg('logo-luisvillares')->withA11y('Luís Villares') ?>
-				</h1>
-			</header>
-
 			<blockquote class="hero-quote">
 				<?php if (empty($header->url)): ?>
 					<q><?= $header->text ?></q>
@@ -52,63 +46,6 @@ $social = new SocialLinks\Page([
 					</a>
 				<?php endif ?>
 			</blockquote>
-
-			<nav>
-				<ul class="hero-menu">
-					<li>
-						<a href="<?= $this->url('bio') ?>">
-							Coñéceme
-						</a>
-					</li>
-					<li>
-						<a href="<?= $this->url('supports') ?>">
-							Asina
-						</a>
-					</li>
-					<li>
-						<a href="<?= $this->url('candidates') ?>">
-							As nosas candidaturas
-						</a>
-					</li>
-					<li>
-						<a href="<?= $this->url('program') ?>">
-							O noso programa
-						</a>
-					</li>
-					<?php if ($events->count()): ?>
-					<li class="is-extended">
-						<strong>Hoxe estaremos en:</strong>
-						
-						<ul class="eventList">
-							<?php
-                            foreach ($events as $event) {
-                                $this->insert('partials/events/minilist', ['event' => $event]);
-                            }
-                            ?>
-						</ul>
-						<a href="<?= $this->url('events') ?>">Ver axenda completa</a>
-					</li>
-					<?php else: ?>
-					<li>
-						<a href="<?= $this->url('events') ?>">
-							Axenda de campaña
-						</a>
-					</li>
-					<?php endif ?>
-				</ul>
-			</nav>
-
-			<footer class="hero-social">
-				<strong>Vémonos nas redes</strong>
-				<a href="https://twitter.com/VillaresLuis">
-					<?= $this->svg('ico-twitter') ?>
-					@VillaresLuis
-				</a>
-				<a href="https://www.facebook.com/LuisVillaresNaveira/">
-					<?= $this->svg('ico-facebook') ?>
-					LuisVillaresNaveira
-				</a>
-			</footer>
 		</section>
 	</div>
 

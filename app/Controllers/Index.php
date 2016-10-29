@@ -47,18 +47,9 @@ class Index
             ->orderBy('RAND()')
             ->run();
 
-        $events = $db->events
-            ->select()
-            ->where('isActive = 1')
-            ->where('isNotInHome = 0')
-            ->where('DATE(`day`) = DATE(NOW())')
-            ->orderBy('day,hour')
-            ->run();
-
         return $app['templates']->render('pages/home', [
             'highlights' => $highlights,
-            'header' => $header,
-            'events' => $events,
+            'header' => $header
         ]);
     }
 
