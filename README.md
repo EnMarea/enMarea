@@ -10,7 +10,7 @@
 ## Instalación:
 
 ```bash
-git clone https://github.com/oscarotero/enMarea.git
+git clone https://github.com/EnMarea/enMarea.git
 cd enMarea
 composer install
 npm install
