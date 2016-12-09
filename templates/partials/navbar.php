@@ -51,8 +51,8 @@
 					</a>
 				</li>
 				<li class="is-section">
-					<a href="<?= $this->url('apoderadas') ?>"<?= $menu === 'apoderadas' ? ' class="is-actived"' : '' ?>>
-						Apoderadas
+					<a href="https://medrando.enmarea.gal/">
+						Medrando
 					</a>
 				</li>
 				<li class="is-section">
@@ -118,8 +118,8 @@
 					</a>
 				</li>
 				<li>
-					<a href="<?= $this->url('apoderadas') ?>">
-						Apoderadas
+					<a href="https://medrando.enmarea.gal/">
+						Medrando
 					</a>
 				</li>
 				<li>
