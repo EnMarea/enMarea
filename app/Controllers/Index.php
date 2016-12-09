@@ -208,6 +208,14 @@ class Index
     }
 
     /**
+     * Medrando
+     */
+    public function medrando(Request $request, Response $response, App $app)
+    {
+        return $this->text('medrando', $request, $response, $app);
+    }
+
+    /**
      * Devolve unha páxina de texto corrido.
      */
     private function text($name, Request $request, Response $response, App $app)
