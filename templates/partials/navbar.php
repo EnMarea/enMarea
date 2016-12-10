@@ -42,7 +42,7 @@
 				</li>
 				<li class="is-section">
 					<a href="<?= $this->url('plenario') ?>"<?= $menu === 'plenario' ? ' class="is-actived"' : '' ?>>
-						Asamblea
+						Plenario
 					</a>
 				</li>
 				<li class="is-section">
@@ -104,7 +104,7 @@
 				</li>
 				<li class="is-section">
 					<a href="<?= $this->url('plenario') ?>">
-						Asamblea
+						Plenario
 					</a>
 				</li>
 				<li>
