@@ -36,18 +36,23 @@
 					</a>
 				</li>
 				<li class="is-section">
+					<a href="<?= $this->url('candidates') ?>"<?= $menu === 'candidates' ? ' class="is-actived"' : '' ?>>
+						Candidaturas
+					</a>
+				</li>
+				<li class="is-section">
 					<a href="<?= $this->url('program') ?>"<?= $menu === 'program' ? ' class="is-actived"' : '' ?>>
 						Programa
 					</a>
 				</li>
 				<li class="is-section">
-					<a href="<?= $this->url('asamblea-xaneiro') ?>"<?= $menu === 'asamblea-xaneiro' ? ' class="is-actived"' : '' ?>>
-						Asamblea
+					<a href="https://achegas.enmarea.gal">
+						Achegas
 					</a>
 				</li>
 				<li class="is-section">
-					<a href="https://medrando.enmarea.gal/">
-						Medrando
+					<a href="<?= $this->url('apoderadas') ?>"<?= $menu === 'apoderadas' ? ' class="is-actived"' : '' ?>>
+						Apoderadas
 					</a>
 				</li>
 				<li class="is-section">
@@ -98,18 +103,23 @@
 					</a>
 				</li>
 				<li>
+					<a href="<?= $this->url('candidates') ?>">
+						Candidaturas
+					</a>
+				</li>
+				<li>
 					<a href="<?= $this->url('program') ?>">
 						Programa
 					</a>
 				</li>
-				<li class="is-section">
-					<a href="<?= $this->url('asamblea-xaneiro') ?>">
-						Asamblea
+				<li>
+					<a href="https://achegas.enmarea.gal">
+						Achegas
 					</a>
 				</li>
 				<li>
-					<a href="https://medrando.enmarea.gal/">
-						Medrando
+					<a href="<?= $this->url('apoderadas') ?>">
+						Apoderadas
 					</a>
 				</li>
 				<li>
@@ -131,4 +141,3 @@
 		</nav>
 	</div>
 </div>
-
