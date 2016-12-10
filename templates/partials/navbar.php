@@ -41,7 +41,7 @@
 					</a>
 				</li>
 				<li class="is-section">
-					<a href="<?= $this->url('asamblea-xaneiro') ?>"<?= $menu === 'asamblea-xaneiro' ? ' class="is-actived"' : '' ?>>
+					<a href="<?= $this->url('plenario') ?>"<?= $menu === 'plenario' ? ' class="is-actived"' : '' ?>>
 						Asamblea
 					</a>
 				</li>
@@ -103,7 +103,7 @@
 					</a>
 				</li>
 				<li class="is-section">
-					<a href="<?= $this->url('asamblea-xaneiro') ?>">
+					<a href="<?= $this->url('plenario') ?>">
 						Asamblea
 					</a>
 				</li>
