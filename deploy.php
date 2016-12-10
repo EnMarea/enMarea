@@ -9,7 +9,7 @@ server('prod', '82.98.177.41', 22)
     ->env('branch', 'master')
     ->env('deploy_path', '/var/www/enmarea.gal/www');
 
-set('repository', 'git@github.com:oscarotero/enMarea.git');
+set('repository', 'git@github.com:EnMarea/enMarea.git');
 set('shared_files', ['.env']);
 set('shared_dirs', [
     'data/logs',
