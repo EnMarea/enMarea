@@ -8,6 +8,7 @@ Deseño e desenvolvemento:
 │ │└─┐│  ├─┤├┬┘  │ │ │ ├┤ ├┬┘│ │
 └─┘└─┘└─┘┴ ┴┴└─  └─┘ ┴ └─┘┴└─└─┘
 https://oscarotero.com
+
 -->
         <title><?= $social->getTitle() ?> - En Marea</title>
 
