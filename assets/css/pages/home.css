@@ -11,7 +11,7 @@
 .page-highlights-content {
 	margin-top: 1rem;
 	background: white;
-	@extend %grid-1-2-2-3-3-4;
+	@extend %grid-1-2;
 
 	@media (--from-narrow) {
 		margin-top: 2rem;

@@ -33,6 +33,7 @@ class Middleware implements ServiceProviderInterface
                 }),
 
                 M::imageTransformer([
+                    'home.' => 'resizeCrop,760,460',
                     'small.' => 'resizeCrop,380,230',
                     'normal.' => 'resize,900',
                     'gallery.' => 'resize,0,200',
