@@ -8,7 +8,7 @@
 		<?php endif ?>
 	<?php elseif ($highlight->imageFile): ?>
 	<a href="<?= $highlight->url ?>" class="highlight-image">
-		<img src="<?= $this->img('uploads/highlights/imageFile/'.$highlight->imageFile->getFilename(), 'small.') ?>">
+		<img src="<?= $this->img('uploads/highlights/imageFile/'.$highlight->imageFile->getFilename(), 'home.') ?>">
 	</a>
 	<?php endif ?>
 

@@ -9,7 +9,7 @@ use Jenssegers\Date\Date;
 		<?php if (!empty($new->imageFile)): ?>
 		<figure class="new-image">
 			<a href="<?= $this->url('new', ['slug' => $new->slug]) ?>">
-			<img src="<?= $this->img('uploads/news/imageFile/'.$new->imageFile->getFilename(), 'home.') ?>">
+			<img src="<?= $this->img('uploads/news/imageFile/'.$new->imageFile->getFilename(), 'small.') ?>">
 			</a>
 		</figure>
 		<?php endif ?>
