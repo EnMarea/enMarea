@@ -13,8 +13,8 @@
 }
 .hero-content {
 	max-width: 30rem;
-	padding-bottom: 25vh;
-	padding-top: 25vh;
+	padding-bottom: 20vh;
+	padding-top: 20vh;
 }
 .hero-container {
 	@extend %wrapper;
